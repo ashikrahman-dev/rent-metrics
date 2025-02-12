@@ -1,29 +1,39 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+/* Tailwind CSS */
 @import "tailwindcss";
 
+/* Tailwind Custom Settings */
+@theme {
+    --font-red-hat-display: "Red Hat Display", serif;
+    /* --font-body: var(--font-red-hat-display); */
+
+    /* Color variable */
+    --color-dark-1: #001924;
+}
+
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: var(--font-red-hat-display);
 
     /* color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; */
 }
 
-
-
 /* @media (prefers-color-scheme: light) {
     :root {
         color: #213547;
         background-color: #ffffff;
     }
-    a:hover {
-        color: #747bff;
-    }
-    button {
-        background-color: #f9f9f9;
-    }
+
 } */
+
+/* Login page style -start */
+.login-signup-bg {
+    background: url(../src/assets/images/login-page-bg.jpg) no-repeat center
+        center;
+    background-size: cover;
+}
+/* Login page style -end */
