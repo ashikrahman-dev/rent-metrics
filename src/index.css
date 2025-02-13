@@ -9,7 +9,13 @@
     /* --font-body: var(--font-red-hat-display); */
 
     /* Color variable */
+    --color-main: #2970CC;
+    --color-main-shade: #E5E8FF;
+    --color-danger: #FF5050;
     --color-dark-1: #001924;
+    --color-dark-2: #54616B;
+    --color-dark-6: #D8DFE5;
+    --color-dark-7: #F5F7F8;
 }
 
 :root {
