@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router";
 import Home from "./pages/Home";
+import NoPropertiesFound from "./pages/NoPropertiesFound/NoPropertiesFound";
 import RequestDemo from "./pages/RequestDemo/RequestDemo";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
@@ -17,6 +18,10 @@ export default function App() {
                 <Route path="/sign-up" element={<SignUp />} />
                 <Route path="/request-a-demo" element={<RequestDemo />} />
                 <Route path="/thank-you" element={<ThankYou />} />
+                <Route
+                    path="/properties-not-found"
+                    element={<NoPropertiesFound />}
+                />
             </Routes>
         </>
     );

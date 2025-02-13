@@ -137,11 +137,11 @@ export default function SignIn() {
 
                         {/* Divider -start */}
                         <div className="flex items-center gap-5 mt-[30px] mb-6 max-w-[380px] mx-auto">
-                            <div className="flex-1 border-t border-dark-6"></div>
+                            <div className="flex-1 border-t border-dark-9"></div>
                             <span className="text-dark-2 text-sm leading-[1.3] font-normal">
                                 Or Sign in with
                             </span>
-                            <div className="flex-1 border-t border-dark-6"></div>
+                            <div className="flex-1 border-t border-dark-9"></div>
                         </div>
                         {/* Divider -end */}
 

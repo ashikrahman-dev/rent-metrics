@@ -9,17 +9,20 @@
     /* --font-body: var(--font-red-hat-display); */
 
     /* Color variable */
-    --color-main: #2970CC;
-    --color-main-shade: #E5E8FF;
-    --color-danger: #FF5050;
+    --color-main: #2970cc;
+    --color-main-shade: #e5e8ff;
+    --color-danger: #ff5050;
     --color-dark-1: #001924;
-    --color-dark-2: #54616B;
-    --color-dark-6: #D8DFE5;
-    --color-dark-7: #F5F7F8;
+    --color-dark-2: #54616b;
+    --color-dark-6: #d8dfe5;
+    --color-dark-7: #f5f7f8;
+    --color-dark-8: #f7f7f7;
+    --color-dark-9: #E9EDF0;
 }
 
 :root {
     font-family: var(--font-red-hat-display);
+    font-weight: normal;
 
     /* color-scheme: light dark;
     font-synthesis: none;
@@ -43,3 +46,13 @@
     background-size: cover;
 }
 /* Login page style -end */
+
+/* Property search filter */
+.property-search-filter-wrap {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    
+}
+
+
+/* Property search filter */
