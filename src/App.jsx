@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router";
+import NotFound from "./components/NotFound/NotFound";
 import Home from "./pages/Home";
 import NoPropertiesFound from "./pages/NoPropertiesFound/NoPropertiesFound";
 import RequestDemo from "./pages/RequestDemo/RequestDemo";
@@ -22,6 +23,7 @@ export default function App() {
                     path="/properties-not-found"
                     element={<NoPropertiesFound />}
                 />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </>
     );
