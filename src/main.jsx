@@ -1,13 +1,31 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
-import App from "./App.jsx";
 import "./index.css";
+
+import { Route, Routes } from "react-router";
+import NotFound from "./components/NotFound/NotFound";
+import Home from "./pages/Home";
+import NoPropertiesFound from "./pages/NoPropertiesFound/NoPropertiesFound";
+import RequestDemo from "./pages/RequestDemo/RequestDemo";
+import SignIn from "./pages/SignIn/SignIn";
+import SignUp from "./pages/SignUp/SignUp";
+import ThankYou from "./pages/ThankYou/ThankYou";
+import Welcome from "./pages/Welcome/Welcome";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <BrowserRouter>
-            <App />
+            <Routes>
+                <Route path="/home" element={<Home />} />
+                <Route path="/" element={<Welcome />} />
+                <Route path="/sign-in" element={<SignIn />} />
+                <Route path="/sign-up" element={<SignUp />} />
+                <Route path="/request-demo" element={<RequestDemo />} />
+                <Route path="/thank-you" element={<ThankYou />} />
+                <Route path="/properties" element={<NoPropertiesFound />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
         </BrowserRouter>
     </StrictMode>
 );

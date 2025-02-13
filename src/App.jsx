@@ -12,17 +12,13 @@ export default function App() {
     return (
         <>
             <Routes>
-                {/* <Route path="/" element={<App />} /> */}
                 <Route path="/home" element={<Home />} />
                 <Route path="/" element={<Welcome />} />
                 <Route path="/sign-in" element={<SignIn />} />
                 <Route path="/sign-up" element={<SignUp />} />
                 <Route path="/request-demo" element={<RequestDemo />} />
                 <Route path="/thank-you" element={<ThankYou />} />
-                <Route
-                    path="/properties-not-found"
-                    element={<NoPropertiesFound />}
-                />
+                <Route path="/properties" element={<NoPropertiesFound />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </>
