@@ -177,7 +177,7 @@ export default function SignUp() {
                         {/* Button group */}
                         <div className="grid gap-5 mt-8">
                             <Link
-                                to="/dashboard"
+                                to="/thank-you"
                                 className="flex justify-center py-[14px] px-6 rounded-lg bg-main text-white text-base font-black transition-colors duration-200 hover:bg-main-shade hover:text-main"
                             >
                                 Register
