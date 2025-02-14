@@ -111,7 +111,7 @@ export default function SignIn() {
                                             </div>
                                             <div className="">
                                                 <Link
-                                                    to="/request-demo"
+                                                    to="/forgot-password"
                                                     className="text-danger text-sm leading-[1.3]"
                                                 >
                                                     Forgot Password ?

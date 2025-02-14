@@ -17,7 +17,7 @@ export default function PropertiesNotFoundCard() {
                 {/* Properties Card */}
                 <div className=" border-t border-dark-6 pt-6 mt-6">
                     {/* Item */}
-                    <div className="flex justify-between gap-6 pb-6 mb-6 border-b border-dark-6">
+                    <div className="flex justify-between items-center gap-6 pb-6 mb-6 border-b border-dark-6">
                         {/* Left */}
                         <div className="flex gap-4 items-center">
                             <div className="">
@@ -36,7 +36,14 @@ export default function PropertiesNotFoundCard() {
                                 </p>
 
                                 {/* Button group */}
-                                
+                                <div className="flex gap-2 mt-3">
+                                    <button className="py-[6px] px-[9px] rounded-sm bg-main-shade text-[8px] text-main font-bold cursor-pointer transition-colors duration-200 hover:bg-main hover:text-white">
+                                        Apartment Complex
+                                    </button>
+                                    <button className="py-[6px] px-[9px] rounded-sm bg-main-shade text-[8px] text-main font-bold cursor-pointer transition-colors duration-200 hover:bg-main hover:text-white">
+                                        Available
+                                    </button>
+                                </div>
                                 {/* Button group */}
                             </div>
                         </div>

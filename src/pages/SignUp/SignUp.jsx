@@ -130,7 +130,6 @@ export default function SignUp() {
                                             <div className="flex h-6 shrink-0 items-center">
                                                 <div className="group grid size-4 grid-cols-1 cursor-pointer">
                                                     <input
-                                                        defaultChecked
                                                         id="keep-me-sign-in"
                                                         name="keep-me-sign-in"
                                                         type="checkbox"
@@ -177,7 +176,7 @@ export default function SignUp() {
                         {/* Button group */}
                         <div className="grid gap-5 mt-8">
                             <Link
-                                to="/thank-you"
+                                to="/dashboard"
                                 className="flex justify-center py-[14px] px-6 rounded-lg bg-main text-white text-base font-black transition-colors duration-200 hover:bg-main-shade hover:text-main"
                             >
                                 Register
