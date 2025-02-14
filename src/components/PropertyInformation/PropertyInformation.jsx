@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 export default function PropertyInformation() {
     return (
-        <div className="bg-white p-6 rounded-lg">
-            <h4 className="text-dark-1 text-2xl font-bold leading-[1.3] mb-6">
-                Property Information
-            </h4>
-
+        <div className="">
             {/* Form - start */}
             <form>
-                <div className="">
+                {/* Property Information form */}
+                <div className="bg-white p-6 rounded-lg mb-8">
+                    <h4 className="text-dark-1 text-2xl font-bold leading-[1.3] mb-6">
+                        Property Information
+                    </h4>
                     <div className="grid grid-cols-12 gap-6 ">
                         {/* Property Name */}
                         <div className="col-span-4">
@@ -138,7 +138,7 @@ export default function PropertyInformation() {
                                 htmlFor="number_of_units"
                                 className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
                             >
-                                Number of units 
+                                Number of units
                             </label>
                             <div className="mt-3">
                                 <input
@@ -152,112 +152,140 @@ export default function PropertyInformation() {
                             </div>
                         </div>
 
-                        {/* Email */}
+                        {/* Year Built  */}
                         <div className="col-span-4">
                             <label
-                                htmlFor="email"
+                                htmlFor="year_built"
                                 className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
                             >
-                                Email
+                                Year Built
                             </label>
                             <div className="mt-3">
                                 <input
-                                    id="email"
-                                    name="email"
-                                    type="email"
-                                    autoComplete="email"
-                                    placeholder="Email"
+                                    id="year_built"
+                                    name="year_built"
+                                    type="number"
+                                    autoComplete="year_built"
+                                    placeholder="yyyy"
+                                    min="1900"
+                                    max="2099"
+                                    step="1"
                                     className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
                                 />
                             </div>
                         </div>
 
-                        {/* Password */}
+                        {/* SF GBA  */}
                         <div className="col-span-4">
                             <label
-                                htmlFor="password"
+                                htmlFor="year_built"
                                 className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
                             >
-                                Password
+                                SF GBA
                             </label>
                             <div className="mt-3">
                                 <input
-                                    id="password"
-                                    name="password"
-                                    type="password"
-                                    autoComplete="password"
-                                    placeholder="Password"
+                                    id="year_built"
+                                    name="year_built"
+                                    type="number"
+                                    autoComplete="year_built"
+                                    placeholder="sq ft."
                                     className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
                                 />
                             </div>
+                        </div>
+                    </div>
+                </div>
+                {/* Property Information form */}
 
-                            {/* Checkbox & Forgot Password */}
-                            <div className="flex justify-between gap-5 text-left mt-[10px]">
-                                <div className="flex gap-2 cursor-pointer">
-                                    <div className="flex h-6 shrink-0 items-center">
-                                        <div className="group grid size-4 grid-cols-1 cursor-pointer">
-                                            <input
-                                                defaultChecked
-                                                id="keep-me-sign-in"
-                                                name="keep-me-sign-in"
-                                                type="checkbox"
-                                                aria-describedby="comments-description"
-                                                className="cursor-pointer col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-main checked:bg-main indeterminate:border-main indeterminate:bg-main focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-main disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto"
-                                            />
-                                            <svg
-                                                fill="none"
-                                                viewBox="0 0 14 14"
-                                                className="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25"
-                                            >
-                                                <path
-                                                    d="M3 8L6 11L11 3.5"
-                                                    strokeWidth={2}
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    className="opacity-0 group-has-checked:opacity-100"
-                                                />
-                                                <path
-                                                    d="M3 7H11"
-                                                    strokeWidth={2}
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    className="opacity-0 group-has-indeterminate:opacity-100"
-                                                />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <div className="text-sm/6">
-                                        <label
-                                            htmlFor="keep-me-sign-in"
-                                            className="font-medium text-dark-2 leading-[1.3] cursor-pointer"
-                                        >
-                                            Keep me Sign in
-                                        </label>
-                                    </div>
-                                </div>
-                                <div className="">
-                                    <Link
-                                        to="/forgot-password"
-                                        className="text-danger text-sm leading-[1.3]"
-                                    >
-                                        Forgot Password ?
-                                    </Link>
-                                </div>
+                {/* Purchase Information  form */}
+                <div className="bg-white p-6 rounded-lg">
+                    <h4 className="text-dark-1 text-2xl font-bold leading-[1.3] mb-6">
+                        Purchase Information
+                    </h4>
+                    <div className="grid grid-cols-12 gap-6 ">
+                        {/* Property Price  */}
+                        <div className="col-span-4">
+                            <label
+                                htmlFor="property_price"
+                                className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
+                            >
+                                Property Price
+                            </label>
+                            <div className="mt-3">
+                                <input
+                                    id="property_price"
+                                    name="property_price"
+                                    type="number"
+                                    autoComplete="property_price"
+                                    placeholder="$"
+                                    className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Date of Purchases */}
+                        <div className="col-span-4">
+                            <label
+                                htmlFor="date_of_purchases"
+                                className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
+                            >
+                                Date of Purchases
+                            </label>
+                            <div className="mt-3">
+                                <input
+                                    id="date_of_purchases"
+                                    name="date_of_purchases"
+                                    type="number"
+                                    autoComplete="date_of_purchases"
+                                    placeholder="dd/mm/yyyy"
+                                    className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Trailing 12 Month NOI  */}
+                        <div className="col-span-4">
+                            <label
+                                htmlFor="time_of_purchases"
+                                className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
+                            >
+                                Trailing 12 Month NOI{" "}
+                                <span className="font-semibold text-sm">
+                                    (At time of purchases)
+                                </span>
+                            </label>
+                            <div className="mt-3">
+                                <input
+                                    id="time_of_purchases"
+                                    name="time_of_purchases"
+                                    type="number"
+                                    autoComplete="time_of_purchases"
+                                    placeholder="July 1, 2022, to June 30, 2023. "
+                                    className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {/* Button group */}
-                <div className="grid gap-5 mt-8">
+                <div className="flex justify-end gap-5 mt-8">
+                    <Link
+                        to="/properties"
+                        className="flex justify-center py-[14px] px-6 rounded-lg bg-danger text-white text-base font-black transition-colors duration-200 hover:bg-danger/15 hover:text-danger"
+                    >
+                        Cancel
+                    </Link>
                     <Link
                         to="/dashboard"
-                        className="flex justify-center py-[14px] px-6 rounded-lg bg-main text-white text-base font-black transition-colors duration-200 hover:bg-main-shade hover:text-main"
+                        className="flex justify-center py-[14px] px-6 rounded-lg bg-success text-white text-base font-black transition-colors duration-200 hover:bg-success/15 hover:text-success"
                     >
-                        Sign In
+                        Add Property
                     </Link>
                 </div>
                 {/* Button group */}
+                {/* Purchase Information  form */}
             </form>
             {/* Form - end */}
         </div>
