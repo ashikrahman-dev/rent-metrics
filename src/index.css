@@ -12,12 +12,13 @@
     --color-main: #2970cc;
     --color-main-shade: #e5e8ff;
     --color-danger: #ff5050;
+    --color-success: #30d287;
     --color-dark-1: #001924;
     --color-dark-2: #54616b;
     --color-dark-6: #d8dfe5;
     --color-dark-7: #f5f7f8;
     --color-dark-8: #f7f7f7;
-    --color-dark-9: #E9EDF0;
+    --color-dark-9: #e9edf0;
 }
 
 :root {
@@ -51,8 +52,20 @@
 .property-search-filter-wrap {
     display: grid;
     grid-template-columns: 1fr auto auto;
-    
 }
 
-
 /* Property search filter */
+
+/* Browser prefix css for Input type number arrow */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+/* Browser prefix css for Input type number arrow */
