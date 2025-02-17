@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         path: "/dashboard",
         element: <DashboardLayout />,
         children: [
-            { path: "/dashboard/hello", element: <PropertySummary /> },
+            { path: "/dashboard", element: <PropertySummary /> },
             // { path: "/add-new-properties", element: <AddNewProperty /> },
         ],
     },
