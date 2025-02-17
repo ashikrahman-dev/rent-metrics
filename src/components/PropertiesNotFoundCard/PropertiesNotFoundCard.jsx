@@ -16,9 +16,9 @@ export default function PropertiesNotFoundCard() {
                 </h5>
 
                 {/* Properties Card */}
-                <div className=" border-t border-dark-6 pt-6 mt-6">
+                <div className=" border-t border-dark-5 pt-6 mt-6">
                     {/* Item */}
-                    <div className="flex justify-between items-center gap-6 pb-6 mb-6 border-b border-dark-6">
+                    <div className="flex justify-between items-center gap-6 pb-6 mb-6 border-b border-dark-5">
                         {/* Left */}
                         <div className="flex gap-4 items-center">
                             <div className="">

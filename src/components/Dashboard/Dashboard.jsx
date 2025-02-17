@@ -1,132 +1,100 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import { propertyList } from "../../utils/data/data";
 
-const stats = [
-    {
-        title: "Total Users",
-        value: "24.8k",
-        change: "+12%",
-        icon: "User Icon",
-        color: "bg-blue-500",
-    },
-    {
-        title: "Active Projects",
-        value: "145",
-        change: "+8%",
-        icon: "Activity Icon",
-        color: "bg-green-500",
-    },
-    {
-        title: "Documents",
-        value: "2,456",
-        change: "+23%",
-        icon: "FileText Icon",
-        color: "bg-purple-500",
-    },
-    {
-        title: "Revenue",
-        value: "$45.2k",
-        change: "+15%",
-        icon: "DollarSign Icon",
-        color: "bg-yellow-500",
-    },
-];
-
-const Dashboard = () => {
+export default function Dashboard() {
     return (
-        <div className="flex-1 p-8 bg-gray-50">
-            <div className="mb-8">
-                <h1 className="text-2xl font-bold text-gray-800">
-                    Welcome back, Admin
-                </h1>
-                <p className="text-gray-600">
-                    Here's what's happening with your projects today.
-                </p>
+        <div className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto pb-40">
+            <div className="flex gap-6 justify-between items-center">
+                <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35] mb-8">
+                    Property Summary
+                </h2>
+                <Link
+                    to="/add-new-properties"
+                    className="text-base px-[18px] py-[9px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main cursor-pointer inline-flex items-center gap-[10px] group col-auto mt-8 mb-12"
+                >
+                    <svg
+                        width="21"
+                        height="20"
+                        viewBox="0 0 21 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M9.827 10.6729H4.66675V9.32676H9.827V4.1665H11.1732V9.32676H16.3334V10.6729H11.1732V15.8332H9.827V10.6729Z"
+                            fill="white"
+                            className="transition-all duration-200 group-hover:fill-main"
+                        />
+                    </svg>
+                    Add Property
+                </Link>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 mb-8 md:grid-cols-2 lg:grid-cols-4">
-                {stats.map((stat) => (
+            {/* Property Card */}
+            <div className="grid grid-cols-12 gap-6">
+                {/* Card Item */}
+                {propertyList.map((property) => (
                     <div
-                        key={stat.title}
-                        className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                        key={property.id}
+                        className="col-span-3 p-2 rounded-lg bg-white property-card relative"
                     >
-                        <div className="flex items-center justify-between mb-4">
-                            <div
-                                className={`p-3 rounded-lg ${stat.color} bg-opacity-10`}
-                            >
-                                {React.cloneElement(stat.icon, {
-                                    className: `w-6 h-6 ${stat.color.replace(
-                                        "bg-",
-                                        "text-"
-                                    )}`,
-                                })}
+                        <img
+                            src={property.image}
+                            alt="Property Image"
+                            className="max-w-full rounded-lg pb-2 relative z-30"
+                        />
+                        {/* Content area */}
+                        <div className="p-4 relative z-30">
+                            <h4 className="text-dark-1 font-bold leading-[1.3] mb-2">
+                                {property.name}
+                            </h4>
+                            <p className="text-base text-dark-2 leading-[1.3]">
+                                {property.address}
+                            </p>
+                            <div className="flex justify-between gap-6 mt-6 mb-8">
+                                {/* specification */}
+                                <div className="">
+                                    <p className="text-dark-3 leading-[1.3] mb-1">
+                                        Occupancy
+                                    </p>
+                                    <h6 className="font-bold text-dark-1">
+                                        {property.occupancy}%
+                                    </h6>
+                                </div>
+                                <div className="">
+                                    <p className="text-dark-3 leading-[1.3] mb-1">
+                                        Revenue
+                                    </p>
+                                    <h6 className="font-bold text-dark-1">
+                                        ${property.revenue}
+                                    </h6>
+                                </div>
+                                <div className="">
+                                    <p className="text-dark-3 leading-[1.3] mb-1">
+                                        Status
+                                    </p>
+                                    <h6
+                                        className={`font-bold text-success bg-success-light rounded-sm py-[3px] px-4 text-xs capitalize ${
+                                            property.status === "review"
+                                                ? "text-warning bg-warning-light"
+                                                : "text-success bg-success-light"
+                                        }`}
+                                    >
+                                        {property.status}
+                                    </h6>
+                                </div>
                             </div>
-                            <span className="px-2.5 py-0.5 text-sm font-medium text-green-600 bg-green-100 rounded-full">
-                                {stat.change}
-                            </span>
+
+                            {/* View details button */}
+                            <Link
+                                to="/"
+                                className="py-[9px] px-6 border border-main rounded-lg font-black flex justify-center text-main w-full leading-[1.5] transition-colors duration-300 hover:bg-main hover:text-white"
+                            >
+                                View Details
+                            </Link>
                         </div>
-                        <h3 className="text-sm font-medium text-gray-600">
-                            {stat.title}
-                        </h3>
-                        <p className="text-2xl font-semibold text-gray-800">
-                            {stat.value}
-                        </p>
                     </div>
                 ))}
             </div>
-
-            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                <div className="p-6 bg-white rounded-lg shadow-sm">
-                    <h2 className="mb-4 text-lg font-semibold text-gray-800">
-                        Recent Activity
-                    </h2>
-                    <div className="space-y-4">
-                        {[1, 2, 3].map((i) => (
-                            <div
-                                key={i}
-                                className="flex items-center p-4 bg-gray-50 rounded-lg"
-                            >
-                                <div className="w-10 h-10 bg-gray-200 rounded-full" />
-                                <div className="ml-4">
-                                    <p className="text-sm font-medium text-gray-800">
-                                        User updated their profile
-                                    </p>
-                                    <p className="text-sm text-gray-600">
-                                        2 hours ago
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                <div className="p-6 bg-white rounded-lg shadow-sm">
-                    <h2 className="mb-4 text-lg font-semibold text-gray-800">
-                        Quick Actions
-                    </h2>
-                    <div className="grid grid-cols-2 gap-4">
-                        {[
-                            "Create Project",
-                            "Add User",
-                            "Upload Files",
-                            "View Reports",
-                        ].map((action) => (
-                            <button
-                                key={action}
-                                className="p-4 text-left bg-gray-50 rounded-lg hover:bg-gray-100"
-                            >
-                                <p className="font-medium text-gray-800">
-                                    {action}
-                                </p>
-                                <p className="text-sm text-gray-600">
-                                    Click to proceed
-                                </p>
-                            </button>
-                        ))}
-                    </div>
-                </div>
-            </div>
         </div>
     );
-};
-
-export default Dashboard;
+}

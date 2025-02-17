@@ -1,9 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotFound from "./components/NotFound/NotFound";
+import DashboardLayout from "./layouts/DashboardLayout/DashboardLayout";
 import LoadPropertyLayout from "./layouts/LoadPropertyLayout/LoadPropertyLayout";
 import AddNewProperty from "./pages/AddNewProperty/AddNewProperty";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import NoPropertiesFound from "./pages/NoPropertiesFound/NoPropertiesFound";
+import PropertySummary from "./pages/PropertySummary/PropertySummary";
 import RequestDemo from "./pages/RequestDemo/RequestDemo";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
@@ -41,6 +43,14 @@ const router = createBrowserRouter([
         children: [
             { path: "/properties", element: <NoPropertiesFound /> },
             { path: "/add-new-properties", element: <AddNewProperty /> },
+        ],
+    },
+    {
+        path: "/dashboard",
+        element: <DashboardLayout />,
+        children: [
+            { path: "/dashboard/hello", element: <PropertySummary /> },
+            // { path: "/add-new-properties", element: <AddNewProperty /> },
         ],
     },
     {
