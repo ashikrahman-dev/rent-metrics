@@ -3,7 +3,7 @@ import totalRevenue from "../../assets/images/total-revenue-icon.svg";
 
 export default function StatusCard() {
     return (
-        <div className="bg-white rounded-lg p-4 relative col-span-4">
+        <div className="bg-white rounded-lg p-4 relative col-span-4 h-full">
             <img src={dragIcon} alt="Icon" className="absolute right-3 top-3" />
             <div className="flex gap-3 items-center mb-5.5">
                 <img src={totalRevenue} alt="Icon" className="max-w-full" />

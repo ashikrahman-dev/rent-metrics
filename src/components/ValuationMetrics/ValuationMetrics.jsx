@@ -1,8 +1,8 @@
-export default function ValuationMetrics() {
+export default function ValuationMetrics({ title }) {
     return (
         <div className="bg-white p-6 rounded-lg">
             <h3 className="text-[22px] dark-1 font-bold leading-[1.4] mb-6">
-                Valuation Metrics
+                {title}
             </h3>
             <p className="text-dark-3 font-medium leading-[1.3]">Cap Rate</p>
             <p className="text-dark-2 font-bold leading-[1.3] mb-4">5.8%</p>
