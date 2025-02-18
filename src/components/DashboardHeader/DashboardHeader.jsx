@@ -2,7 +2,7 @@ import userImg from "../../assets/images/user-image.png";
 
 export default function DashboardHeader() {
     return (
-        <section className="px-8 grid grid-cols-12 gap-6 py-4 bg-white">
+        <section className="px-8 grid grid-cols-12 gap-6 py-4 bg-white mb-[-70px] relative z-10">
             {/* Search Box */}
             <div className="col-span-6">
                 <input

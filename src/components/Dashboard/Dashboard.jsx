@@ -3,9 +3,9 @@ import { propertyList } from "../../utils/data/data";
 
 export default function Dashboard() {
     return (
-        <div className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto pb-40">
+        <div className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto pb-20 pt-20 relative z-0">
             <div className="flex gap-6 justify-between items-center">
-                <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35] mb-8">
+                <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
                     Property Summary
                 </h2>
                 <Link

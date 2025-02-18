@@ -297,7 +297,7 @@ export default function Sidebar() {
 
     return (
         <div
-            className={`bg-dark-1 text-white min-h-screen h-full transition-all duration-300 ease-in-out ${
+            className={`bg-dark-1 text-white h-svh transition-all duration-300 ease-in-out ${
                 isCollapsed ? "w-20" : "min-w-64"
             }`}
         >
@@ -330,7 +330,7 @@ export default function Sidebar() {
                             <div
                                 className={`flex items-center cursor-pointer px-6 py-4 hover:bg-[#001E2C] relative before:absolute before:left-0 before:content-[''] before:w-[3px] before:h-0 before:top-0 before:bg-main before:transition-all before:duration-250 hover:before:h-full ${
                                     item.submenu && openSubmenuIndex === index
-                                        ? "bg-[#001E2C]"
+                                        ? "bg-[#001E2C] relative before:absolute before:left-0 before:content-[''] before:w-[3px] before:h-full before:top-0 before:bg-main before:transition-all before:duration-250"
                                         : ""
                                 }`}
                                 onClick={() =>
@@ -354,7 +354,7 @@ export default function Sidebar() {
                                         <img
                                             src={arrowDown}
                                             alt="Arrow Down"
-                                            className={`w-4 h-4 transition-transform duration-200 ${
+                                            className={`w-4 h-4 transition-transform duration-200  ${
                                                 openSubmenuIndex === index
                                                     ? "rotate-180"
                                                     : ""
@@ -365,7 +365,7 @@ export default function Sidebar() {
                             </div>
                             {item.submenu && !isCollapsed && (
                                 <ul
-                                    className={` overflow-hidden transition-all duration-300 ease-in-out ${
+                                    className={` overflow-hidden transition-all duration-300 ease-in-out relative before:absolute before:left-0 before:content-[''] before:w-[3px] before:h-full before:top-0 before:bg-main before:transition-all before:duration-250 ${
                                         openSubmenuIndex === index
                                             ? "max-h-48"
                                             : "max-h-0"
@@ -374,7 +374,7 @@ export default function Sidebar() {
                                     {item.submenu.map((subItem) => (
                                         <li
                                             key={subItem.title}
-                                            className="pl-6 flex items-center p-2 transition-all duration-300 text-white cursor-pointer hover:bg-[#001E2C] hover:text-main-2"
+                                            className="pl-6 flex items-center p-2 transition-all duration-300 text-dark-4 text-sm cursor-pointer hover:bg-[#001E2C] hover:text-main-2"
                                         >
                                             <span className="w-5" />
                                             <span className="pl-3">
