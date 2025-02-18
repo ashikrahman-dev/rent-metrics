@@ -3,6 +3,7 @@ import { useState } from "react";
 import arrowRight from "../../assets/images/arrow-right.svg";
 import arrowDown from "../../assets/images/small-arrow-down.svg";
 
+import { Link } from "react-router-dom";
 import sidebarLogo from "../../assets/images/logo-white.svg";
 // Menu Icon
 
@@ -23,7 +24,7 @@ const menuItems = [
                 />
             </svg>
         ),
-        path: "/",
+        path: "/dashboard/property-summary/",
     },
     {
         title: "Key Metrics",
@@ -327,7 +328,8 @@ export default function Sidebar() {
                 <ul className="space-y-2">
                     {menuItems.map((item, index) => (
                         <li key={item.title} className="group">
-                            <div
+                            <Link
+                                to={item.path}
                                 className={`flex items-center cursor-pointer px-6 py-4 hover:bg-[#001E2C] relative before:absolute before:left-0 before:content-[''] before:w-[3px] before:h-0 before:top-0 before:bg-main before:transition-all before:duration-250 hover:before:h-full ${
                                     item.submenu && openSubmenuIndex === index
                                         ? "bg-[#001E2C] relative before:absolute before:left-0 before:content-[''] before:w-[3px] before:h-full before:top-0 before:bg-main before:transition-all before:duration-250"
@@ -362,7 +364,7 @@ export default function Sidebar() {
                                         />
                                     </>
                                 )}
-                            </div>
+                            </Link>
                             {item.submenu && !isCollapsed && (
                                 <ul
                                     className={` overflow-hidden transition-all duration-300 ease-in-out relative before:absolute before:left-0 before:content-[''] before:w-[3px] before:h-full before:top-0 before:bg-main before:transition-all before:duration-250 ${
