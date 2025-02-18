@@ -1,5 +1,3 @@
-
-
 // Property Image
 import propertyImage1 from "../../assets/images/property-img-1.jpg";
 import propertyImage2 from "../../assets/images/property-img-2.jpg";
@@ -9,6 +7,10 @@ import propertyImage5 from "../../assets/images/property-img-5.jpg";
 import propertyImage6 from "../../assets/images/property-img-6.jpg";
 import propertyImage7 from "../../assets/images/property-img-7.jpg";
 import propertyImage8 from "../../assets/images/property-img-8.jpg";
+
+import expensesIcon from "../../assets/images/operating-expenses-icon.svg";
+import occupancyIcon from "../../assets/images/total-occupancy-rate-icon.svg";
+import totalRevenueIcon from "../../assets/images/total-revenue-icon.svg";
 
 export const propertyList = [
     {
@@ -82,5 +84,87 @@ export const propertyList = [
         occupancy: "95",
         revenue: "125,000",
         status: "active",
+    },
+];
+
+export const propertyDetails = [
+    {
+        id: 1,
+        name: "Elevate Tech Hub",
+        address: "5566 Blockchain Street, Neural Bay",
+        image: propertyImage8,
+        occupancy: "95",
+        revenue: "125,000",
+        status: "active",
+        overview: [
+            {
+                id: 1,
+                title: "Total Revenue",
+                icon: totalRevenueIcon,
+                revenue: "$1.2M",
+                label: "Last year",
+                percentage: "12",
+                bgColor: "73EAB2",
+            },
+            {
+                id: 2,
+                title: "Total Occupancy Rate",
+                icon: occupancyIcon,
+                revenue: "95%",
+                label: "Last year",
+                percentage: "5",
+                bgColor: "FF9898",
+            },
+            {
+                id: 3,
+                title: "Operating Expenses",
+                icon: expensesIcon,
+                revenue: "$320k",
+                label: "Convert",
+                percentage: "8",
+                bgColor: "FFC362",
+            },
+        ],
+        propertyDetails: {
+            id: 1,
+            title: "Property Features",
+            address: "123 Main Street, New York, NY 10001",
+            type: "Residential Apartment",
+            units: 150,
+            yearBuilt: 2018,
+            lastRenovation: 2022,
+        },
+
+        valuation: [
+            {
+                id: 1,
+                title: "Current Value",
+                icon: totalRevenueIcon,
+                revenue: "$12.5M",
+                label: "Last year",
+                percentage: "15",
+                bgColor: "73EAB2",
+            },
+            {
+                id: 2,
+                title: "Price per sq ft",
+                icon: totalRevenueIcon,
+                revenue: "$450",
+                label: "Market average",
+                percentage: "8",
+                bgColor: "68C8F8",
+            },
+            {
+                id: 3,
+                kpi: "Add KPI",
+            },
+        ],
+        valuationMetrics: {
+            id: 1,
+            capRate: "5.8%",
+            rentRatio: 16.5,
+            grm: 12.4,
+            noi: "$725k",
+        },
     },
 ];

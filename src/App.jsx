@@ -11,6 +11,7 @@ import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import ThankYou from "./pages/ThankYou/ThankYou";
 import Welcome from "./pages/Welcome/Welcome";
+import Overview from "./pages/Overview/Overview";
 
 const router = createBrowserRouter([
     {
@@ -46,10 +47,11 @@ const router = createBrowserRouter([
         ],
     },
     {
-        path: "/dashboard",
+        path: "/dashboard/",
         element: <DashboardLayout />,
         children: [
-            { path: "/dashboard", element: <PropertySummary /> },
+            { path: "property-summary", element: <PropertySummary /> },
+            { path: "property-summary/overview", element: <Overview /> },
             // { path: "/add-new-properties", element: <AddNewProperty /> },
         ],
     },
