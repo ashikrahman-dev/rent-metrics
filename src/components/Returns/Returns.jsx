@@ -8,7 +8,7 @@ export default function Returns() {
     return (
         <div className="grid grid-cols-12 gap-6">
             <div className="col-span-7">
-                <div className="grid grid-cols-12 justify-between gap-6 mb-6">
+                <div className="grid grid-cols-3 justify-between gap-6 mb-6">
                     <StatusCard />
                     <StatusCard />
                     <StatusCardKPI />

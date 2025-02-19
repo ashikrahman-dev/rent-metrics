@@ -4,14 +4,15 @@ import DashboardLayout from "./layouts/DashboardLayout/DashboardLayout";
 import LoadPropertyLayout from "./layouts/LoadPropertyLayout/LoadPropertyLayout";
 import AddNewProperty from "./pages/AddNewProperty/AddNewProperty";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import Marketing from "./pages/Marketing/Marketing";
 import NoPropertiesFound from "./pages/NoPropertiesFound/NoPropertiesFound";
+import Overview from "./pages/Overview/Overview";
 import PropertySummary from "./pages/PropertySummary/PropertySummary";
 import RequestDemo from "./pages/RequestDemo/RequestDemo";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import ThankYou from "./pages/ThankYou/ThankYou";
 import Welcome from "./pages/Welcome/Welcome";
-import Overview from "./pages/Overview/Overview";
 
 const router = createBrowserRouter([
     {
@@ -52,6 +53,15 @@ const router = createBrowserRouter([
         children: [
             { path: "property-summary", element: <PropertySummary /> },
             { path: "property-summary/overview", element: <Overview /> },
+            // { path: "/add-new-properties", element: <AddNewProperty /> },
+        ],
+    },
+    {
+        path: "/dashboard/",
+        element: <DashboardLayout />,
+        children: [
+            { path: "marketing", element: <Marketing /> },
+            // { path: "property-summary/overview", element: <Overview /> },
             // { path: "/add-new-properties", element: <AddNewProperty /> },
         ],
     },

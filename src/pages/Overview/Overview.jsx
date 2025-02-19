@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
 import { Link } from "react-router-dom";
-import MonthlyPerformanceChart from "../../components/Charts/MonthlyPerformanceChart/MonthlyPerformanceChart";
+import MonthlyPerformanceChart from "../../components/Charts/MonthlyPropertyChart/MonthlyPropertyChart";
 import PropertyDetails from "../../components/PropertyDetails/PropertyDetails";
 import PropertyDocuments from "../../components/PropertyDocuments/PropertyDocuments";
 import RecentActivity from "../../components/RecentActivity/RecentActivity";
@@ -87,7 +87,7 @@ export default function Overview() {
                 <TabsContent value="overview">
                     <div className="grid grid-cols-12 gap-6">
                         <div className="col-span-7">
-                            <div className="grid grid-cols-12 justify-between gap-6 mb-6">
+                            <div className="grid grid-cols-3 justify-between gap-6 mb-6">
                                 <StatusCard />
                                 <StatusCard />
                                 <StatusCard />

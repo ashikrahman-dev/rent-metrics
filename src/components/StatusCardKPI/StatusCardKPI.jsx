@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function StatusCardKPI() {
     return (
-        <Link to="" className="bg-white rounded-lg p-4 col-span-4 h-full flex items-center justify-center gap-2">
+        <Link to="" className="bg-white rounded-lg p-4 col-span-1 h-full flex items-center justify-center gap-2">
             <svg
                 width="25"
                 height="24"

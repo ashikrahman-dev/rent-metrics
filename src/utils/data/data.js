@@ -168,3 +168,53 @@ export const propertyDetails = [
         },
     },
 ];
+
+import financialStatementsIcon from "../../assets/images/financial-statements-icon.svg";
+import insuranceDocumentsIcon from "../../assets/images/insurance-documents-icon.svg";
+import leaseAgreementsIcon from "../../assets/images/lease-agreements-icon.svg";
+import propertyAppraisalIcon from "../../assets/images/property-appraisal-icon.svg";
+import propertyPhotosIcon from "../../assets/images/property-photos-icon.svg";
+
+// Property Documents
+export const propertyDocumentsData = [
+    {
+        id: 1,
+        title: "Property Appraisal Report",
+        icon: propertyAppraisalIcon,
+        size: "2.5 MB",
+        date: "Updated 2 weeks ago",
+        downloadUrl: "#",
+    },
+    {
+        id: 2,
+        title: "Financial Statements",
+        icon: financialStatementsIcon,
+        size: "1.8 MB",
+        date: "Updated 1 month ago",
+        downloadUrl: "#",
+    },
+    {
+        id: 3,
+        title: "Lease Agreements",
+        icon: leaseAgreementsIcon,
+        size: "3.2 MB",
+        date: "Updated 3 months ago",
+        downloadUrl: "#",
+    },
+    {
+        id: 4,
+        title: "Property Photos",
+        icon: propertyPhotosIcon,
+        size: "15.7 MB",
+        date: "Updated 1 week ago",
+        downloadUrl: "#",
+    },
+    {
+        id: 5,
+        title: "Insurance Documents",
+        icon: insuranceDocumentsIcon,
+        size: "1.1 MB",
+        date: "Updated 2 months ago",
+        downloadUrl: "#",
+    },
+];

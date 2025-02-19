@@ -139,11 +139,7 @@ const menuItems = [
                 />
             </svg>
         ),
-        submenu: [
-            { title: "All Documents", path: "/documents" },
-            { title: "Shared", path: "/documents/shared" },
-            { title: "Archived", path: "/documents/archived" },
-        ],
+        path: "/dashboard/marketing",
     },
     {
         title: "Bench Marking",
