@@ -12,6 +12,7 @@ import RequestDemo from "./pages/RequestDemo/RequestDemo";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import ThankYou from "./pages/ThankYou/ThankYou";
+import Valuation from "./pages/Valuation/Valuation";
 import Welcome from "./pages/Welcome/Welcome";
 
 const router = createBrowserRouter([
@@ -45,6 +46,14 @@ const router = createBrowserRouter([
         children: [
             { path: "/properties", element: <NoPropertiesFound /> },
             { path: "/add-new-properties", element: <AddNewProperty /> },
+        ],
+    },
+    {
+        path: "/dashboard/",
+        element: <DashboardLayout />,
+        children: [
+            { path: "valuation", element: <Valuation /> },
+            // { path: "/add-new-properties", element: <AddNewProperty /> },
         ],
     },
     {

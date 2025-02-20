@@ -28,7 +28,6 @@ const menuItems = [
     },
     {
         title: "Key Metrics",
-        // icon: keyMetrics,
         icon: (
             <svg
                 width="20"
@@ -44,9 +43,8 @@ const menuItems = [
             </svg>
         ),
         submenu: [
-            { title: "All Users", path: "/users" },
-            { title: "Add User", path: "/users/add" },
-            { title: "Roles", path: "/users/roles" },
+            { title: "Metrics", path: "/dashboard/metrics" },
+            { title: "Valuation", path: "/dashboard/valuation" },
         ],
     },
     {
@@ -369,15 +367,17 @@ export default function Sidebar() {
                                             : "max-h-0"
                                     }`}
                                 >
-                                    {item.submenu.map((subItem) => (
+                                    {item.submenu.map((subItem, index) => (
                                         <li
-                                            key={subItem.title}
+                                            key={index}
                                             className="pl-6 flex items-center p-2 transition-all duration-300 text-dark-4 text-sm cursor-pointer hover:bg-[#001E2C] hover:text-main-2"
                                         >
-                                            <span className="w-5" />
-                                            <span className="pl-3">
-                                                {subItem.title}
-                                            </span>
+                                            <Link to={subItem.path}>
+                                                <span className="w-5" />
+                                                <span className="pl-3">
+                                                    {subItem.title}
+                                                </span>
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
