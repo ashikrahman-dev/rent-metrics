@@ -3,6 +3,7 @@ import NotFound from "./components/NotFound/NotFound";
 import DashboardLayout from "./layouts/DashboardLayout/DashboardLayout";
 import LoadPropertyLayout from "./layouts/LoadPropertyLayout/LoadPropertyLayout";
 import AddNewProperty from "./pages/AddNewProperty/AddNewProperty";
+import AIAssetManager from "./pages/AIAssetManager/AIAssetManager";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import Marketing from "./pages/Marketing/Marketing";
 import NoPropertiesFound from "./pages/NoPropertiesFound/NoPropertiesFound";
@@ -53,6 +54,14 @@ const router = createBrowserRouter([
         element: <DashboardLayout />,
         children: [
             { path: "valuation", element: <Valuation /> },
+            // { path: "/add-new-properties", element: <AddNewProperty /> },
+        ],
+    },
+    {
+        path: "/dashboard/",
+        element: <DashboardLayout />,
+        children: [
+            { path: "ai-asset-manager", element: <AIAssetManager /> },
             // { path: "/add-new-properties", element: <AddNewProperty /> },
         ],
     },

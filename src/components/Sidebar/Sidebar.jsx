@@ -70,7 +70,7 @@ const menuItems = [
                 </defs>
             </svg>
         ),
-        path: "/messages",
+        path: "/dashboard/ai-asset-manager",
     },
     {
         title: "Financial",
