@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "../ui/button";
 import { Label } from "../../components/ui/label";
 
 import { Textarea } from "../../components/ui/textarea";
@@ -82,16 +81,15 @@ export default function AddNote() {
                         value={note}
                         onChange={(e) => setNote(e.target.value)}
                         className="bg-muted w-full outline-none bg-dark-7 h-[100px] p-3 placeholder:text-dark-2 text-dark-2 font-medium leading-[1.3] rounded-lg"
-                        
                     />
                 </div>
 
-                <Button
+                <button
                     type="submit"
                     className="w-full text-base px-[18px] py-[9px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main cursor-pointer inline-flex items-center gap-2 group col-auto"
                 >
                     Add Note
-                </Button>
+                </button>
             </form>
         </div>
     );
