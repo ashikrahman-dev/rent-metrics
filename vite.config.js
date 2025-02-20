@@ -2,13 +2,34 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
+import { nodePolyfills } from "vite-plugin-node-polyfills";
 
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [tailwindcss(), react()],
+    plugins: [
+        tailwindcss(),
+        react({
+            babel: {
+                parserOpts: {
+                    plugins: ["decorators-legacy", "classProperties"],
+                },
+            },
+        }),
+        nodePolyfills(),
+    ],
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src"),
+        },
+    },
+    build: {
+        rollupOptions: {
+            onwarn(warning, warn) {
+                if (warning.code === "MODULE_LEVEL_DIRECTIVE") {
+                    return;
+                }
+                warn(warning);
+            },
         },
     },
 });

@@ -86,7 +86,7 @@ export default function AddNote() {
 
                 <button
                     type="submit"
-                    className="w-full text-base px-[18px] py-[9px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main cursor-pointer inline-flex items-center gap-2 group col-auto"
+                    className="w-full text-base px-[18px] py-[9px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main cursor-pointer inline-flex items-center gap-2 group col-auto text-center justify-center"
                 >
                     Add Note
                 </button>
