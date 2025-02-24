@@ -1,5 +1,3 @@
-import SelectOption from "../SelectOption/SelectOption";
-
 const operations = [
     { name: "Operations" },
     { name: "Arlene Mccoy" },
@@ -29,7 +27,7 @@ export default function AddNote() {
                 Add Note
             </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            {/* <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                     <div className="col-span-1">
                         <p className="text-base text-dark-1 font-bold leading-[1.4] mb-3">
@@ -61,7 +59,7 @@ export default function AddNote() {
                 >
                     Add Note
                 </button>
-            </form>
+            </form> */}
         </div>
     );
 }
