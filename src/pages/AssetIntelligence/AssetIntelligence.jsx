@@ -12,7 +12,7 @@ export default function AssetIntelligence() {
             {/* Heading & Button */}
             <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
                 <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
-                    A.I. Asset Manager
+                    Asset Intelligence
                 </h2>
                 <div className="flex gap-2.5">
                     {/* Export Button */}
