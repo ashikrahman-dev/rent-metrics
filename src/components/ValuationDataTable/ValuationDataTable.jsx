@@ -119,7 +119,7 @@ export default function ValuationDataTable() {
                                 onClick={handleSort}
                                 className="cursor-pointer flex items-center gap-1 font-bold text-dark-2 pt-7.5 pl-6"
                             >
-                                ASSET{" "}
+                                ASSET
                                 {sortOrder === "asc" ? (
                                     <svg
                                         width="20"

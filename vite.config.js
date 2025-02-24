@@ -23,6 +23,7 @@ export default defineConfig({
         },
     },
     build: {
+        chunkSizeWarningLimit: 1000, // in kB
         rollupOptions: {
             onwarn(warning, warn) {
                 if (warning.code === "MODULE_LEVEL_DIRECTIVE") {
