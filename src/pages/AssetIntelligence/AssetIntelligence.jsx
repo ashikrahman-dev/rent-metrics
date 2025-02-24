@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 
 // Icons import
+// import AddNote from "../../components/AddNote/AddNote";
 import AddNote from "../../components/AddNote/AddNote";
 import AIRecommendations from "../../components/AIRecommendations/AIRecommendations";
-import ApplicationCohortConversionMonthChart from "../../components/Charts/ApplicationCohortConversionMonthChart/ApplicationCohortConversionMonthChart";
+import ApplicationConversionMonthChart from "../../components/Charts/ApplicationConversionMonthChart/ApplicationConversionMonthChart";
 
-export default function AIAssetManager() {
+export default function AssetIntelligence() {
     return (
         <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
             {/* Heading & Button */}
@@ -57,7 +58,7 @@ export default function AIAssetManager() {
                 </div>
             </div>
             <div className="flex flex-col gap-6">
-                <ApplicationCohortConversionMonthChart />
+                <ApplicationConversionMonthChart />
                 <div className="grid grid-cols-12 gap-6">
                     <AIRecommendations />
 

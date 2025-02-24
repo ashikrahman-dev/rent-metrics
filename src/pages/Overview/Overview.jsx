@@ -1,6 +1,6 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { Link } from "react-router-dom";
-import MonthlyPerformanceChart from "../../components/Charts/MonthlyPropertyChart/MonthlyPropertyChart";
+import MonthlyPropertyChart from "../../components/Charts/MonthlyPropertyChart/MonthlyPropertyChart";
 import PropertyDetails from "../../components/PropertyDetails/PropertyDetails";
 import PropertyDocuments from "../../components/PropertyDocuments/PropertyDocuments";
 import RecentActivity from "../../components/RecentActivity/RecentActivity";
@@ -57,60 +57,51 @@ export default function Overview() {
                     </Link>
                 </div>
             </div>
-            <Tabs defaultValue="overview" className="">
-                <TabsList className="bg-white p-[5px] rounded-md inline-flex mb-8">
-                    <TabsTrigger
-                        value="overview"
-                        className="text-sm py-[13px] px-7 text-dark-1 font-bold leading-[1.4] cursor-pointer transition-colors duration-200 rounded-md"
-                    >
-                        Overview
-                    </TabsTrigger>
-                    <TabsTrigger
-                        value="valuation"
-                        className="text-sm py-[13px] px-7 text-dark-1 font-bold leading-[1.4] cursor-pointer transition-colors duration-200 rounded-md"
-                    >
-                        Valuation
-                    </TabsTrigger>
-                    <TabsTrigger
-                        value="returns"
-                        className="text-sm py-[13px] px-7 text-dark-1 font-bold leading-[1.4] cursor-pointer transition-colors duration-200 rounded-md"
-                    >
-                        Returns
-                    </TabsTrigger>
-                    <TabsTrigger
-                        value="documents"
-                        className="text-sm py-[13px] px-7 text-dark-1 font-bold leading-[1.4] cursor-pointer transition-colors duration-200 rounded-md"
-                    >
-                        Documents
-                    </TabsTrigger>
-                </TabsList>
-                <TabsContent value="overview">
-                    <div className="grid grid-cols-12 gap-6">
-                        <div className="col-span-7">
-                            <div className="grid grid-cols-3 justify-between gap-6 mb-6">
-                                <StatusCard />
-                                <StatusCard />
-                                <StatusCard />
+            <div className="">
+                <TabGroup>
+                    <TabList className="bg-white p-[5px] rounded-md inline-flex mb-8 gap-1">
+                        <Tab className="text-sm py-[13px] px-7 text-dark-1 font-bold leading-[1.4] cursor-pointer transition-colors duration-200 rounded-md outline-none focus-visible:outline-none focus-visible:border-none hover:bg-main hover:text-white">
+                            Overview
+                        </Tab>
+                        <Tab className="text-sm py-[13px] px-7 text-dark-1 font-bold leading-[1.4] cursor-pointer transition-colors duration-200 rounded-md outline-none focus-visible:outline-none focus-visible:border-none hover:bg-main hover:text-white">
+                            Valuation
+                        </Tab>
+                        <Tab className="text-sm py-[13px] px-7 text-dark-1 font-bold leading-[1.4] cursor-pointer transition-colors duration-200 rounded-md outline-none focus-visible:outline-none focus-visible:border-none hover:bg-main hover:text-white">
+                            Returns
+                        </Tab>
+                        <Tab className="text-sm py-[13px] px-7 text-dark-1 font-bold leading-[1.4] cursor-pointer transition-colors duration-200 rounded-md outline-none focus-visible:outline-none focus-visible:border-none hover:bg-main hover:text-white">
+                            Documents
+                        </Tab>
+                    </TabList>
+                    <TabPanels>
+                        <TabPanel>
+                            <div className="grid grid-cols-12 gap-6">
+                                <div className="col-span-7">
+                                    <div className="grid grid-cols-3 justify-between gap-6 mb-6">
+                                        <StatusCard />
+                                        <StatusCard />
+                                        <StatusCard />
+                                    </div>
+                                    <MonthlyPropertyChart />
+                                </div>
+                                <div className="col-span-5 flex flex-col gap-6">
+                                    <PropertyDetails />
+                                    <RecentActivity />
+                                </div>
                             </div>
-
-                            <MonthlyPerformanceChart />
-                        </div>
-                        <div className="col-span-5 flex flex-col gap-6">
-                            <PropertyDetails />
-                            <RecentActivity />
-                        </div>
-                    </div>
-                </TabsContent>
-                <TabsContent value="valuation">
-                    <Valuation />
-                </TabsContent>
-                <TabsContent value="returns">
-                    <Returns />
-                </TabsContent>
-                <TabsContent value="documents">
-                    <PropertyDocuments />
-                </TabsContent>
-            </Tabs>
+                        </TabPanel>
+                        <TabPanel>
+                            <Valuation />
+                        </TabPanel>
+                        <TabPanel>
+                            <Returns />
+                        </TabPanel>
+                        <TabPanel>
+                            <PropertyDocuments />
+                        </TabPanel>
+                    </TabPanels>
+                </TabGroup>
+            </div>
         </section>
     );
 }

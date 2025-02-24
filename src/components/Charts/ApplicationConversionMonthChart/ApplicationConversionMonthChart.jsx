@@ -95,7 +95,7 @@ const data = [
     },
 ];
 
-export default function ApplicationCohortConversionMonthChart() {
+export default function ApplicationConversionMonthChart() {
     return (
         <div className="bg-white p-6 rounded-lg col-span-1">
             <h2 className="text-lg font-bold text-dark-1 leading-[1.4] mb-6">

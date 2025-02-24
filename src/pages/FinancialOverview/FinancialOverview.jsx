@@ -1,18 +1,24 @@
 import { Link } from "react-router-dom";
+import StatusCard from "../../components/StatusCard/StatusCard";
 
-// Icons import
-import ValuationDataTable from "../../components/ValuationDataTable/ValuationDataTable";
+import expenseTracking from "../../assets/images/expense-tracking-icon.svg";
+import NoiTracker from "../../assets/images/noi-tracker-icon.svg";
+import revenueOverview from "../../assets/images/revenue-overview-icon.svg";
+import BudgetProjectionsProgressBar from "../../components/BudgetProjectionsProgressBar/BudgetProjectionsProgressBar";
+import CurrentMonthProgressBar from "../../components/CurrentMonthProgressBar/CurrentMonthProgressBar";
+import StatusCardKPI from "../../components/StatusCardKPI/StatusCardKPI";
+import InsightsRecommendations from "../../components/InsightsRecommendations/InsightsRecommendations";
+import QuickActions from "../../components/QuickActions/QuickActions";
 
-export default function Valuation() {
+export default function FinancialOverview() {
     return (
         <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
             {/* Heading & Button */}
             <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
                 <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
-                    Valuation
+                    Overview
                 </h2>
                 <div className="flex gap-2.5">
-                    {/* Export Button */}
                     <Link
                         to="/add-new-properties"
                         className="text-base px-[18px] py-[9px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main cursor-pointer inline-flex items-center gap-2 group col-auto"
@@ -32,7 +38,6 @@ export default function Valuation() {
                         </svg>
                         Export
                     </Link>
-                    {/* Share Button */}
                     <Link
                         to="/add-new-properties"
                         className="text-base px-[17px] py-2 border border-dark-2 bg-transparent rounded-lg text-dark-2 font-black transition-colors duration-200 hover:bg-dark-2 hover:text-white cursor-pointer inline-flex items-center gap-2 group col-auto"
@@ -54,8 +59,46 @@ export default function Valuation() {
                     </Link>
                 </div>
             </div>
-            <div className="">
-                <ValuationDataTable />
+
+            <div className="grid gap-6">
+                <div className="col-span-full">
+                    <div className="grid grid-cols-5 justify-between gap-6 mb-6">
+                        <StatusCard
+                            title="Revenue Overview"
+                            icon={revenueOverview}
+                            number="$85,420"
+                            status="Last month"
+                            statusCode="12.5%"
+                            statusColor="#73EAB2"
+                        />
+                        <StatusCard
+                            title="Expense Tracking"
+                            icon={expenseTracking}
+                            number="$42,150"
+                            status="Last month"
+                            statusCode="3.2%"
+                            statusColor="#68C8F8"
+                        />
+                        <StatusCard
+                            title="NOI Tracker"
+                            icon={NoiTracker}
+                            number="500"
+                            status="Convert"
+                            statusCode="12%"
+                            statusColor="#FFC362"
+                        />
+                        <StatusCardKPI />
+                        <StatusCardKPI />
+                    </div>
+                </div>
+                <div className="grid grid-cols-2 gap-6">
+                    <CurrentMonthProgressBar />
+                    <BudgetProjectionsProgressBar />
+                </div>
+                <div className="grid grid-cols-12 gap-6">
+                    <InsightsRecommendations />
+                    <QuickActions />
+                </div>
             </div>
         </section>
     );
