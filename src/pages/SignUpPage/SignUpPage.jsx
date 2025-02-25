@@ -3,7 +3,7 @@ import facebookLogin from "../../assets/images/facebook-login.svg";
 import googleLogin from "../../assets/images/google-login.svg";
 import logo from "../../assets/images/logo.svg";
 
-export default function SignUp() {
+export default function SignUpPage() {
     return (
         <section className="grid place-items-center h-full min-h-svh login-signup-bg ">
             <div className="container mx-auto flex justify-center items-center my-16">
