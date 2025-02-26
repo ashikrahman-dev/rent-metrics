@@ -22,6 +22,7 @@ import SignInComponent from "./components/SignInComponent/SignInComponent";
 import SignUpComponent from "./components/SignUpComponent/SignUpComponent";
 import ThankYou from "./pages/ThankYou/ThankYou";
 import Welcome from "./pages/Welcome/Welcome";
+import Valuation from "./pages/Valuation/Valuation";
 
 // **Protected Route Component**
 const ProtectedRoute = ({ children }) => {
@@ -126,7 +127,7 @@ const router = createBrowserRouter([
             { path: "property-summary", element: <PropertySummary /> },
             { path: "property-summary/overview", element: <Overview /> },
             { path: "marketing", element: <Marketing /> },
-            { path: "valuation", element: <Marketing /> },
+            { path: "valuation", element: <Valuation /> },
             { path: "asset-intelligence", element: <AssetIntelligence /> },
             { path: "financial/overview", element: <FinancialOverview /> },
             // { path: "/add-new-properties", element: <AddNewProperty /> },
