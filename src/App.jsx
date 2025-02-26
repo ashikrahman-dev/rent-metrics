@@ -20,9 +20,10 @@ import RequestDemo from "./pages/RequestDemo/RequestDemo";
 // import SignUp from "./pages/SignUp/SignUp";
 import SignInComponent from "./components/SignInComponent/SignInComponent";
 import SignUpComponent from "./components/SignUpComponent/SignUpComponent";
+import Occupancy from "./pages/Occupancy/Occupancy";
 import ThankYou from "./pages/ThankYou/ThankYou";
-import Welcome from "./pages/Welcome/Welcome";
 import Valuation from "./pages/Valuation/Valuation";
+import Welcome from "./pages/Welcome/Welcome";
 
 // **Protected Route Component**
 const ProtectedRoute = ({ children }) => {
@@ -130,6 +131,7 @@ const router = createBrowserRouter([
             { path: "valuation", element: <Valuation /> },
             { path: "asset-intelligence", element: <AssetIntelligence /> },
             { path: "financial/overview", element: <FinancialOverview /> },
+            { path: "operations/occupancy", element: <Occupancy /> },
             // { path: "/add-new-properties", element: <AddNewProperty /> },
         ],
     },

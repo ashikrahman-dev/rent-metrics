@@ -1,13 +1,67 @@
 import { Link } from "react-router-dom";
-import DataTable from "../../components/DataTable/DataTable";
+import OccupancyDataTableCard from "../../components/OccupancyDataTableCard/OccupancyDataTableCard";
+import OccupancySmallDataTable from "../../components/OccupancySmallDataTable/OccupancySmallDataTable";
+import OccupancyStatusCard from "../../components/OccupancyStatusCard/OccupancyStatusCard";
 
-export default function Valuation() {
+export default function Occupancy() {
+    // Data from the provided table with unique fixed values for each asset
+    const initialAssets = ["Budget", "+30days", "+60days"];
+
+    // Fixed data for each asset and interest rate combination
+    const occupancyData = [
+        {
+            label: "3 month Prior",
+            date: "Jun-24",
+            values: ["94.6%", "84.1%", "85.0%"],
+        },
+        {
+            label: "1 month Prior",
+            date: "Aug-24",
+            values: ["96.4%", "94.1%", "92.7%"],
+        },
+        {
+            label: "Previous Week",
+            date: "09/05/24",
+            values: ["97.1%", "93.2%", "91.8%"],
+        },
+        {
+            label: "Current Week",
+            date: "09/12/24",
+            values: ["97.1%", "93.6%", "92.3%"],
+        },
+    ];
+
+    const economicInitialAssets = ["Budget", "+30days"];
+    // Fixed data for each asset and interest rate combination
+    const economicData = [
+        {
+            label: "3 month Prior",
+            date: "Jun-24",
+            values: ["94.6%", "84.1%"],
+        },
+        {
+            label: "1 month Prior",
+            date: "Aug-24",
+            values: ["96.4%", "94.1%"],
+        },
+        {
+            label: "Previous Week",
+            date: "09/05/24",
+            values: ["97.1%", "93.2%"],
+        },
+        {
+            label: "Current Week",
+            date: "09/12/24",
+            values: ["97.1%", "93.6%"],
+        },
+    ];
+
     return (
         <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
             {/* Heading & Button */}
             <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
                 <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
-                    Valuation
+                    Occupancy
                 </h2>
 
                 <div className="flex gap-2.5">
@@ -53,9 +107,44 @@ export default function Valuation() {
                     </Link>
                 </div>
             </div>
-
-            <div>
-                <DataTable />
+            <div className="flex flex-col gap-6">
+                <div className="grid grid-cols-12 gap-6">
+                    <OccupancyStatusCard />
+                    <OccupancyStatusCard />
+                </div>
+                <div className="">
+                    <OccupancyDataTableCard />
+                </div>
+                <div className="grid grid-cols-2 gap-6">
+                    <div className="col-span-1">
+                        <OccupancySmallDataTable
+                            title="Physical"
+                            initialAssets={initialAssets}
+                            occupancyTableData={occupancyData}
+                        />
+                    </div>
+                    <div className="col-span-1">
+                        <OccupancySmallDataTable
+                            title="Economic"
+                            initialAssets={economicInitialAssets}
+                            occupancyTableData={economicData}
+                        />
+                    </div>
+                    <div className="col-span-1">
+                        <OccupancySmallDataTable
+                            title="Resident Activity"
+                            initialAssets={initialAssets}
+                            occupancyTableData={occupancyData}
+                        />
+                    </div>
+                    <div className="col-span-1">
+                        <OccupancySmallDataTable
+                            title="Delinquency(Current Resident)"
+                            initialAssets={initialAssets}
+                            occupancyTableData={occupancyData}
+                        />
+                    </div>
+                </div>
             </div>
         </section>
     );
