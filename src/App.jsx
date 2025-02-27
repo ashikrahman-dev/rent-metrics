@@ -18,6 +18,7 @@ import PropertySummary from "./pages/PropertySummary/PropertySummary";
 import RequestDemo from "./pages/RequestDemo/RequestDemo";
 // import SignIn from "./pages/SignIn/SignIn";
 // import SignUp from "./pages/SignUp/SignUp";
+import LeaseTradeOut from "./pages/LeaseTradeOut/LeaseTradeOut";
 import Occupancy from "./pages/Occupancy/Occupancy";
 import SignInPage from "./pages/SignInPage/SignInPage";
 import SignUpPage from "./pages/SignUpPage/SignUpPage";
@@ -147,6 +148,7 @@ const router = createBrowserRouter([
             { path: "asset-intelligence", element: <AssetIntelligence /> },
             { path: "financial/overview", element: <FinancialOverview /> },
             { path: "operations/occupancy", element: <Occupancy /> },
+            { path: "operations/lease-trade-out", element: <LeaseTradeOut /> },
             // { path: "/add-new-properties", element: <AddNewProperty /> },
         ],
     },
