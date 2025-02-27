@@ -42,7 +42,7 @@ export default function SignInPage() {
                 // Set the active session
                 await setActive({ session: signInAttempt.createdSessionId });
                 // Redirect to dashboard
-                navigate("/dashboard");
+                navigate("/dashboard/property-summary/");
             } else if (signInAttempt.status === "needs_second_factor") {
                 // Handle 2FA if needed
                 // This would require additional implementation
@@ -98,7 +98,7 @@ export default function SignInPage() {
             await setActive({ session: completeSignIn.createdSessionId });
 
             // Redirect to dashboard
-            navigate("/dashboard");
+            navigate("/dashboard/property-summary/");
         } catch (err) {
             console.error("Error during verification:", err);
             setError(err.message || "Error verifying email. Please try again.");
@@ -116,7 +116,7 @@ export default function SignInPage() {
             await signIn.authenticateWithRedirect({
                 strategy,
                 redirectUrl: "/sso-callback",
-                redirectUrlComplete: "/dashboard",
+                redirectUrlComplete: "/dashboard/property-summary/",
             });
         } catch (err) {
             console.error(`Error during ${strategy} sign in:`, err);
