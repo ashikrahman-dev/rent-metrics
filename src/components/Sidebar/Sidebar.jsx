@@ -123,7 +123,7 @@ const menuItems = [
         ),
         submenu: [
             { title: "Occupancy ", path: "/dashboard/operations/occupancy" },
-            { title: "Average Effective Rent", path: "" },
+            { title: "Average Effective Rent", path: "/dashboard/operations/average-effective-rent" },
             { title: "Lease-Trade Out", path: "/dashboard/operations/lease-trade-out" },
             { title: "Lease-Up Tracker", path: "" },
             { title: "Delinquency", path: "" },

@@ -58,7 +58,7 @@ export default function AssetIntelligence() {
                 </div>
             </div>
             <div className="flex flex-col gap-6">
-                <ApplicationConversionMonthChart />
+                <ApplicationConversionMonthChart title="Application Cohort Conversion by Month" />
                 <div className="grid grid-cols-12 gap-6">
                     <AIRecommendations />
 
