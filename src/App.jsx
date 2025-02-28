@@ -24,9 +24,11 @@ import LeaseTradeOut from "./pages/LeaseTradeOut/LeaseTradeOut";
 import Occupancy from "./pages/Occupancy/Occupancy";
 import SignInPage from "./pages/SignInPage/SignInPage";
 import SignUpPage from "./pages/SignUpPage/SignUpPage";
+import Statement from "./pages/Statement/Statement";
 import ThankYou from "./pages/ThankYou/ThankYou";
 import Valuation from "./pages/Valuation/Valuation";
 import Welcome from "./pages/Welcome/Welcome";
+import BudgetVariance from "./pages/BudgetVariance/BudgetVariance";
 
 // **Protected Route Component**
 const ProtectedRoute = ({ children }) => {
@@ -149,6 +151,8 @@ const router = createBrowserRouter([
             { path: "valuation", element: <Valuation /> },
             { path: "asset-intelligence", element: <AssetIntelligence /> },
             { path: "financial/overview", element: <FinancialOverview /> },
+            { path: "financial/statement", element: <Statement /> },
+            { path: "financial/budget-variance", element: <BudgetVariance /> },
             { path: "operations/occupancy", element: <Occupancy /> },
             { path: "operations/lease-trade-out", element: <LeaseTradeOut /> },
             {
