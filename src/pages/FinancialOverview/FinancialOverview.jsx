@@ -4,11 +4,12 @@ import StatusCard from "../../components/StatusCard/StatusCard";
 import expenseTracking from "../../assets/images/expense-tracking-icon.svg";
 import NoiTracker from "../../assets/images/noi-tracker-icon.svg";
 import revenueOverview from "../../assets/images/revenue-overview-icon.svg";
-import BudgetProjectionsProgressBar from "../../components/BudgetProjectionsProgressBar/BudgetProjectionsProgressBar";
-import CurrentMonthProgressBar from "../../components/CurrentMonthProgressBar/CurrentMonthProgressBar";
-import StatusCardKPI from "../../components/StatusCardKPI/StatusCardKPI";
+import BudgetProjectionsChart from "../../components/Charts/BudgetProjectionsChart/BudgetProjectionsChart";
+import CurrentMonthActualChart from "../../components/Charts/CurrentMonthActualChart/CurrentMonthActualChart";
+import DailyFinancialTrackerChart from "../../components/Charts/DailyFinancialTrackerChart/DailyFinancialTrackerChart";
 import InsightsRecommendations from "../../components/InsightsRecommendations/InsightsRecommendations";
 import QuickActions from "../../components/QuickActions/QuickActions";
+import StatusCardKPI from "../../components/StatusCardKPI/StatusCardKPI";
 
 export default function FinancialOverview() {
     return (
@@ -92,8 +93,11 @@ export default function FinancialOverview() {
                     </div>
                 </div>
                 <div className="grid grid-cols-2 gap-6">
-                    <CurrentMonthProgressBar />
-                    <BudgetProjectionsProgressBar />
+                    <CurrentMonthActualChart />
+                    <BudgetProjectionsChart />
+                </div>
+                <div className="grid grid-cols-1 gap-6">
+                    <DailyFinancialTrackerChart />
                 </div>
                 <div className="grid grid-cols-12 gap-6">
                     <InsightsRecommendations />
