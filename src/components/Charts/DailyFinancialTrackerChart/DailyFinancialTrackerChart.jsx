@@ -26,7 +26,7 @@ export default function DailyFinancialTrackerChart() {
     return (
         <div className="bg-white p-6 rounded-lg col-span-1">
             <h2 className="text-lg font-bold text-dark-1 leading-[1.4] mb-10">
-                Current Month Actuals
+                Daily Financial Tracker
             </h2>
 
             <div className="w-full h-[300px] bg-white">
