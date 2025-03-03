@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"; // Ensure Link is imported
-import OverviewTab from "../../components/OverviewTab/OverviewTab";
+import PropertyDocuments from "../../components/PropertyDocuments/PropertyDocuments";
 import Returns from "../../components/Returns/Returns";
+import Vacant from "../../components/Vacant/Vacant";
 import Valuation from "../../components/Valuation/Valuation";
 
 const Tabs = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     const tabs = [
-        { title: "Overview", content: <OverviewTab /> },
-        { title: "Valuation", content: <Valuation /> },
-        { title: "Returns", content: <Returns /> },
+        { title: "Vacant (5)", content: <Vacant /> },
+        { title: "Occupied NTV (22)", content: <Valuation /> },
+        { title: "Occupied Exp. in 30 Days (13)", content: <Returns /> },
+        { title: "Admin/Down (0)", content: <PropertyDocuments /> },
     ];
 
     return (
@@ -38,13 +40,13 @@ const Tabs = () => {
     );
 };
 
-export default function Overview() {
+export default function UnitRenovation() {
     return (
         <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
             {/* Heading & Button */}
             <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
                 <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
-                    Property Summary
+                    Unit Renovation
                 </h2>
                 <div className="flex gap-2.5">
                     <Link

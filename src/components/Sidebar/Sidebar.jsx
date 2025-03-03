@@ -92,7 +92,10 @@ const menuItems = [
         submenu: [
             { title: "Overview ", path: "/dashboard/financial/overview" },
             { title: "Statement", path: "/dashboard/financial/statement" },
-            { title: "Budget Variance", path: "/dashboard/financial/budget-variance" },
+            {
+                title: "Budget Variance",
+                path: "/dashboard/financial/budget-variance",
+            },
         ],
     },
     {
@@ -196,7 +199,7 @@ const menuItems = [
     },
     {
         title: "Unit Renovation",
-        path: "/dashboard",
+        path: "/dashboard/unit-renovation/analytics",
         icon: (
             <svg
                 width="20"
@@ -230,6 +233,24 @@ const menuItems = [
                 </defs>
             </svg>
         ),
+        submenu: [
+            {
+                title: "Analytics ",
+                path: "/dashboard/unit-renovation/analytics",
+            },
+            {
+                title: "Project Date",
+                path: "/dashboard/unit-renovation/project-date",
+            },
+            {
+                title: "Update Due",
+                path: "/dashboard/unit-renovation/update-due",
+            },
+            {
+                title: "Reno Opportunities",
+                path: "/dashboard/unit-renovation/reno-opportunities",
+            },
+        ],
     },
     {
         title: "Capital Tracker",
