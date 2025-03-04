@@ -18,13 +18,13 @@ import PropertySummary from "./pages/PropertySummary/PropertySummary";
 import RequestDemo from "./pages/RequestDemo/RequestDemo";
 // import SignIn from "./pages/SignIn/SignIn";
 // import SignUp from "./pages/SignUp/SignUp";
+import SignInComponent from "./components/SignInComponent/SignInComponent";
+import SignUpComponent from "./components/SignUpComponent/SignUpComponent";
 import LoadPropertyLayout from "./layouts/LoadPropertyLayout/LoadPropertyLayout";
 import AverageEffectiveRent from "./pages/AverageEffectiveRent/AverageEffectiveRent";
 import BudgetVariance from "./pages/BudgetVariance/BudgetVariance";
 import LeaseTradeOut from "./pages/LeaseTradeOut/LeaseTradeOut";
 import Occupancy from "./pages/Occupancy/Occupancy";
-import SignInPage from "./pages/SignInPage/SignInPage";
-import SignUpPage from "./pages/SignUpPage/SignUpPage";
 import Statement from "./pages/Statement/Statement";
 import ThankYou from "./pages/ThankYou/ThankYou";
 import UnitRenovation from "./pages/UnitRenovation/UnitRenovation";
@@ -67,7 +67,8 @@ const router = createBrowserRouter([
         path: "/sign-in",
         element: (
             <SignedOut>
-                <SignInPage />
+                {/* <SignInPage /> */}
+                <SignInComponent />
             </SignedOut>
         ),
     },
@@ -75,8 +76,8 @@ const router = createBrowserRouter([
         path: "/sign-up",
         element: (
             <SignedOut>
-                {/* <SignUpComponent /> */}
-                <SignUpPage />
+                {/* <SignUpPage /> */}
+                <SignUpComponent />
             </SignedOut>
         ),
     },
