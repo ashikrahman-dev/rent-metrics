@@ -21,6 +21,7 @@ import RequestDemo from "./pages/RequestDemo/RequestDemo";
 import SignInComponent from "./components/SignInComponent/SignInComponent";
 import SignUpComponent from "./components/SignUpComponent/SignUpComponent";
 import LoadPropertyLayout from "./layouts/LoadPropertyLayout/LoadPropertyLayout";
+import Analytics from "./pages/Analytics/Analytics";
 import AverageEffectiveRent from "./pages/AverageEffectiveRent/AverageEffectiveRent";
 import BudgetVariance from "./pages/BudgetVariance/BudgetVariance";
 import LeaseTradeOut from "./pages/LeaseTradeOut/LeaseTradeOut";
@@ -28,6 +29,7 @@ import Occupancy from "./pages/Occupancy/Occupancy";
 import Statement from "./pages/Statement/Statement";
 import ThankYou from "./pages/ThankYou/ThankYou";
 import UnitRenovation from "./pages/UnitRenovation/UnitRenovation";
+import UpdateDue from "./pages/UpdateDue/UpdateDue";
 import Valuation from "./pages/Valuation/Valuation";
 import Welcome from "./pages/Welcome/Welcome";
 
@@ -67,7 +69,6 @@ const router = createBrowserRouter([
         path: "/sign-in",
         element: (
             <SignedOut>
-                {/* <SignInPage /> */}
                 <SignInComponent />
             </SignedOut>
         ),
@@ -76,7 +77,6 @@ const router = createBrowserRouter([
         path: "/sign-up",
         element: (
             <SignedOut>
-                {/* <SignUpPage /> */}
                 <SignUpComponent />
             </SignedOut>
         ),
@@ -162,12 +162,12 @@ const router = createBrowserRouter([
                 path: "operations/average-effective-rent",
                 element: <AverageEffectiveRent />,
             },
-            { path: "unit-renovation/analytics", element: <UnitRenovation /> },
+            { path: "unit-renovation/analytics", element: <Analytics /> },
             {
                 path: "unit-renovation/project-date",
                 element: <UnitRenovation />,
             },
-            { path: "unit-renovation/update-due", element: <UnitRenovation /> },
+            { path: "unit-renovation/update-due", element: <UpdateDue /> },
             {
                 path: "unit-renovation/reno-opportunities",
                 element: <UnitRenovation />,
