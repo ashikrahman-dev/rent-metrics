@@ -2,8 +2,8 @@ import avgDaysReno from "../../assets/images/avg-days-reno-icon.svg";
 import avgDaysVacantNonReno from "../../assets/images/avg-days-vacant-non-reno-icon.svg";
 import avgDaysVacantReno from "../../assets/images/avg-days-vacant-reno-icon.svg";
 import expectedAvgDaysVacant from "../../assets/images/expected-avg-days-vacant-icon.svg";
-import LeaseUnitsTypeChart from "../Charts/LeaseUnitsTypeChart/LeaseUnitsTypeChart";
-import RenovationStatusChart from "../Charts/RenovationStatusChart/RenovationStatusChart";
+import AvgDaysVacantChart from "../Charts/AvgDaysVacantChart/AvgDaysVacantChart";
+import AvgDaysVacantRenovationTypeChart from "../Charts/AvgDaysVacantRenovationTypeChart/AvgDaysVacantRenovationTypeChart";
 import StatusCard from "../StatusCard/StatusCard";
 
 export default function AvgDaysVacant() {
@@ -36,8 +36,8 @@ export default function AvgDaysVacant() {
                         number="26"
                     />
 
-                    <RenovationStatusChart />
-                    <LeaseUnitsTypeChart />
+                    <AvgDaysVacantChart />
+                    <AvgDaysVacantRenovationTypeChart />
                 </div>
             </div>
         </div>
