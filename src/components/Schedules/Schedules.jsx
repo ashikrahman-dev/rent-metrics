@@ -5,6 +5,8 @@ import projectPlan from "../../assets/images/project-plan-icon.svg";
 import totalProjectedUnits from "../../assets/images/total-projected-units-icon.svg";
 import totalUnits from "../../assets/images/total-units.svg";
 import unitsLeased from "../../assets/images/units-leased-icon.svg";
+import LeaseUnitsTypeChart from "../Charts/LeaseUnitsTypeChart/LeaseUnitsTypeChart";
+import RenovationStatusChart from "../Charts/RenovationStatusChart/RenovationStatusChart";
 import StatusCard from "../StatusCard/StatusCard";
 
 export default function Schedules() {
@@ -77,6 +79,9 @@ export default function Schedules() {
                         statusCode="88.8%"
                         statusColor="#FFC362"
                     />
+
+                    <RenovationStatusChart />
+                    <LeaseUnitsTypeChart />
                 </div>
             </div>
         </div>
