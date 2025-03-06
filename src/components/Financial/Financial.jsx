@@ -26,7 +26,7 @@ export default function Financial() {
                     Financials
                 </h2>
                 <div className="flex items-center gap-3">
-                    <div className="">
+                    <div className="flex items-center gap-4">
                         <h6 className="text-dark-2 text-sm font-bold leading-[1.4]">
                             Project Period:
                         </h6>
@@ -39,7 +39,7 @@ export default function Financial() {
                         />
                     </div>
                     <div className="">
-                        <Checkbox>Include Vacancy Cost</Checkbox>
+                        <Checkbox className="text-dark-2 font-bold text-sm">Include Vacancy Cost</Checkbox>
                     </div>
                 </div>
             </div>
