@@ -173,13 +173,13 @@ button[data-headlessui-state="selected"]:focus-visible {
 /* Scrollbar -end */
 
 /* Select box style */
-.add-note-select .rs-picker-select {
+.rs-picker-select {
     height: 52px;
     display: flex;
     align-items: center;
     border-radius: 8px;
 }
-.add-note-select .rs-picker-select .rs-picker-toggle.rs-btn.rs-btn-default {
+.rs-picker-select .rs-picker-toggle.rs-btn.rs-btn-default {
     background: var(--color-dark-7) !important;
     border-radius: 8px;
     border: none;
