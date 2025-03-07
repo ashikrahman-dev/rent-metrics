@@ -190,7 +190,7 @@ button[data-headlessui-state="selected"]:focus-visible {
     outline: none !important;
 }
 
-.add-note-select .rs-stack-item.rs-picker-toggle-indicator svg {
+.add-note-select-wrapper .rs-stack-item.rs-picker-toggle-indicator svg {
     top: 15px !important;
 }
 
