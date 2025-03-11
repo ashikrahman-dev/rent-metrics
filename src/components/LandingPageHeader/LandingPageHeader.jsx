@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
+import SignInPopUp from "../SignInPopUp/SignInPopUp";
+import SignUpPopUp from "../SignUpPopUp/SignUpPopUp";
 
 const menuItems = [
     {
@@ -49,15 +51,17 @@ export default function LandingPageHeader() {
 
                 {/* Back to Dashboard Button */}
                 <div className="col-span-4 flex gap-8 items-center justify-end">
-                    <Link to="/sign-in" className="">
-                        Log in
-                    </Link>
-                    <Link
+                    {/* <Link to="/sign-in" className="font-black text-dark-1">
+                        Sign in
+                    </Link> */}
+                    <SignInPopUp />
+                    {/* <Link
                         to="/sign-up"
                         className="text-base px-6 py-[14px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main inline-block"
                     >
                         Sign Up
-                    </Link>
+                    </Link> */}
+                    <SignUpPopUp />
                 </div>
             </div>
         </header>
