@@ -29,6 +29,11 @@ const menuItems = [
         title: "Why Rent Metrics",
         url: "/home/why-rent-metrics",
     },
+    {
+        id: 6,
+        title: "Business Intelligence",
+        url: "/home/business-intelligence",
+    },
 ];
 
 export default function LandingPageHeader() {
@@ -42,7 +47,7 @@ export default function LandingPageHeader() {
                 </Link>
 
                 {/* Menu */}
-                <div className="col-span-6 text-center flex xl:gap-10.5 lg:gap-6 gap-4 justify-center">
+                <div className="col-span-7 text-center flex xl:gap-10.5 lg:gap-6 gap-4 justify-center">
                     {menuItems.map((item) => (
                         <Link
                             key={item.id}
@@ -55,7 +60,7 @@ export default function LandingPageHeader() {
                 </div>
 
                 {/* Back to Dashboard Button */}
-                <div className="col-span-4 flex xl:gap-8 lg:gap-6 gap-4 items-center justify-end">
+                <div className="col-span-3 flex xl:gap-8 lg:gap-6 gap-4 items-center justify-end">
                     <SignInPopUp />
                     <SignUpPopUp />
                 </div>

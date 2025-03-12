@@ -25,6 +25,7 @@ import LoadPropertyLayout from "./layouts/LoadPropertyLayout/LoadPropertyLayout"
 import Analytics from "./pages/Analytics/Analytics";
 import AverageEffectiveRent from "./pages/AverageEffectiveRent/AverageEffectiveRent";
 import BudgetVariance from "./pages/BudgetVariance/BudgetVariance";
+import BusinessIntelligence from "./pages/BusinessIntelligence/BusinessIntelligence";
 import Home from "./pages/Home/Home";
 import LeaseTradeOut from "./pages/LeaseTradeOut/LeaseTradeOut";
 import Occupancy from "./pages/Occupancy/Occupancy";
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
         children: [
             { path: "", element: <Home /> },
             { path: "why-rent-metrics", element: <WhyRentMetrics /> },
+            {
+                path: "business-intelligence",
+                element: <BusinessIntelligence />,
+            },
         ],
     },
 
