@@ -33,6 +33,7 @@ import ThankYou from "./pages/ThankYou/ThankYou";
 import UnitRenovation from "./pages/UnitRenovation/UnitRenovation";
 import UpdateDue from "./pages/UpdateDue/UpdateDue";
 import Valuation from "./pages/Valuation/Valuation";
+import WhyRentMetrics from "./pages/WhyRentMetrics/WhyRentMetrics";
 
 // **Protected Route Component**
 const ProtectedRoute = ({ children }) => {
@@ -68,7 +69,7 @@ const router = createBrowserRouter([
     },
 
     {
-        path: "/home",
+        path: "/home/",
         element: (
             <SignedOut>
                 <HomeLayout />
@@ -76,7 +77,7 @@ const router = createBrowserRouter([
         ),
         children: [
             { path: "", element: <Home /> },
-            { path: "home/solution", element: <Overview /> },
+            { path: "why-rent-metrics", element: <WhyRentMetrics /> },
         ],
     },
 

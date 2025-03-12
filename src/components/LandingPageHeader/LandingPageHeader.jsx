@@ -24,6 +24,11 @@ const menuItems = [
         title: "Company",
         url: "/company",
     },
+    {
+        id: 5,
+        title: "Why Rent Metrics",
+        url: "/home/why-rent-metrics",
+    },
 ];
 
 export default function LandingPageHeader() {
@@ -37,12 +42,12 @@ export default function LandingPageHeader() {
                 </Link>
 
                 {/* Menu */}
-                <div className="col-span-6 text-center flex gap-10.5 justify-center">
+                <div className="col-span-6 text-center flex xl:gap-10.5 lg:gap-6 gap-4 justify-center">
                     {menuItems.map((item) => (
                         <Link
                             key={item.id}
                             to={item.url}
-                            className="text-lg text-dark-1 font-semibold hover:text-main transition-colors duration-200"
+                            className="xl:text-lg lg:text-base text-sm text-dark-1 font-semibold hover:text-main transition-colors duration-200"
                         >
                             {item.title}
                         </Link>
@@ -50,17 +55,8 @@ export default function LandingPageHeader() {
                 </div>
 
                 {/* Back to Dashboard Button */}
-                <div className="col-span-4 flex gap-8 items-center justify-end">
-                    {/* <Link to="/sign-in" className="font-black text-dark-1">
-                        Sign in
-                    </Link> */}
+                <div className="col-span-4 flex xl:gap-8 lg:gap-6 gap-4 items-center justify-end">
                     <SignInPopUp />
-                    {/* <Link
-                        to="/sign-up"
-                        className="text-base px-6 py-[14px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main inline-block"
-                    >
-                        Sign Up
-                    </Link> */}
                     <SignUpPopUp />
                 </div>
             </div>
