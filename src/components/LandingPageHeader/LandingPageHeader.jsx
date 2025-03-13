@@ -38,7 +38,7 @@ export default function LandingPageHeader() {
                 </div>
 
                 {/* Offcanvas Menu */}
-                <div className="md:hidden sm:col-span-6 text-end">
+                <div className="md:hidden sm:col-span-6 flex justify-end">
                     <OffcanvasMenu />
                 </div>
             </div>
