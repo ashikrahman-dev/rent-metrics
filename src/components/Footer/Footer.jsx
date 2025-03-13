@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer className="footer-area xl:pt-25 lg:pt-20 md:pt-14 pt-12">
             {/* Footer top */}
-            <div className="container mx-auto px-4 grid sm:grid-cols-12 grid-cols-1 lg:gap-6 gap-10 xl:pb-[118px] lg:pb-20 md:pb-14 sm:pb-10 pb-4">
+            <div className="container mx-auto px-4 sm:grid flex flex-col sm:grid-cols-12 grid-cols-1 lg:gap-6 gap-10 xl:pb-[118px] lg:pb-20 md:pb-14 sm:pb-10 pb-4">
                 <div className="lg:col-span-4 col-span-12 ">
                     <img
                         src={footerLogo}

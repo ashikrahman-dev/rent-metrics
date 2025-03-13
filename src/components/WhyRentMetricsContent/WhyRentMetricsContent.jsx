@@ -30,7 +30,7 @@ export default function WhyRentMetricsContent() {
                         <div className="relative before:absolute before:content-[''] before:w-7.5 before:h-[3px] before:bg-main before:rounded-[30px] before:left-[calc(50%-15px)] before:bottom-0"></div>
                     </div>
                     {/* Heading end */}
-                    <div className="flex flex-col xl:gap-[100px] lg:gap-20 md:gap-16 gap-12 lg:mt-[60px] mt-20">
+                    <div className="flex flex-col xl:gap-[100px] lg:gap-20 md:gap-16 gap-12 lg:mt-[60px] mt-10">
                         <div className="grid grid-cols-12 sm:gap-6 gap-8 items-center">
                             <div className="sm:col-span-6 col-span-full">
                                 <img
