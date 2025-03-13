@@ -6,7 +6,7 @@ export default function Cta() {
         <section className="xl:py-[120px] lg:py-[100px] md:py-20 sm:py-16 py-14">
             <div className="container mx-auto px-4">
                 <div className="md:pt-12.5 pt-7.5 md:px-12.5 px-5.5 xl:rounded-3xl lg:rounded-2xl rounded-xl bg-gradient-to-r from-[#45C7FF] to-[#78FFF4]">
-                    <div className="grid grid-cols-12 gap-6 ">
+                    <div className="sm:grid flex flex-col sm:grid-cols-12 gap-6 ">
                         <div className="md:col-span-6 col-span-full">
                             <img
                                 src={ctaImage}
