@@ -15,9 +15,9 @@ export default function Footer() {
                 </div>
 
                 <div className="lg:col-span-8 sm:col-span-12">
-                    <div className="grid grid-cols-12 justify-between md:gap-6 gap-y-12 gap-x-8">
+                    <div className="sm:grid flex flex-col sm:grid-cols-12 justify-between md:gap-6 gap-y-12 gap-x-8">
                         {/* Widget */}
-                        <div className="md:min-w-30 min-w-full xl:col-span-4 lg:col-span-3 md:col-span-3 sm:col-span-6 hidden">
+                        <div className="md:min-w-30 min-w-full xl:col-span-4 lg:col-span-3 md:col-span-3 sm:col-span-6">
                             <h5 className="text-white font-black uppercase text-sm mb-6">
                                 Navigation
                             </h5>
@@ -57,7 +57,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         {/* Widget */}
-                        <div className="xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-6 hidden">
+                        <div className="xl:col-span-4 lg:col-span-4 md:col-span-4 sm:col-span-6">
                             <h5 className="text-white font-black uppercase text-sm mb-6">
                                 Contact Us
                             </h5>
@@ -119,7 +119,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         {/* Widget */}
-                        <div className="xl:col-span-4 lg:col-span-5 md:col-span-5 col-span-12 hidden">
+                        <div className="xl:col-span-4 lg:col-span-5 md:col-span-5 col-span-12">
                             <h5 className="text-white font-black uppercase text-sm mb-6 2xl:pl-20 lg:pl-6 md:pl-14 md:text-left text-center">
                                 Social
                             </h5>

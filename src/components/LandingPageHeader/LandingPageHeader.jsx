@@ -8,10 +8,14 @@ import SignUpPopUp from "../SignUpPopUp/SignUpPopUp";
 export default function LandingPageHeader() {
     return (
         <header className="bg-white xl:py-7.5 lg:py-6 md:py-5 py-4 xl:px-7.5 lg:px-6 md:px-5 px-4 shadow-[0px_10px_20px_0px_rgba(0,0,0,0.03)]">
-            <div className="container sm:grid flex justify-between items-center sm:grid-cols-12 items-center gap-6 mx-auto">
+            <div className="container sm:grid flex justify-between items-center sm:grid-cols-12 gap-6 mx-auto">
                 {/* Logo */}
                 <Link to="/home" className="xl:col-span-2 sm:col-span-6">
-                    <img src={logo} alt="Logo" className="xl:max-w-[180px] lg:max-w-[150px] md:max-w-[140px] max-w-32" />
+                    <img
+                        src={logo}
+                        alt="Logo"
+                        className="xl:max-w-[180px] lg:max-w-[150px] md:max-w-[140px] max-w-32"
+                    />
                 </Link>
 
                 {/* Menu */}
