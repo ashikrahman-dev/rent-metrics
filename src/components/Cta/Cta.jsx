@@ -11,12 +11,12 @@ export default function Cta() {
                             <img
                                 src={ctaImage}
                                 alt="Image"
-                                className="max-w-full md:pl-10"
+                                className="max-w-full md:pl-10 w-full"
                             />
                         </div>
-                        <div className="md:col-span-6 col-span-full">
+                        <div className="md:col-span-6 sm:col-span-12">
                             <div className="md:py-12 pb-10 pt-5">
-                                <h2 className="2xl:text-[40px] xl:text-4xl lg:text-3xl sm:text-2xl text-xl font-bold leading-[1.3] text-dark-1 max-w-[430px] md:mb-8 mb-6">
+                                <h2 className="2xl:text-[40px] xl:text-4xl lg:text-3xl sm:text-2xl text-xl font-bold leading-[1.3] text-dark-1 w-full max-w-[430px] md:mb-8 mb-6">
                                     See How RentMetrics Transforms Property
                                     Management
                                 </h2>

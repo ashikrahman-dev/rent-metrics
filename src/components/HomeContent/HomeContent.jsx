@@ -11,7 +11,7 @@ export default function HomeContent() {
                 </h2>
                 <div className="relative before:absolute before:content-[''] before:w-7.5 before:h-[3px] before:bg-main before:rounded-[30px] before:left-[calc(50%-15px)] before:bottom-0"></div>
                 <div className="flex flex-col xl:gap-[100px] lg:gap-20 md:gap-16 gap-12 lg:mt-[60px] mt-10">
-                    <div className="grid grid-cols-12 sm:gap-6 gap-8 items-center">
+                    <div className="grid sm:grid-cols-12 sm:gap-6 gap-8 items-center">
                         <div className="lg:col-span-5 sm:col-span-6 col-span-full">
                             <img
                                 src={boostNoi}
@@ -40,7 +40,7 @@ export default function HomeContent() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-12 gap-6 items-center">
+                    <div className="grid sm:grid-cols-12 gap-6 items-center">
                         <div className="lg:col-span-7 sm:col-span-6 col-span-full xl:pr-22 lg:pr-12 pr-0 sm:order-1 order-2">
                             <h3 className="xl:text-[32px] lg:text-3xl md:text-2xl text-xl font-bold mb-4">
                                 Boost NOI with Portfolio-Wide Intelligence

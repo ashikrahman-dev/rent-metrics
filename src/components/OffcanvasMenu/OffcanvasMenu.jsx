@@ -13,10 +13,10 @@ export default function OffcanvasMenu() {
         <div className="relative">
             {/* Toggle Button */}
             <button
-                className="focus:outline-none w-6 cursor-pointer"
+                className="focus:outline-none w-7.5 cursor-pointer flex items-center justify-center"
                 onClick={() => setIsOpen(true)}
             >
-                <img src={offcanvasMenu} alt="Icon" className="w-6" />
+                <img src={offcanvasMenu} alt="Icon" className="w-7.5" />
             </button>
 
             {/* Overlay */}
@@ -29,7 +29,7 @@ export default function OffcanvasMenu() {
 
             {/* Offcanvas Menu */}
             <div
-                className={`fixed flex flex-col justify-between  top-0 left-0 h-full w-72 bg-white shadow-lg transform p-6 ${
+                className={`fixed flex flex-col justify-between  top-0 left-0 h-full w-72 bg-white shadow-lg transform p-5 ${
                     isOpen ? "translate-x-0" : "-translate-x-full"
                 } transition-transform duration-100 ease-in-out z-50`}
             >
@@ -41,7 +41,7 @@ export default function OffcanvasMenu() {
                         <img
                             src={offcanvasMenuClose}
                             alt="Icon"
-                            className="w-6"
+                            className="w-7.5"
                         />
                     </button>
                 </div>
