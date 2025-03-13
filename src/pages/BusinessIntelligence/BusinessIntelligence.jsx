@@ -88,7 +88,7 @@ export default function BusinessIntelligence() {
 
             <section className="xl:py-[120px] lg:py-[100px] md:py-20 sm:py-16 py-14">
                 <div className="container mx-auto md:px-0 px-4">
-                    <div className="flex flex-col xl:gap-[100px] lg:gap-20 md:gap-16 gap-12 lg:mt-[60px] mt-20">
+                    <div className="flex flex-col xl:gap-[100px] lg:gap-20 md:gap-16 gap-12">
                         <div className="grid grid-cols-12 sm:gap-6 gap-8 items-center">
                             <div className="sm:col-span-6 col-span-full">
                                 <img
@@ -141,29 +141,29 @@ export default function BusinessIntelligence() {
             <section className="xl:py-[120px] lg:py-[100px] md:py-20 sm:py-16 py-14">
                 <div className="container mx-auto md:px-0 px-4">
                     <div className="text-center">
-                        <h2 className="xl:max-w-[705px] lg:max-w-[600px] max-w-[500px] mx-auto 2xl:text-[40px] xl:text-4xl lg:text-3xl sm:text-2xl text-xl leading-[1.3] font-semibold text-dark-1 text-center pb-8">
+                        <h2 className="xl:max-w-[705px] lg:max-w-[600px] max-w-[400px] mx-auto 2xl:text-[40px] xl:text-4xl lg:text-3xl sm:text-2xl text-xl leading-[1.3] font-semibold text-dark-1 text-center pb-8">
                             With Rentlytics Business Intelligence 2.0, You
                             Can...
                         </h2>
                         <div className="relative before:absolute before:content-[''] before:w-7.5 before:h-[3px] before:bg-main before:rounded-[30px] before:left-[calc(50%-15px)] before:bottom-0"></div>
                     </div>
                     {/* Heading end */}
-                    <div className="flex flex-col xl:gap-[100px] lg:gap-20 md:gap-16 gap-12 lg:mt-[60px] mt-20">
-                        <div className="grid grid-cols-12 sm:gap-6 gap-7.5 items-center">
+                    <div className="flex flex-col xl:gap-[100px] lg:gap-20 md:gap-16 gap-12 lg:mt-[60px] mt-10 md:px-4">
+                        <div className="grid grid-cols-12 md:gap-7.5 sm:gap-5 gap-4 items-center">
                             {rentlyticsData.map((item) => (
                                 <div
                                     key={item.id}
-                                    className="col-span-4 bg-white p-6 rounded-2xl shadow-[0px_32px_32px_0px_rgba(11,25,44,0.06)] h-full"
+                                    className="lg:col-span-4 sm:col-span-6 col-span-full bg-white p-6 rounded-2xl shadow-[0px_32px_32px_0px_rgba(11,25,44,0.06)] h-full"
                                 >
                                     <img
                                         src={item.icon}
                                         alt="icon"
-                                        className="max-w-full"
+                                        className="xl:w-[72px] lg:w-[60px] md:w-12.5 sm:w-10 w-9"
                                     />
-                                    <h4 className="mt-6 text-2xl text-dark-1 font-bold leading-[1.3] mb-3">
+                                    <h4 className="mt-6 xl:text-2xl lg:text-[22px] md:text-xl text-base text-dark-1 font-bold leading-[1.3] mb-3">
                                         {item.title}
                                     </h4>
-                                    <p className="text-dark-2 text-lg leading-[1.4]">
+                                    <p className="text-dark-2 xl:text-lg lg:text-base text-sm leading-[1.4]">
                                         {item.description}
                                     </p>
                                 </div>
@@ -187,22 +187,22 @@ export default function BusinessIntelligence() {
                         <div className="relative before:absolute before:content-[''] before:w-7.5 before:h-[3px] before:bg-main before:rounded-[30px] before:left-[calc(50%-15px)] before:bottom-0"></div>
                     </div>
                     {/* Heading end */}
-                    <div className="flex flex-col xl:gap-[100px] lg:gap-20 md:gap-16 gap-12 lg:mt-[60px] mt-20">
-                        <div className="grid grid-cols-12 sm:gap-6 gap-7.5 items-center">
+                    <div className="flex flex-col xl:gap-[100px] lg:gap-20 md:gap-16 gap-12 lg:mt-[60px] mt-10">
+                        <div className="grid grid-cols-12 md:gap-7.5 sm:gap-5 gap-4 items-center">
                             {empowerInnovationData.map((item) => (
                                 <div
                                     key={item.id}
-                                    className="col-span-4 bg-white p-6 rounded-2xl shadow-[0px_32px_32px_0px_rgba(11,25,44,0.06)] h-full"
+                                    className="lg:col-span-4 sm:col-span-6 col-span-full bg-white p-6 rounded-2xl shadow-[0px_32px_32px_0px_rgba(11,25,44,0.06)] h-full"
                                 >
                                     <img
                                         src={item.icon}
                                         alt="icon"
-                                        className="max-w-full"
+                                        className="xl:w-[72px] lg:w-[60px] md:w-12.5 sm:w-10 w-9"
                                     />
-                                    <h4 className="mt-6 text-2xl text-dark-1 font-bold leading-[1.3] mb-3">
+                                    <h4 className="mt-6 xl:text-2xl lg:text-[22px] md:text-xl text-base text-dark-1 font-bold leading-[1.3] mb-3">
                                         {item.title}
                                     </h4>
-                                    <p className="text-dark-2 text-lg leading-[1.4]">
+                                    <p className="text-dark-2 xl:text-lg lg:text-base text-sm leading-[1.4]">
                                         {item.description}
                                     </p>
                                 </div>
