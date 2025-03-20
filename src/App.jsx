@@ -40,6 +40,8 @@ import WhyRentMetrics from "./pages/WhyRentMetrics/WhyRentMetrics";
 import ManualInputofData from "./pages/ManualInputofData/ManualInputofData";
 import UnitInventory from  "./pages/UnitInventory/UnitInventory";
 import MaintenanceInventory from "./pages/MaintenanceInventory/MaintenanceInventory";
+import BenchMarking from "./pages/BenchMarking/BenchMarking";
+import FinancialReport from "./pages/FinancialsReport/FinancialsReport";
 
 // **Protected Route Component**
 const ProtectedRoute = ({ children }) => {
@@ -180,6 +182,7 @@ const router = createBrowserRouter([
             { path: "valuation", element: <Valuation /> },
             { path: "asset-intelligence", element: <AssetIntelligence /> },
             { path: "financial/overview", element: <FinancialOverview /> },
+            { path: "financial/report", element: <FinancialReport /> },
             { path: "financial/statement", element: <Statement /> },
             { path: "financial/budget-variance", element: <BudgetVariance /> },
             { path: "operations/occupancy", element: <Occupancy /> },
@@ -202,6 +205,7 @@ const router = createBrowserRouter([
             { path: "manual-input-of-data", element: <ManualInputofData /> },
             { path: "capital-inventory/unit-inventory", element: <UnitInventory /> },
             { path: "capital-inventory/maintenance-inventory", element: <MaintenanceInventory /> },
+            { path: "bench-marking", element: <BenchMarking/> },
 
             
         ],
