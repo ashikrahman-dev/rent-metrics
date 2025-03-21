@@ -1,6 +1,5 @@
 import { useState } from "react";
 import ReactApexChart from "react-apexcharts";
-
 export default function LeadsLeasesChart() {
     const [state, setState] = useState({
         series: [
