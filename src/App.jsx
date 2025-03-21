@@ -42,6 +42,10 @@ import UnitInventory from  "./pages/UnitInventory/UnitInventory";
 import MaintenanceInventory from "./pages/MaintenanceInventory/MaintenanceInventory";
 import BenchMarking from "./pages/BenchMarking/BenchMarking";
 import FinancialReport from "./pages/FinancialsReport/FinancialsReport";
+import RentsandOccupancyReport from "./pages/RentsandOccupancyReport/RentsandOccupancyReport";
+import Delinquency from "./pages/Delinquency/Delinquency";
+
+
 
 // **Protected Route Component**
 const ProtectedRoute = ({ children }) => {
@@ -190,6 +194,14 @@ const router = createBrowserRouter([
             {
                 path: "operations/average-effective-rent",
                 element: <AverageEffectiveRent />,
+            },
+            {
+                path: "operations/occupancy-report",
+                element: <RentsandOccupancyReport />,
+            },
+            {
+                path: "operations/delinquency",
+                element: <Delinquency />,
             },
             { path: "unit-renovation/analytics", element: <Analytics /> },
             {

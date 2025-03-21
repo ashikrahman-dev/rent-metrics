@@ -1,3 +1,4 @@
+import dragIcon from "../../../assets/images/drag-icon.svg";
 import {
   Area,
   AreaChart,
@@ -8,9 +9,22 @@ import {
   YAxis,
 } from "recharts";
 
-export default function BenchMarkingExpensePerUnit({ title, data = [] }) {
+export default function BenchMarkingExpensePerUnit({
+  title,
+  data = [],
+  linearGradientId = "dynamicGradientColor",
+  startColor = "#30D287",
+  endColor = "#fff",
+  domain = [0, 25], // Default Y-axis domain
+  ticks = [0, 5, 10, 15, 20, 25], // Default Y-axis ticks
+}) {
   return (
-    <div className="bg-white p-6 rounded-lg col-span-1">
+    <div className="bg-white p-6 rounded-lg col-span-1 relative">
+      <img
+        src={dragIcon}
+        alt="Drag Icon"
+        className="absolute right-3 top-3"
+      />
       {/* Title */}
       <h2 className="text-lg font-bold text-dark-1 leading-[1.4] mb-10 flex gap-4 items-center">
         {title || "Expense Per Unit"}
@@ -58,14 +72,14 @@ export default function BenchMarkingExpensePerUnit({ title, data = [] }) {
             {/* Gradient Definition */}
             <defs>
               <linearGradient
-                id="linearGradientColor2"
+                id={linearGradientId}
                 x1="0"
                 y1="0"
                 x2="0"
                 y2="1"
               >
-                <stop offset="5%" stopColor="#30D287" stopOpacity={0.8} />
-                <stop offset="95%" stopColor="#fff" stopOpacity={0} />
+                <stop offset="5%" stopColor={startColor} stopOpacity={0.8} />
+                <stop offset="95%" stopColor={endColor} stopOpacity={0} />
               </linearGradient>
             </defs>
 
@@ -85,8 +99,8 @@ export default function BenchMarkingExpensePerUnit({ title, data = [] }) {
             />
             <YAxis
               tickFormatter={(tick) => `${tick}%`}
-              domain={[0, 25]}
-              ticks={[0, 5, 10, 15, 20, 25]}
+              domain={domain}
+              ticks={ticks}
               tick={{
                 fontSize: 12,
                 fontWeight: 600,
@@ -97,8 +111,8 @@ export default function BenchMarkingExpensePerUnit({ title, data = [] }) {
             <Area
               type="linear"
               dataKey="value"
-              stroke="#30D2874D"
-              fill="url(#linearGradientColor2)"
+              stroke={startColor}
+              fill={`url(#${linearGradientId})`}
               strokeWidth={2}
               fillOpacity={1}
             />

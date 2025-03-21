@@ -5,17 +5,13 @@ import T3noi from "../../assets/images/t-3noi.svg";
 import Income from "../../assets/images/income-per.svg";
 import Expenses from "../../assets/images/Expenses Per Unit.svg";
 import Operating from "../../assets/images/1171278959.svg";
-
-import BudgetProjectionsChart from "../../components/Charts/BudgetProjectionsChart/BudgetProjectionsChart";
-
-import DailyFinancialTrackerChart from "../../components/Charts/DailyFinancialTrackerChart/DailyFinancialTrackerChart";
-import InsightsRecommendations from "../../components/InsightsRecommendations/InsightsRecommendations";
-import QuickActions from "../../components/QuickActions/QuickActions";
+import dragIcon from "../../assets/images/drag-icon.svg";
+import tooltipIcon from "../../assets/images/title-tooltip-icon.svg";
 
 import FinancCard from "../../components/FinancCard/FinancCard";
 import FinancCartCard from "../../components/FinancCartCard/FinancCartCard";
 
-import BenchMarkingExpensePerUnit from "../../components/Charts/BenchMarking/BenchMarkingExpensePerUnit";
+import RavenueyChart from "../../components/Charts/RavenueyChart/RavenueyChart";
 
 const sampleData = [
   { name: "Jan-24", value: 2.0 },
@@ -146,20 +142,160 @@ export default function FinancialReport() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-6">
-          <BenchMarkingExpensePerUnit
-            title="Benchmarking Expense"
-            data={sampleData1}
-          />
-          <BudgetProjectionsChart />
+        <div className="grid grid-cols-3 gap-6">
+          <RavenueyChart title="Ravenue" />
+          <div className="growthcarf">
+            <div className="bg-white p-6 rounded-lg relative h-full">
+              <img
+                src={dragIcon}
+                alt="Drag Icon"
+                className="absolute right-3 top-3"
+              />
+              <h2 className="text-[16px] font-bold text-dark-1 leading-[1.4] mb-6  flex gap-3 items-center">
+                12 Mo. % Growth -10.2
+              </h2>
+              <h3 className="text-[14px] font-semibold text-dark-1 leading-[1.4] mb-6  flex gap-3 items-center">
+                Pro Forma Variance
+              </h3>
+              <div className="grid grid-cols-3 gap-6 font-normal text-[14px] text-[#54616B]">
+                <span>Net Tental Income</span>
+                <span>$1,319</span>
+                <span>$1,319</span>
+              </div>
+              <div className="grid grid-cols-3 gap-6 font-normal text-[14px] text-[#54616B]">
+                <span>Net Tental Income</span>
+                <span>$1,319</span>
+                <span>$1,319</span>
+              </div>
+              <div className="grid grid-cols-3 gap-6 font-normal text-[14px] text-[#54616B]">
+                <span>Net Tental Income</span>
+                <span>$1,319</span>
+                <span>$1,319</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="growthcarf">
+            <div className="bg-white p-6 rounded-lg relative h-full">
+              <img
+                src={dragIcon}
+                alt="Drag Icon"
+                className="absolute right-3 top-3"
+              />
+              <h2 className="text-[16px] font-bold text-dark-1 leading-[1.4] mb-6  flex gap-3 items-center">
+                Comments
+                <button className="cursor-pointer">
+                  <img src={tooltipIcon} alt="Icon" className="max-w-full" />
+                </button>
+              </h2>
+            </div>
+          </div>
         </div>
-        <div className="grid grid-cols-1 gap-6">
+        <div className="grid grid-cols-3 gap-6">
+          <RavenueyChart title="Monthly Expense " />
+          <div className="growthcarf">
+            <div className="bg-white p-6 rounded-lg relative h-full">
+              <img
+                src={dragIcon}
+                alt="Drag Icon"
+                className="absolute right-3 top-3"
+              />
+              <h2 className="text-[16px] font-bold text-dark-1 leading-[1.4] mb-6  flex gap-3 items-center">
+                12 Mo. % Growth -10.2
+              </h2>
+              <h3 className="text-[14px] font-semibold text-dark-1 leading-[1.4] mb-6  flex gap-3 items-center">
+                Pro Forma Variance
+              </h3>
+              <div className="grid grid-cols-3 gap-6 font-normal text-[14px] text-[#54616B]">
+                <span>Net Tental Income</span>
+                <span>$1,319</span>
+                <span>$1,319</span>
+              </div>
+              <div className="grid grid-cols-3 gap-6 font-normal text-[14px] text-[#54616B]">
+                <span>Net Tental Income</span>
+                <span>$1,319</span>
+                <span>$1,319</span>
+              </div>
+              <div className="grid grid-cols-3 gap-6 font-normal text-[14px] text-[#54616B]">
+                <span>Net Tental Income</span>
+                <span>$1,319</span>
+                <span>$1,319</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="growthcarf">
+            <div className="bg-white p-6 rounded-lg relative h-full">
+              <img
+                src={dragIcon}
+                alt="Drag Icon"
+                className="absolute right-3 top-3"
+              />
+              <h2 className="text-[16px] font-bold text-dark-1 leading-[1.4] mb-6  flex gap-3 items-center">
+                Comments
+                <button className="cursor-pointer">
+                  <img src={tooltipIcon} alt="Icon" className="max-w-full" />
+                </button>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-3 gap-6">
+          <RavenueyChart title="Net Operating Income" />
+          <div className="growthcarf">
+            <div className="bg-white p-6 rounded-lg relative h-full">
+              <img
+                src={dragIcon}
+                alt="Drag Icon"
+                className="absolute right-3 top-3"
+              />
+              <h2 className="text-[16px] font-bold text-dark-1 leading-[1.4] mb-6  flex gap-3 items-center">
+                12 Mo. % Growth -10.2
+              </h2>
+              <h3 className="text-[14px] font-semibold text-dark-1 leading-[1.4] mb-6  flex gap-3 items-center">
+                Pro Forma Variance
+              </h3>
+              <div className="grid grid-cols-3 gap-6 font-normal text-[14px] text-[#54616B]">
+                <span>Net Tental Income</span>
+                <span>$1,319</span>
+                <span>$1,319</span>
+              </div>
+              <div className="grid grid-cols-3 gap-6 font-normal text-[14px] text-[#54616B]">
+                <span>Net Tental Income</span>
+                <span>$1,319</span>
+                <span>$1,319</span>
+              </div>
+              <div className="grid grid-cols-3 gap-6 font-normal text-[14px] text-[#54616B]">
+                <span>Net Tental Income</span>
+                <span>$1,319</span>
+                <span>$1,319</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="growthcarf">
+            <div className="bg-white p-6 rounded-lg relative h-full">
+              <img
+                src={dragIcon}
+                alt="Drag Icon"
+                className="absolute right-3 top-3"
+              />
+              <h2 className="text-[16px] font-bold text-dark-1 leading-[1.4] mb-6  flex gap-3 items-center">
+                Comments
+                <button className="cursor-pointer">
+                  <img src={tooltipIcon} alt="Icon" className="max-w-full" />
+                </button>
+              </h2>
+            </div>
+          </div>
+        </div>
+        {/* <div className="grid grid-cols-1 gap-6">
           <DailyFinancialTrackerChart />
         </div>
         <div className="grid grid-cols-12 gap-6">
           <InsightsRecommendations />
           <QuickActions />
-        </div>
+        </div> */}
       </div>
     </section>
   );

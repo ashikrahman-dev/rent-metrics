@@ -6,28 +6,32 @@
 
 import { Area, AreaChart, ResponsiveContainer } from "recharts";
 
-// const data = [
-//   { name: "Jan-24", value: 2.0 },
-//   { name: "Feb-24", value: 3.6 },
-//   { name: "Mar-24", value: 10.0 },
-//   { name: "Apr-24", value: 8.0 },
-//   { name: "May-24", value: 10.5 },
-//   { name: "Jun-24", value: 0.0 },
-//   { name: "Jul-24", value: 10.0 },
-//   { name: "Aug-24", value: 10.0 },
-//   { name: "Sep-24", value: 10.0 },
-//   { name: "Oct-24", value: 3.5 },
-//   { name: "Nov-24", value: 7.3 },
-//   { name: "Dec-24", value: 5.0 },
-// ];
-
+const data = [
+  { name: "Jan-24", NewLeases: 5, LastMonthAvg: 0, Market: 90 },
+  { name: "Feb-24", NewLeases: 84, LastMonthAvg: 175, Market: 100 },
+  { name: "Mar-24", NewLeases: 160, LastMonthAvg: 160, Market: 200 },
+  { name: "Apr-24", NewLeases: 127, LastMonthAvg: 165, Market: 150 },
+  { name: "May-24", NewLeases: 72, LastMonthAvg: 230, Market: 110 },
+  { name: "Jun-24", NewLeases: 124, LastMonthAvg: 190, Market: 180 },
+  { name: "July-24", NewLeases: 152, LastMonthAvg: 200, Market: 90 },
+  { name: "Aug-24", NewLeases: 150, LastMonthAvg: 190, Market: 148 },
+  { name: "Sep-24", NewLeases: 151, LastMonthAvg: 148, Market: 120 },
+  { name: "Oct-24", NewLeases: 110, LastMonthAvg: 173, Market: 140 },
+  { name: "Nov-24", NewLeases: 140, LastMonthAvg: 190, Market: 190 },
+  { name: "Dec-24", NewLeases: 148, LastMonthAvg: 165, Market: 50 },
+];
 export default function FinancCartCard({
   title,
   data,
   stopColor,
   strokeColor,
   linearGradientColor,
-}) {
+}) 
+
+
+
+
+{
   return (
     <div className="bg-white rounded-lg p-4 relative col-span-1 h-full">
       {/* Title and Icon */}

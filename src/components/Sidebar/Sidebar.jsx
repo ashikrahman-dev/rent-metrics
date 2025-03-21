@@ -188,6 +188,7 @@ const menuItems = [
             </svg>
         ),
         submenu: [
+            { title: "Rent & Occupancy Report ", path: "/dashboard/operations/occupancy-report" },
             { title: "Occupancy ", path: "/dashboard/operations/occupancy" },
             {
                 title: "Average Effective Rent",
@@ -197,8 +198,12 @@ const menuItems = [
                 title: "Lease-Trade Out",
                 path: "/dashboard/operations/lease-trade-out",
             },
-            { title: "Lease-Up Tracker", path: "" },
-            { title: "Delinquency", path: "" },
+                
+            {
+                title: "Delinquency",
+                path: "/dashboard/operations/delinquency",
+            },
+            { title: "Lease-Up Tracker", path: "" },      
         ],
     },
     {

@@ -1,7 +1,22 @@
 import { Link } from "react-router-dom";
 import LeaseTradeOutDataTable from "../../components/LeaseTradeOutDataTable/LeaseTradeOutDataTable";
 import LTOUnitTypeDataTable from "../../components/LTOUnitTypeDataTable/LTOUnitTypeDataTable";
+import BenchMarkingExpensePerUnit from "../../components/Charts/BenchMarking/BenchMarkingExpensePerUnit";
 
+const expenseData = [
+    { name: "10%", value: 5.0 },
+    { name: "20%", value: 10.0 },
+    { name: "30%", value: 15.0 },
+    { name: "40%", value: 8.0 },
+    { name: "50%", value: 12.5 },
+    { name: "60%", value: 20.0 },
+    { name: "10%", value: 5.0 },
+    { name: "20%", value: 10.0 },
+    { name: "30%", value: 15.0 },
+    { name: "40%", value: 8.0 },
+    { name: "50%", value: 12.5 },
+    { name: "60%", value: 20.0 },
+  ];
 export default function LeaseTradeOut() {
     return (
         <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
@@ -54,16 +69,32 @@ export default function LeaseTradeOut() {
                     </Link>
                 </div>
             </div>
-            <div className="flex flex-col gap-6">
+            <div className="mb-3 ">
+             <BenchMarkingExpensePerUnit
+                        title="All Units – Rents & Occupancy"
+                        data={expenseData}
+                        linearGradientId="customGradient"
+                        gradientStartColor="#30D287"
+                        strokeColor="#30D287"
+                      />
+            </div>
+            
+        </section>
+    );
+}
+
+
+
+{/* <div className="flex flex-col gap-6">
                 <div className="p-6 bg-white rounded-lg">
-                    {/* Heading & Button */}
+                  
                     <div className="flex gap-5 justify-between items-center">
                         <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
                             LTO
                         </h2>
 
                         <div className="flex gap-2.5">
-                            {/* Share Button */}
+                 
                             <Link
                                 to=""
                                 className="text-base px-[17px] py-2 border border-dark-2 bg-transparent rounded-lg text-dark-2 font-black transition-colors duration-200 hover:bg-dark-2 hover:text-white cursor-pointer inline-flex items-center gap-2 group col-auto"
@@ -83,7 +114,7 @@ export default function LeaseTradeOut() {
                                 </svg>
                                 Share
                             </Link>
-                            {/* Export Button */}
+                           
                             <Link
                                 to=""
                                 className="text-base px-[18px] py-[9px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main cursor-pointer inline-flex items-center gap-2 group col-auto"
@@ -110,14 +141,14 @@ export default function LeaseTradeOut() {
                     </div>
                 </div>
                 <div className="p-6 bg-white rounded-lg">
-                    {/* Heading & Button */}
+              
                     <div className="flex gap-5 justify-between items-center">
                         <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
                             LTO
                         </h2>
 
                         <div className="flex gap-2.5">
-                            {/* Share Button */}
+                        
                             <Link
                                 to=""
                                 className="text-base px-[17px] py-2 border border-dark-2 bg-transparent rounded-lg text-dark-2 font-black transition-colors duration-200 hover:bg-dark-2 hover:text-white cursor-pointer inline-flex items-center gap-2 group col-auto"
@@ -137,7 +168,7 @@ export default function LeaseTradeOut() {
                                 </svg>
                                 Share
                             </Link>
-                            {/* Export Button */}
+                            
                             <Link
                                 to=""
                                 className="text-base px-[18px] py-[9px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main cursor-pointer inline-flex items-center gap-2 group col-auto"
@@ -163,7 +194,4 @@ export default function LeaseTradeOut() {
                         <LTOUnitTypeDataTable />
                     </div>
                 </div>
-            </div>
-        </section>
-    );
-}
+            </div> */}

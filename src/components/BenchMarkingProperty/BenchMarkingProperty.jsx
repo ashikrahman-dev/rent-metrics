@@ -3,6 +3,15 @@ import BenchMarkingOperations from "../Charts/BenchMarking/BenchMarkingOperation
 import BenchMarkingMarketing from "../Charts/BenchMarking/BenchMarkingMarketing";
 import BenchMarkingExpensePerUnit from "../Charts/BenchMarking/BenchMarkingExpensePerUnit";
 
+const expenseData = [
+  { name: "Jan-24", value: 5.0 },
+  { name: "Feb-24", value: 10.0 },
+  { name: "Mar-24", value: 15.0 },
+  { name: "Apr-24", value: 8.0 },
+  { name: "May-24", value: 12.5 },
+  { name: "Jun-24", value: 20.0 },
+];
+
 export default function BenchMarkingProperty() {
   return (
     <div>
@@ -10,7 +19,7 @@ export default function BenchMarkingProperty() {
         <BenchMarkingFinancial />
         <BenchMarkingOperations />
         <BenchMarkingMarketing />
-        <BenchMarkingExpensePerUnit />
+        <BenchMarkingExpensePerUnit title="Expense Per Unit"  data={expenseData}/>
       </div>
     </div>
   );
