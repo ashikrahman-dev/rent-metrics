@@ -9,10 +9,13 @@ export default function FinancCard({
     icon,
     number,
     statusLeft,
+    statusmedil,
     statusRight,   
     statusLeftA,
+    statusmedilA,
     statusRightA, 
     statusLeftB,
+    statusmedilB,
     statusRightB,     
 
 }) {
@@ -53,16 +56,19 @@ export default function FinancCard({
                     {statusLeft ? (
                         <div className="w-full">                         
                             <span className="flex gap-6 justify-between items-center text-[14px] text-dark-2  relative">                                
-                               <span>{statusLeft || "Last year"} </span> 
-                               <span>{statusRight || "Last year"}  </span>                              
+                               <span>{statusLeft} </span> 
+                               <span>{statusmedil } </span> 
+                               <span>{statusRight}  </span>                              
                             </span>
                             <span className="flex justify-between text-[14px] text-dark-2  relative">                                
-                               <span>{statusLeftA || "Last year"} </span> 
-                               <span>{statusRightA || "Last year"}  </span>                              
+                               <span>{statusLeftA } </span> 
+                               <span>{statusmedilA } </span> 
+                               <span>{statusRightA }  </span>                              
                             </span>
                             <span className="flex justify-between text-[14px] text-dark-2  relative">                                
-                               <span>{statusLeftB || "Last year"} </span> 
-                               <span>{statusRightB || "Last year"} </span>                              
+                               <span>{statusLeftB } </span> 
+                               <span>{statusmedilB} </span> 
+                               <span>{statusRightB } </span>                              
                             </span>                                                      
                         </div>
                     ) : (

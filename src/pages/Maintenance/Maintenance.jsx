@@ -1,32 +1,38 @@
 import { Link } from "react-router-dom";
+
+import T12NOI from "../../assets/images/t-12-noi-icon.svg";
+import T3noi from "../../assets/images/t-3noi.svg";
+import Income from "../../assets/images/income-per.svg";
+import Expenses from "../../assets/images/Expenses Per Unit.svg";
+import Operating from "../../assets/images/1171278959.svg";
+
 import BenchMarkingExpensePerUnit from "../../components/Charts/BenchMarking/BenchMarkingExpensePerUnit";
 
-const expenseData = [
-  { name: "10%", value: 5.0 },
-  { name: "20%", value: 10.0 },
-  { name: "30%", value: 15.0 },
-  { name: "40%", value: 8.0 },
-  { name: "50%", value: 12.5 },
-  { name: "60%", value: 20.0 },
-  { name: "70%", value: 5.0 },
-  { name: "80%", value: 10.0 },
-  { name: "90%", value: 15.0 },
-  { name: "100%", value: 8.0 }, 
-  
+import FinancCard from "../../components/FinancCard/FinancCard";
+
+//import RavenueyChart from "../../components/Charts/RavenueyChart/RavenueyChart";
+
+const sampleData = [
+  { name: "30 Days", value: 12 },
+  { name: "60 Days", value: 10.0 },
+  { name: "90 Days", value: 10.0 },
+  { name: "120 Days", value: 10.0 },
+  { name: "150 Days", value: 3.5 },
+  { name: "180 Days", value: 7.3 },
+  { name: "200 Days", value: 5.0 },
 ];
-export default function LeaseTradeOut() {
+
+export default function Maintenance() {
   return (
     <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
       {/* Heading & Button */}
       <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
         <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
-          Delinquency
+          Maintenance
         </h2>
-
         <div className="flex gap-2.5">
-          {/* Export Button */}
           <Link
-            to=""
+            to="/add-new-properties"
             className="text-base px-[18px] py-[9px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main cursor-pointer inline-flex items-center gap-2 group col-auto"
           >
             <svg
@@ -44,9 +50,8 @@ export default function LeaseTradeOut() {
             </svg>
             Export
           </Link>
-          {/* Share Button */}
           <Link
-            to=""
+            to="/add-new-properties"
             className="text-base px-[17px] py-2 border border-dark-2 bg-transparent rounded-lg text-dark-2 font-black transition-colors duration-200 hover:bg-dark-2 hover:text-white cursor-pointer inline-flex items-center gap-2 group col-auto"
           >
             <svg
@@ -66,14 +71,49 @@ export default function LeaseTradeOut() {
           </Link>
         </div>
       </div>
-      <div className="mb-3 ">
-        <BenchMarkingExpensePerUnit
-          title="Delinquency"
-          data={expenseData}
-          linearGradientId="Gradientrr"
-          gradientStartColor="#2970CC"
-          strokeColor="#2970CC"
-        />
+
+      <div className="grid gap-6">
+        <div className="col-span-full">
+          <div className="grid grid-cols-5 justify-between gap-6 mb-6">
+            <FinancCard
+              title="T-1 Work Orders"
+              icon={T12NOI}
+              statusLeft="Top"
+              statusmedil="Open"
+              statusRight="Closed"
+              statusLeftA="208"
+              statusmedilA="43"
+              statusRightA="171"
+            />
+            <FinancCard
+              title="Work Orders Avg Days Open"
+              icon={T3noi}
+              number="2.99"
+            />
+            <FinancCard
+              title="Renovation Deliveries"
+              icon={Income}
+              number="00"
+            />
+            <FinancCard title="Avg Days Vacant" icon={Expenses} number="N/A" />
+
+            <FinancCard
+              title="T-3 Total Move- Ins"
+              icon={Operating}
+              number="29"
+            />
+          </div>
+        </div>
+        <div className="grid">
+          <BenchMarkingExpensePerUnit
+            title="Avg. Maintenance"
+            data={sampleData}
+            stopColor="#fff"
+            startColor="#BFECFF"
+            strokeColor = "#2970CC"
+            linearGradientId="avgMaintenance"
+          />
+        </div>
       </div>
     </section>
   );

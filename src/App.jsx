@@ -44,7 +44,8 @@ import BenchMarking from "./pages/BenchMarking/BenchMarking";
 import FinancialReport from "./pages/FinancialsReport/FinancialsReport";
 import RentsandOccupancyReport from "./pages/RentsandOccupancyReport/RentsandOccupancyReport";
 import Delinquency from "./pages/Delinquency/Delinquency";
-
+import Maintenance from "./pages/Maintenance/Maintenance";
+import RentRollSummary from "./pages/RentRollSummary/RentRollSummary";
 
 
 // **Protected Route Component**
@@ -203,6 +204,10 @@ const router = createBrowserRouter([
                 path: "operations/delinquency",
                 element: <Delinquency />,
             },
+            {
+                path: "operations/maintenance",
+                element: <Maintenance />,
+            },
             { path: "unit-renovation/analytics", element: <Analytics /> },
             {
                 path: "unit-renovation/project-date",
@@ -218,6 +223,7 @@ const router = createBrowserRouter([
             { path: "capital-inventory/unit-inventory", element: <UnitInventory /> },
             { path: "capital-inventory/maintenance-inventory", element: <MaintenanceInventory /> },
             { path: "bench-marking", element: <BenchMarking/> },
+            { path: "rent-rollr-summary", element: <RentRollSummary/> },
 
             
         ],

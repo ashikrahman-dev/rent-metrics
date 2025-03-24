@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import dragIcon from "../../assets/images/drag-icon.svg";
 import tooltipIcon from "../../assets/images/title-tooltip-icon.svg";
-import RavenueyChart from "../../components/Charts/RavenueyChart/RavenueyChart";
+
 import RorDataTable from "../../components/RorDataTable";
 import BenchMarkingExpensePerUnit from "../../components/Charts/BenchMarking/BenchMarkingExpensePerUnit";
 

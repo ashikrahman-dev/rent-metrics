@@ -198,12 +198,16 @@ const menuItems = [
                 title: "Lease-Trade Out",
                 path: "/dashboard/operations/lease-trade-out",
             },
-                
+            { title: "Lease-Up Tracker", path: "" },     
             {
                 title: "Delinquency",
                 path: "/dashboard/operations/delinquency",
             },
-            { title: "Lease-Up Tracker", path: "" },      
+            {
+                title: "Maintenance",
+                path: "/dashboard/operations/maintenance",
+            },
+              
         ],
     },
     {
@@ -367,7 +371,7 @@ const menuItems = [
     },
     {
         title: "Rent Roll Summary",
-        path: "/dashboard",
+        path: "/dashboard/rent-rollr-summary",
         icon: (
             <svg
                 width="20"
@@ -519,7 +523,7 @@ export default function Sidebar() {
                                 <ul
                                     className={` overflow-hidden transition-all duration-300 ease-in-out relative before:absolute before:left-0 before:content-[''] before:w-[3px] before:h-full before:top-0 before:bg-main before:transition-all before:duration-250 ${
                                         openSubmenuIndex === index
-                                            ? "max-h-48"
+                                            ? "max-h-68"
                                             : "max-h-0"
                                     }`}
                                 >
