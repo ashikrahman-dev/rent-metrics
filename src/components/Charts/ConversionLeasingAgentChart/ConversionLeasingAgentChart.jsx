@@ -24,7 +24,6 @@ const data = [
     { name: "Nov-24", value: 10.0, revenue: 150 },
     { name: "Dec-24", value: 5.0, revenue: 65 },
 ];
-
 export default function ConversionLeasingAgentChart() {
     return (
         <div className="bg-white p-6 rounded-lg col-span-1">
