@@ -16,7 +16,7 @@ import LeadsLeasesChart from "../../components/Charts/LeadsLeasesChart/LeadsLeas
 export default function Marketing() {
     return (
         <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
-            {/* Heading & Button */}
+            {/* Heading & Button */} 
             <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
                 <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
                     Marketing
