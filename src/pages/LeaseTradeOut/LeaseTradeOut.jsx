@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 //import LeaseTradeOutDataTable from "../../components/LeaseTradeOutDataTable/LeaseTradeOutDataTable";
 //import LTOUnitTypeDataTable from "../../components/LTOUnitTypeDataTable/LTOUnitTypeDataTable";
-import BenchMarkingExpensePerUnit from "../../components/Charts/BenchMarking/BenchMarkingExpensePerUnit";
+import LeaseTradeOutChart from "../../components/Charts/LeaseTradeOutChart/LeaseTradeOutChart";
 
 const expenseData = [
     { name: "10%", value: 5.0 },
@@ -70,7 +70,7 @@ export default function LeaseTradeOut() {
                 </div>
             </div>
             <div className="mb-3 ">
-             <BenchMarkingExpensePerUnit
+             <LeaseTradeOutChart
                         title="All Units – Rents & Occupancy"
                         data={expenseData}
                         linearGradientId="customGradient"

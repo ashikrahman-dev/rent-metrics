@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import OccupancyDataTableCard from "../../components/OccupancyDataTableCard/OccupancyDataTableCard";
 import OccupancySmallDataTable from "../../components/OccupancySmallDataTable/OccupancySmallDataTable";
 import OccupancyStatusCard from "../../components/OccupancyStatusCard/OccupancyStatusCard";
+import LeaseTradeOut from "../LeaseTradeOut/LeaseTradeOut";
+import OccupancyChart from "../../components/Charts/OccupancyChart/OccupancyChart";
+import OccupancyTrent from "../../components/Charts/OccupancyTrent/OccupancyTrent";
 
 export default function Occupancy() {
     // Data from the provided table with unique fixed values for each asset
@@ -59,13 +62,27 @@ export default function Occupancy() {
     return (
         <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
             {/* Heading & Button */}
-            <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
+            <div className="flex gap-6 justify-between items-center mb-[14px] pt-8">
                 <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
                     Occupancy
                 </h2>
 
                 <div className="flex gap-2.5">
                     {/* Edit Button */}
+                    
+<form>   
+    <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+    <div className="relative">
+        <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0259 13.8477L18.5948 17.4166L17.4163 18.5951L13.8474 15.0262C12.5642 16.0528 10.9367 16.667 9.16675 16.667C5.02675 16.667 1.66675 13.307 1.66675 9.16699C1.66675 5.02699 5.02675 1.66699 9.16675 1.66699C13.3067 1.66699 16.6667 5.02699 16.6667 9.16699C16.6667 10.937 16.0526 12.5644 15.0259 13.8477ZM13.354 13.2293C14.373 12.1792 15.0001 10.7467 15.0001 9.16699C15.0001 5.94408 12.3897 3.33366 9.16675 3.33366C5.94383 3.33366 3.33341 5.94408 3.33341 9.16699C3.33341 12.3899 5.94383 15.0003 9.16675 15.0003C10.7464 15.0003 12.1789 14.3732 13.2291 13.3542L13.354 13.2293Z" fill="#001924"/>
+</svg>
+
+        </div>
+        <input type="search" id="default-search" className="block h-[42px] w-[547px] p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search property name or address" required />
+    </div>
+</form>
+
                     <Link
                         to=""
                         className="text-base px-[18px] py-[9px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main cursor-pointer inline-flex items-center gap-2 group col-auto"
@@ -110,11 +127,15 @@ export default function Occupancy() {
             <div className="flex flex-col gap-6">
                 <div className="grid grid-cols-12 gap-6">
                     <OccupancyStatusCard />
-                    <OccupancyStatusCard />
+                    <OccupancyChart />
+                </div>
+                <div className="">
+                    <OccupancyTrent />
                 </div>
                 <div className="">
                     <OccupancyDataTableCard />
                 </div>
+              
                 <div className="grid grid-cols-2 gap-6">
                     <div className="col-span-1">
                         <OccupancySmallDataTable

@@ -1,5 +1,4 @@
 import physicalTrend from "../../assets/images/physical-trend-icon.svg";
-
 export default function OccupancyStatusCard() {
     return (
         <div className="bg-white p-5 rounded-lg col-span-6">
@@ -16,7 +15,7 @@ export default function OccupancyStatusCard() {
                         92.0%
                     </h2>
                     <p className="text-dark-2 text-sm font-bold leading-[1.4]">
-                        12M Avg
+                    Current
                     </p>
                 </div>
                 {/* Divider */}
@@ -24,10 +23,10 @@ export default function OccupancyStatusCard() {
                 {/* Item */}
                 <div className="">
                     <h2 className="text-4xl font-extrabold text-dark-1 leading-[1.4] mb-3">
-                        92.0%
+                        92.9%
                     </h2>
                     <p className="text-dark-2 text-sm font-bold leading-[1.4]">
-                        12M Avg
+                    Leased
                     </p>
                 </div>
                 {/* Divider */}
@@ -35,10 +34,10 @@ export default function OccupancyStatusCard() {
                 {/* Item */}
                 <div className="">
                     <h2 className="text-4xl font-extrabold text-dark-1 leading-[1.4] mb-3">
-                        92.0%
+                        92.1%
                     </h2>
                     <p className="text-dark-2 text-sm font-bold leading-[1.4]">
-                        12M Avg
+                    Economic Occ.
                     </p>
                 </div>
             </div>
