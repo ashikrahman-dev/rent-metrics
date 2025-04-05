@@ -27,25 +27,25 @@ const data = [
 ];
 
 const barColors = {
-    "Jan-24": "#2970CC",
+    "Jan-24": "#FFC362",
     "Feb-24": "#45C7FF",
-    "Mar-24": "#2970CC",
+    "Mar-24": "#FFC362",
     "Apr-24": "#45C7FF",
-    "May-24": "#2970CC",
+    "May-24": "#FFC362",
     "Jun-24": "#45C7FF",
-    "Jul-24": "#2970CC",
+    "Jul-24": "#FFC362",
     "Aug-24": "#45C7FF",
-    "Sep-24": "#2970CC",
+    "Sep-24": "#FFC362",
     "Oct-24": "#45C7FF",
-    "Nov-24": "#2970CC",
+    "Nov-24": "#FFC362",
     "Dec-24": "#45C7FF",
 };
 
-export default function LeaseTradeOutChart() {
+export default function TrafficTrendChart() {
     return (
         <div className="bg-white p-6 rounded-lg col-span-1">
             <h2 className="text-lg font-bold text-dark-1 leading-[1.4] mb-10">
-                LTO
+            Retention, Availability & Traffic Trends 
             </h2>
             <div className="w-full h-[300px] bg-white">
                 <ResponsiveContainer width="100%" height="100%">
@@ -130,7 +130,7 @@ export default function LeaseTradeOutChart() {
                             name="Revenue"
                             type="linear"
                             dataKey="revenue"
-                            stroke="#45C7FF"
+                            stroke="#FFC362"
                             strokeWidth={1.5}
                             dot={false}
                         />
@@ -139,7 +139,7 @@ export default function LeaseTradeOutChart() {
                             name="Target"
                             type="linear"
                             dataKey="target"
-                            stroke="#2970CC"
+                            stroke="#45C7FF"
                             strokeWidth={1.5}
                             dot={false}
                         />

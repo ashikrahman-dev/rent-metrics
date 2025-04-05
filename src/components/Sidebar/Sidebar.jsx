@@ -159,6 +159,10 @@ const menuItems = [
                 title: "Budget Variance",
                 path: "/dashboard/financial/budget-variance",
             },
+            {
+                title: "Daily Tracker",
+                path: "/dashboard/financial/daily-tracker",
+            },
         ],
     },
     {
@@ -198,7 +202,7 @@ const menuItems = [
                 title: "Lease-Trade Out",
                 path: "/dashboard/operations/lease-trade-out",
             },
-            { title: "Lease-Up Tracker", path: "" },     
+            { title: "Lease-Up Tracker", path: "/dashboard/operations/lease-up-tracker" },     
             {
                 title: "Delinquency",
                 path: "/dashboard/operations/delinquency",
@@ -206,6 +210,10 @@ const menuItems = [
             {
                 title: "Maintenance",
                 path: "/dashboard/operations/maintenance",
+            },
+            {
+                title: "Traffic Trends ",
+                path: "/dashboard/operations/traffic-trends",
             },
               
         ],
@@ -478,7 +486,7 @@ export default function Sidebar() {
                 </button>
             </div>
 
-            <nav className="sidebar-menu">
+            <nav className="sidebar-menu h-[92vh] overflow-y-auto">
                 <ul className="space-y-2">
                     {menuItems.map((item, index) => (
                         <li key={item.title} className="group">
@@ -523,7 +531,7 @@ export default function Sidebar() {
                                 <ul
                                     className={` overflow-hidden transition-all duration-300 ease-in-out relative before:absolute before:left-0 before:content-[''] before:w-[3px] before:h-full before:top-0 before:bg-main before:transition-all before:duration-250 ${
                                         openSubmenuIndex === index
-                                            ? "max-h-68"
+                                            ? "max-h-100"
                                             : "max-h-0"
                                     }`}
                                 >

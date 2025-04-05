@@ -12,46 +12,46 @@ import {
 } from "recharts";
 
 const data = [
-    { name: "Jan-24", value: 5.0, revenue: 90, target: 100 },
-    { name: "Feb-24", value: 50.0, revenue: 140, target: 130 },
-    { name: "Mar-24", value: 15.0, revenue: 120, target: 125 },
-    { name: "Apr-24", value: 60.0, revenue: 200, target: 190 },
-    { name: "May-24", value: 12.5, revenue: 180, target: 160 },
-    { name: "Jun-24", value: 40.0, revenue: 255, target: 230 },
-    { name: "Jul-24", value: 18.0, revenue: 120, target: 150 },
-    { name: "Aug-24", value: 65.0, revenue: 180, target: 170 },
-    { name: "Sep-24", value: 22.0, revenue: 115, target: 110 },
-    { name: "Oct-24", value: 37.5, revenue: 200, target: 180 },
-    { name: "Nov-24", value: 10.0, revenue: 150, target: 140 },
-    { name: "Dec-24", value: 35.0, revenue: 65, target: 90 },
+    { name: "Jan-24", value: 40, revenue: 150,  },
+    { name: "Feb-24", value: 50.0, revenue: 200, },
+    { name: "Mar-24", value: 35.0, revenue: 150,  },
+    { name: "Apr-24", value: 20.0, revenue: 80, },
+    { name: "May-24", value: 60.5, revenue: 250, },
+    { name: "Jun-24", value: 40.0, revenue: 170, },
+    { name: "Jul-24", value: 58.0, revenue: 240, },
+    { name: "Aug-24", value: 50.0, revenue: 200, },
+    { name: "Sep-24", value: 59.0, revenue: 240,},
+    { name: "Oct-24", value: 37.5, revenue: 150, },
+    { name: "Nov-24", value: 55.0, revenue: 220,},
+    { name: "Dec-24", value: 35.0, revenue: 150, },
 ];
 
 const barColors = {
-    "Jan-24": "#2970CC",
-    "Feb-24": "#45C7FF",
-    "Mar-24": "#2970CC",
-    "Apr-24": "#45C7FF",
-    "May-24": "#2970CC",
-    "Jun-24": "#45C7FF",
-    "Jul-24": "#2970CC",
-    "Aug-24": "#45C7FF",
-    "Sep-24": "#2970CC",
-    "Oct-24": "#45C7FF",
-    "Nov-24": "#2970CC",
-    "Dec-24": "#45C7FF",
+    "Jan-24": "#A667FF",
+    "Feb-24": "#3EA7E8",
+    "Mar-24": "#A667FF",
+    "Apr-24": "#3EA7E8",
+    "May-24": "#A667FF",
+    "Jun-24": "#3EA7E8",
+    "Jul-24": "#A667FF",
+    "Aug-24": "#3EA7E8",
+    "Sep-24": "#A667FF",
+    "Oct-24": "#3EA7E8",
+    "Nov-24": "#A667FF",
+    "Dec-24": "#3EA7E8",
 };
 
-export default function LeaseTradeOutChart() {
+export default function LeaseUpTrackerChart() {
     return (
         <div className="bg-white p-6 rounded-lg col-span-1">
             <h2 className="text-lg font-bold text-dark-1 leading-[1.4] mb-10">
-                LTO
+            Current Occupancy
             </h2>
-            <div className="w-full h-[300px] bg-white">
+            <div className="w-full h-[400px] bg-white">
                 <ResponsiveContainer width="100%" height="100%">
                     <ComposedChart
                         data={data}
-                        margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
+                        margin={{ top: 20, right: 20, left: 20, bottom: 0 }}
                         barSize={12}
                     >
                         <CartesianGrid
@@ -70,7 +70,6 @@ export default function LeaseTradeOutChart() {
                         />
                         <YAxis
                             yAxisId="left"
-                            tickFormatter={(tick) => `${tick}`}
                             domain={[0, 70]}
                             tick={{
                                 fontSize: 14,
@@ -81,8 +80,8 @@ export default function LeaseTradeOutChart() {
                         <YAxis
                             yAxisId="right"
                             orientation="right"
-                            tickFormatter={(tick) => `${tick}%`}
                             domain={[0, "auto"]}
+                            tickFormatter={(tick) => `$${tick}`}
                             tick={{
                                 fontSize: 14,
                                 fontWeight: 600,
@@ -121,7 +120,7 @@ export default function LeaseTradeOutChart() {
                             {data.map((entry, index) => (
                                 <Cell
                                     key={`cell-${index}`}
-                                    fill={barColors[entry.name] || "#ccc"}
+                                    fill={barColors[entry.name] || "#E6E6EC"}
                                 />
                             ))}
                         </Bar>
@@ -131,15 +130,6 @@ export default function LeaseTradeOutChart() {
                             type="linear"
                             dataKey="revenue"
                             stroke="#45C7FF"
-                            strokeWidth={1.5}
-                            dot={false}
-                        />
-                        <Line
-                            yAxisId="right"
-                            name="Target"
-                            type="linear"
-                            dataKey="target"
-                            stroke="#2970CC"
                             strokeWidth={1.5}
                             dot={false}
                         />

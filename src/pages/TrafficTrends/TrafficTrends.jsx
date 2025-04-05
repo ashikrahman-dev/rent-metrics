@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import DelinquencyChart from "../../components/Charts/DelinquencyChart/DelinquencyChart";
+import TrafficTrendChart from "../../components/Charts/TrafficTrendChart/TrafficTrendChart";
 
 const expenseData = [
   { name: "10%", value: 5.0 },
@@ -14,13 +14,13 @@ const expenseData = [
   { name: "100%", value: 8.0 }, 
   
 ];
-export default function LeaseTradeOut() {
+export default function TrafficTrends() {
   return (
     <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
       {/* Heading & Button */}
       <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
         <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
-          Delinquency
+        Traffic Trends 
         </h2>
 
         <div className="flex gap-2.5">
@@ -67,7 +67,7 @@ export default function LeaseTradeOut() {
         </div>
       </div>
       <div className="mb-3 ">
-        <DelinquencyChart
+        <TrafficTrendChart
           title="Delinquency"
           data={expenseData}
           linearGradientId="Gradientrr"

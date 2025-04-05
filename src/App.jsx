@@ -46,6 +46,9 @@ import RentsandOccupancyReport from "./pages/RentsandOccupancyReport/RentsandOcc
 import Delinquency from "./pages/Delinquency/Delinquency";
 import Maintenance from "./pages/Maintenance/Maintenance";
 import RentRollSummary from "./pages/RentRollSummary/RentRollSummary";
+import TrafficTrends from "./pages/TrafficTrends/TrafficTrends";
+import LeaseUpTracker from "./pages/LeaseUpTracker/LeaseUpTracker";
+import DailyTracker from "./pages/DailyTracker/DailyTracker";
 
 
 // **Protected Route Component**
@@ -190,6 +193,7 @@ const router = createBrowserRouter([
             { path: "financial/report", element: <FinancialReport /> },
             { path: "financial/statement", element: <Statement /> },
             { path: "financial/budget-variance", element: <BudgetVariance /> },
+            { path: "financial/daily-tracker", element: <DailyTracker /> },
             { path: "operations/occupancy", element: <Occupancy /> },
             { path: "operations/lease-trade-out", element: <LeaseTradeOut /> },
             {
@@ -207,6 +211,14 @@ const router = createBrowserRouter([
             {
                 path: "operations/maintenance",
                 element: <Maintenance />,
+            },
+            {
+                path: "operations/traffic-trends",
+                element: <TrafficTrends />,
+            },
+            {
+                path: "operations/lease-up-tracker",
+                element: <LeaseUpTracker />,
             },
             { path: "unit-renovation/analytics", element: <Analytics /> },
             {
