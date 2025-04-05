@@ -10,6 +10,7 @@ import DailyFinancialTrackerChart from "../../components/Charts/DailyFinancialTr
 import InsightsRecommendations from "../../components/InsightsRecommendations/InsightsRecommendations";
 import QuickActions from "../../components/QuickActions/QuickActions";
 import StatusCardKPI from "../../components/StatusCardKPI/StatusCardKPI";
+
 export default function FinancialOverview() {
     return (
         <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
