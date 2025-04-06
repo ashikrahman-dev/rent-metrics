@@ -163,6 +163,14 @@ const menuItems = [
                 title: "Daily Tracker",
                 path: "/dashboard/financial/daily-tracker",
             },
+            {
+                title: "CapEx Tracker",
+                path: "/dashboard/financial/capex-tracker",
+            },
+            {
+                title: "MMR Report",
+                path: "/dashboard/financial/mmr-report",
+            },
         ],
     },
     {
@@ -330,6 +338,11 @@ const menuItems = [
                 title: "Reno Opportunities",
                 path: "/dashboard/unit-renovation/reno-opportunities",
             },
+            {
+                title: "Unit Renovation Summary",
+                path: "/dashboard/unit-renovation/unit-renovation-summary",
+            },
+            
         ],
     },
     {
@@ -448,6 +461,7 @@ const menuItems = [
             </svg>
         ),
     },
+ 
 ];
 
 export default function Sidebar() {

@@ -226,3 +226,19 @@ button[data-headlessui-state="selected"]:focus-visible {
     background-position: center center;
 }
 /* why-rent-metrics-banner */
+
+
+
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #2970CC;
+    border-radius: 10px;
+    border: 0px solid #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }

@@ -49,6 +49,9 @@ import RentRollSummary from "./pages/RentRollSummary/RentRollSummary";
 import TrafficTrends from "./pages/TrafficTrends/TrafficTrends";
 import LeaseUpTracker from "./pages/LeaseUpTracker/LeaseUpTracker";
 import DailyTracker from "./pages/DailyTracker/DailyTracker";
+import CapExTracker from "./pages/CapExTracker/CapExTracker";
+import UnitRenovationSummary from "./pages/UnitRenovationSummary/UnitRenovationSummary";
+import MMRReport from "./pages/MMRReport/MMRReport";
 
 
 // **Protected Route Component**
@@ -169,7 +172,7 @@ const router = createBrowserRouter([
                 path: "add-new-properties",
                 element: (
                     <ProtectedRoute>
-                        <AddNewProperty />
+                    <AddNewProperty />
                     </ProtectedRoute>
                 ),
             },
@@ -194,6 +197,7 @@ const router = createBrowserRouter([
             { path: "financial/statement", element: <Statement /> },
             { path: "financial/budget-variance", element: <BudgetVariance /> },
             { path: "financial/daily-tracker", element: <DailyTracker /> },
+            { path: "financial/capex-tracker", element: <CapExTracker /> },
             { path: "operations/occupancy", element: <Occupancy /> },
             { path: "operations/lease-trade-out", element: <LeaseTradeOut /> },
             {
@@ -236,6 +240,8 @@ const router = createBrowserRouter([
             { path: "capital-inventory/maintenance-inventory", element: <MaintenanceInventory /> },
             { path: "bench-marking", element: <BenchMarking/> },
             { path: "rent-rollr-summary", element: <RentRollSummary/> },
+            { path: "unit-renovation/unit-renovation-summary", element: <UnitRenovationSummary/> },
+            { path: "financial/mmr-report", element: <MMRReport/> },
 
             
         ],
