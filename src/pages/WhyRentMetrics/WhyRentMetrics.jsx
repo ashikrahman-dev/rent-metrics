@@ -4,7 +4,7 @@ import WhyRentMetricsContent from "../../components/WhyRentMetricsContent/WhyRen
 
 export default function WhyRentMetrics() {
     return (
-        <>
+        <> 
             <WhyRentMetricsBanner />
             <WhyRentMetricsContent />
             <Cta />
