@@ -56,7 +56,7 @@ export default function RentRollSummary() {
       <div>
         <RentRollSummaryTable />
       </div>
-      <div className="grid grid-cols-2 gap-4">
+      {/* <div className="grid grid-cols-2 gap-4">
         <div className="bg-white p-5 rounded-2xl mt-8 h-[400px] relative">
           <img
             src={dragIcon}
@@ -71,7 +71,7 @@ export default function RentRollSummary() {
           </h2>          
           <FrontFacing />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

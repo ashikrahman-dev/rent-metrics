@@ -1,70 +1,241 @@
 export default function RentRollSummaryTable() {
-  // Financial data categories
-  const tableRow = [
-    "E1",
-    "48",
-    "576",
-    "100%",
-    "$1,285	",
-    "$1,298	",
-    "0",
-    "0",
-    "N/A",
-    "$0",
-    "0",
-    "0",
-    "0",
-    "3",
-    "$1,072",
-    "5",
-    "2",
-    "3",
-
-  ];
-  const tableTotal = [
-    "Total",
-    "242",
-    "00",
-    "90.9%",
-    "$1,603",
-    "15",
-    "8",
-    "53%",
-    "$1,691",
-    "12",
-    "4",
-    "7",
-    "5",
-    "$1,362",
-    "10",
-    "16",
-    "10",
-    "3",
-
+  const headers = [
+    "Unit", 
+    "Unit Type", 
+    "Unit Resident", 
+    "Name",
+    "Market Charge",
+    "Amount", 
+    "Resident", 
+    "Other Move In", 
+    "Lease", 
+    "Move Out", 
+    "Balance", 
   ];
 
-  // tableTitle for column headers
-  const tableTitle = [
-    "Number of +Unit",
-    "Sq Ft",
-    "Occ.%",
-    "Avg Rent",
-    "Market Rent",
-    "Lease Exp.",
-    "#Renew",
-    "%Renew",
-    "Avg Rate",
-    "Total Vactes",
-    "Early Vacates",
-    "MTM Unit",
-    "New Leases",
-    "Avg Rate",
-    "F-1 Exp",
-    "F-2Exp",
-    "F-3Exp",
+  const data = [
+    // Row 1
+    [
+      { value: "Sq Ft", colspan: 4 },
+      { value: "Rent Code", colspan: 4 },
+      { value: "Deposit" },
+      { value: "Deposit" },
+      { value: "Expiration" }
+    ],
+    // Row 2
+    [
+      { value: "Current/Notice/Vacant Residents", colspan: 11 },
+    ],
+    // Row 3
+    [
+      { value: "1101"},
+      { value: "AMCB4 "},
+      { value: "1,337.00" },
+      { value: "t0705639"},
+      { value: "Paul Tyrrell" },
+      { value: "2,422.00" },
+      { value: "rent" },
+      { value: "2,123.00" },
+      { value: "500.00" },
+      { value: "500.00" },
+      { value: "12/12/2024" }
+    ],
+    [
+      { value: " "},
+      { value: " "},
+      { value: "" },
+      { value: ""},
+      { value: "cable" },
+      { value: "72.00" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" }
+    ],
+    [
+      { value: " "},
+      { value: " "},
+      { value: "" },
+      { value: ""},
+      { value: "cable" },
+      { value: "72.00" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" }
+    ],
+    [
+      { value: " "},
+      { value: " "},
+      { value: "" },
+      { value: ""},
+      { value: "Total" },
+      { value: "2,195.00" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" }
+    ],
+    [
+      { value: "1101"},
+      { value: "AMCB4 "},
+      { value: "1,337.00" },
+      { value: "t0705639"},
+      { value: "Paul Tyrrell" },
+      { value: "2,422.00" },
+      { value: "rent" },
+      { value: "2,123.00" },
+      { value: "500.00" },
+      { value: "500.00" },
+      { value: "12/12/2024" }
+    ],
+    [
+      { value: " "},
+      { value: " "},
+      { value: "" },
+      { value: ""},
+      { value: "cable" },
+      { value: "72.00" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" }
+    ],
+    [
+      { value: " "},
+      { value: " "},
+      { value: "" },
+      { value: ""},
+      { value: "cable" },
+      { value: "72.00" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" }
+    ],
+    [
+      { value: " "},
+      { value: " "},
+      { value: "" },
+      { value: ""},
+      { value: "Total" },
+      { value: "2,195.00" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" }
+    ],
+    [
+      { value: "1101"},
+      { value: "AMCB4 "},
+      { value: "1,337.00" },
+      { value: "t0705639"},
+      { value: "Paul Tyrrell" },
+      { value: "2,422.00" },
+      { value: "rent" },
+      { value: "2,123.00" },
+      { value: "500.00" },
+      { value: "500.00" },
+      { value: "12/12/2024" }
+    ],
+    [
+      { value: " "},
+      { value: " "},
+      { value: "" },
+      { value: ""},
+      { value: "cable" },
+      { value: "72.00" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" }
+    ],
+    [
+      { value: " "},
+      { value: " "},
+      { value: "" },
+      { value: ""},
+      { value: "cable" },
+      { value: "72.00" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" }
+    ],
+    [
+      { value: " "},
+      { value: " "},
+      { value: "" },
+      { value: ""},
+      { value: "Total" },
+      { value: "2,195.00" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" }
+    ],
+    [
+      { value: "1101"},
+      { value: "AMCB4 "},
+      { value: "1,337.00" },
+      { value: "t0705639"},
+      { value: "Paul Tyrrell" },
+      { value: "2,422.00" },
+      { value: "rent" },
+      { value: "2,123.00" },
+      { value: "500.00" },
+      { value: "500.00" },
+      { value: "12/12/2024" }
+    ],
+    [
+      { value: " "},
+      { value: " "},
+      { value: "" },
+      { value: ""},
+      { value: "cable" },
+      { value: "72.00" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" }
+    ],
+    [
+      { value: " "},
+      { value: " "},
+      { value: "" },
+      { value: ""},
+      { value: "cable" },
+      { value: "72.00" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" }
+    ],
+    [
+      { value: " "},
+      { value: " "},
+      { value: "" },
+      { value: ""},
+      { value: "Total" },
+      { value: "2,195.00" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" },
+      { value: "" }
+    ],
   ];
-
-  // Static financial data with unique values for each cell
   
 
   return (
@@ -72,157 +243,36 @@ export default function RentRollSummaryTable() {
       <div className="w-full overflow-x-auto border rounded-2xl border-[#BBC5CD] font-red-hat-display">
         <table className="min-w-full border-collapse bg-white">
           <thead>
-            <tr className="bg-white text-sm font-bold text-dark-2">
-              <th className="py-3 px-3 text-left border-b border-r border-[#BBC5CD] border-b-dark-3">
-                Unit Type
-              </th>
-              {tableTitle.map((month) => (
+            <tr className="bg-white text-dark-2 font-semibold text-[14px] uppercase">
+              {headers.map((header, idx) => (
                 <th
-                  key={month}
-                  className="py-3 px-3 font-bold text-left border-b  border-[#BBC5CD] border-b-dark-3 font-[14px] text-[#54616B]"
+                  key={idx}
+                  className={`py-2 px-4 text-center font-semibold text-[14px] border-b border-[#BBC5CD] ${idx !== headers.length - 1 ? 'border-r border-[#D8DFE5]' : ''}`}
                 >
-                  {month}
+                  {header}
                 </th>
               ))}
             </tr>
           </thead>
-          <tbody>            
-          <tr>
-  {tableRow.map((item, index) => (
-    <td
-      key={item}
-      className={`py-3 px-3 font-medium text-left border-b ${
-        index !== tableRow.length - 1 ? 'border-r' : ''
-      } border-[#BBC5CD] font-[14px] text-[#54616B]`}
-    >
-      {item}
-    </td>
+          <tbody>
+  {data.map((row, rowIdx) => (
+    <tr key={rowIdx} className="hover:bg-gray-50">
+      {row.map((cell, cellIdx) => {
+        const colSpan = cell.colspan || 1;
+        return (
+          <td
+            key={cellIdx}
+            colSpan={colSpan}
+            className={`p-2 text-center font-semibold text-[14px] border-b border-[#BBC5CD] ${cellIdx !== row.length - 1 ? 'border-r border-[#D8DFE5]' : ''}`}
+          >
+            {cell.value}
+          </td>
+        );
+      })}
+    </tr>
   ))}
-</tr>
-<tr>
-  {tableRow.map((item, index) => (
-    <td
-      key={item}
-      className={`py-3 px-3 font-medium text-left border-b ${
-        index !== tableRow.length - 1 ? 'border-r' : ''
-      } border-[#BBC5CD] font-[14px] text-[#54616B]`}
-    >
-      {item}
-    </td>
-  ))}
-</tr>
-<tr>
-  {tableRow.map((item, index) => (
-    <td
-      key={item}
-      className={`py-3 px-3 font-medium text-left border-b ${
-        index !== tableRow.length - 1 ? 'border-r' : ''
-      } border-[#BBC5CD] font-[14px] text-[#54616B]`}
-    >
-      {item}
-    </td>
-  ))}
-</tr>
-<tr>
-  {tableRow.map((item, index) => (
-    <td
-      key={item}
-      className={`py-3 px-3 font-medium text-left border-b ${
-        index !== tableRow.length - 1 ? 'border-r' : ''
-      } border-[#BBC5CD] font-[14px] text-[#54616B]`}
-    >
-      {item}
-    </td>
-  ))}
-</tr>
-<tr>
-  {tableRow.map((item, index) => (
-    <td
-      key={item}
-      className={`py-3 px-3 font-medium text-left border-b ${
-        index !== tableRow.length - 1 ? 'border-r' : ''
-      } border-[#BBC5CD] font-[14px] text-[#54616B]`}
-    >
-      {item}
-    </td>
-  ))}
-</tr>
-<tr>
-  {tableRow.map((item, index) => (
-    <td
-      key={item}
-      className={`py-3 px-3 font-medium text-left border-b ${
-        index !== tableRow.length - 1 ? 'border-r' : ''
-      } border-[#BBC5CD] font-[14px] text-[#54616B]`}
-    >
-      {item}
-    </td>
-  ))}
-</tr>
-<tr>
-  {tableRow.map((item, index) => (
-    <td
-      key={item}
-      className={`py-3 px-3 font-medium text-left border-b ${
-        index !== tableRow.length - 1 ? 'border-r' : ''
-      } border-[#BBC5CD] font-[14px] text-[#54616B]`}
-    >
-      {item}
-    </td>
-  ))}
-</tr>
-<tr>
-  {tableRow.map((item, index) => (
-    <td
-      key={item}
-      className={`py-3 px-3 font-medium text-left border-b ${
-        index !== tableRow.length - 1 ? 'border-r' : ''
-      } border-[#BBC5CD] font-[14px] text-[#54616B]`}
-    >
-      {item}
-    </td>
-  ))}
-</tr>
-<tr>
-  {tableRow.map((item, index) => (
-    <td
-      key={item}
-      className={`py-3 px-3 font-medium text-left border-b ${
-        index !== tableRow.length - 1 ? 'border-r' : ''
-      } border-[#BBC5CD] font-[14px] text-[#54616B]`}
-    >
-      {item}
-    </td>
-  ))}
-</tr>
-<tr>
-  {tableRow.map((item, index) => (
-    <td
-      key={item}
-      className={`py-3 px-3 font-medium text-left border-b ${
-        index !== tableRow.length - 1 ? 'border-r' : ''
-      } border-[#BBC5CD] font-[14px] text-[#54616B]`}
-    >
-      {item}
-    </td>
-  ))}
-</tr>
+</tbody>
 
-<tr>
-            {tableTotal.map((item, index) => (
-                <td
-                  key={item}
-                  className={`py-3 px-3 font-bold text-[#001924]  text-left bg-[#E5E8FF]  ${
-                    index !== tableRow.length - 1 ? 'border-r' : ''
-                  } border-[#BBC5CD] font-[14px] text-[#54616B]`}
-                  >
-                  {item}
-                </td>
-              ))}             
-            </tr> 
-                      
-           
-          </tbody>
         </table>
       </div>
     </div>
