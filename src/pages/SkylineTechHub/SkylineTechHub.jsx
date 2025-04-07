@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"; // Ensure Link is imported
 import OverviewTab from "../../components/OverviewTab/OverviewTab";
 import Returns from "../../components/Returns/Returns";
 import Valuation from "../../components/Valuation/Valuation";
-
 const Tabs = () => {
     const [activeTab, setActiveTab] = useState(0);
 
