@@ -198,7 +198,6 @@ export default function PropertyInformation() {
                 </div>
                 {/* Property Information form */}
 
-         
                 {/* Button group */}
                 <div className="flex justify-end gap-5 mt-8">
                     <Link
@@ -208,7 +207,7 @@ export default function PropertyInformation() {
                         Cancel
                     </Link>
                     <Link
-                        to=""
+                        to="/dealpoint"
                         className="flex justify-center py-[14px] px-6 rounded-lg bg-success text-white text-base font-black transition-colors duration-200 hover:bg-success/15 hover:text-success"
                     >
                         Add Property
