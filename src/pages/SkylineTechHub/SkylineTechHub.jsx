@@ -33,6 +33,7 @@ const Tabs = () => {
 
             {/* Tabs Content */}
             <div>{tabs[activeTab].content}</div>
+            
         </div>
     );
 };
