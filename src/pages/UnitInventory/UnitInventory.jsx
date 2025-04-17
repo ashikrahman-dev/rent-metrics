@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { upload } from "../../assets/images/upload.svg";
+import { check } from "../../assets/images/check.svg";
+import { close } from "../../assets/images/close.svg";
 
 export default function UnitInventory() {
   const [tableData, setTableData] = useState([
-    { unitNumber: "101", status: "Refrigerator, Microwave, Stove" },
+    { unitNumber: "101", Refrigerator: upload, Stove:"",Microwave:"",Dishwasher:"" },
     { unitNumber: "102", status: "Refrigerator, Microwave, Stove" },
     { unitNumber: "103", status: "Refrigerator, Microwave, Stove" },
     { unitNumber: "104", status: "Refrigerator, Microwave, Stove" },
@@ -88,18 +91,35 @@ export default function UnitInventory() {
                       className="py-3 px-5 text-left border-b border-b-dark-3 cursor-pointer uppercase"
                       onClick={() => handleSort("unitNumber")}
                     >
-                      Unit Number{" "}
+                      Refrigerator{" "}
                       {sortConfig.key === "unitNumber" &&
                         (sortConfig.direction === "asc" ? "↑" : "↓")}
                     </th>
                     <th
-                      className="py-3 px-5 text-left border-b border-b-dark-3 uppercase cursor-pointer"
-                      onClick={() => handleSort("status")}
+                      className="py-3 px-5 text-left border-b border-b-dark-3 cursor-pointer uppercase"
+                      onClick={() => handleSort("unitNumber")}
                     >
-                      Renovation Status{" "}
-                      {sortConfig.key === "status" &&
+                     Stove{" "}
+                      {sortConfig.key === "unitNumber" &&
                         (sortConfig.direction === "asc" ? "↑" : "↓")}
                     </th>
+                    <th
+                      className="py-3 px-5 text-left border-b border-b-dark-3 cursor-pointer uppercase"
+                      onClick={() => handleSort("unitNumber")}
+                    >
+                     Microwave{" "}
+                      {sortConfig.key === "unitNumber" &&
+                        (sortConfig.direction === "asc" ? "↑" : "↓")}
+                    </th>
+                    <th
+                      className="py-3 px-5 text-left border-b border-b-dark-3 cursor-pointer uppercase"
+                      onClick={() => handleSort("unitNumber")}
+                    >
+                     Dishwasher{" "}
+                      {sortConfig.key === "unitNumber" &&
+                        (sortConfig.direction === "asc" ? "↑" : "↓")}
+                    </th>
+                  
                     <th className="py-3 px-5 text-end border-b border-b-dark-3 uppercase justify-items-end">
                       Action
                     </th>
@@ -112,10 +132,16 @@ export default function UnitInventory() {
                       className="hover:bg-gray-50 text-sm font-medium text-dark-2"
                     >
                       <td className="py-3 px-5 text-left border-b border-b-[#E6E6EC]">
-                        {row.unitNumber}
+                        {row.Refrigerator}
                       </td>
                       <td className="py-3 px-5 text-left border-b border-b-[#E6E6EC]">
-                        {row.status}
+                        {row.check}
+                      </td>
+                      <td className="py-3 px-5 text-left border-b border-b-[#E6E6EC]">
+                        {row.close}
+                      </td>
+                      <td className="py-3 px-5 text-left border-b border-b-[#E6E6EC]">
+                        {row.check}
                       </td>
                       <td className="py-3 px-5 text-end justify-items-end border-b border-b-[#E6E6EC]">
                         <div className="relative">

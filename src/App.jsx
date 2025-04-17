@@ -53,6 +53,7 @@ import CapExTracker from "./pages/CapExTracker/CapExTracker";
 import UnitRenovationSummary from "./pages/UnitRenovationSummary/UnitRenovationSummary";
 import MMRReport from "./pages/MMRReport/MMRReport";
 import Dealpoint from "./components/Dealpoint/Dealpoint";
+import PropertyManagement from "./components/PropertyManagement/PropertyManagement";
 
 
 // **Protected Route Component**
@@ -182,6 +183,14 @@ const router = createBrowserRouter([
                 element: (
                     <ProtectedRoute>
                     <Dealpoint />
+                    </ProtectedRoute>
+                ),
+            },
+            {
+                path: "PropertyManagement",
+                element: (
+                    <ProtectedRoute>
+                    <PropertyManagement />
                     </ProtectedRoute>
                 ),
             },

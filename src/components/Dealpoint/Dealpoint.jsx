@@ -256,7 +256,7 @@ Interest Only Period (Months)
 
          
                 {/* Button group */}
-                <div className="flex justify-end gap-5 mt-8">
+                <div className="flex justify-end gap-5 mt-8 pb-8">
                     <Link
                         to="/"
                         className="flex justify-center py-[14px] px-6 rounded-lg bg-danger text-white text-base font-black transition-colors duration-200 hover:bg-danger/15 hover:text-danger"
@@ -264,10 +264,10 @@ Interest Only Period (Months)
                         Cancel
                     </Link>
                     <Link
-                        to="/dealpoint"
+                        to="/PropertyManagement"
                         className="flex justify-center py-[14px] px-6 rounded-lg bg-success text-white text-base font-black transition-colors duration-200 hover:bg-success/15 hover:text-success"
                     >
-                        Add Property
+                        Connect Data
                     </Link>
                 </div>
                 {/* Button group */}
