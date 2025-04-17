@@ -5,10 +5,7 @@
 
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import Check from "../../assets/images/check.svg";
-import X from "../../assets/images/Close.svg";
 import MoreVertical from "../../assets/images/three-dot-action-icon.svg";
-import Upload from "../../assets/images/Upload.svg";
 
 export default function MaintenanceInventory() {
     const units = [
