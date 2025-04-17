@@ -6,6 +6,6 @@ import { defineConfig } from "vite";
 export default defineConfig({
     plugins: [tailwindcss(), react()],
     build: {
-        chunkSizeWarningLimit: 2500, // in kB
+        chunkSizeWarningLimit: 5000, // in kB
     },
 });
