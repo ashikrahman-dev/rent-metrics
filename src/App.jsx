@@ -265,7 +265,7 @@ const router = createBrowserRouter([
         ],
     },
     // **404 Not Found Route**
-    { path: "*", element: <NotFound /> },
+    { path: "*", element: <NotFound /> }, 
 ]);
 
 export default function App() {
