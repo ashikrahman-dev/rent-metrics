@@ -79,7 +79,7 @@ export default function LeaseUpTrackerTable() {
     const totals = calculateTotals();
 
     return (
-        <div className="    bg-white rounded-2xl">
+        <div className="bg-white rounded-2xl">
             <div className="w-full overflow-x-auto border rounded-2xl border-dark-5 font-red-hat-display">
                 <table className="min-w-full border-collapse bg-white">
                     <thead>

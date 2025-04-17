@@ -4,7 +4,7 @@ import T12NOI from "../../assets/images/t-12-noi-icon.svg";
 import T3noi from "../../assets/images/t-3noi.svg";
 import Income from "../../assets/images/income-per.svg";
 import Expenses from "../../assets/images/Expenses Per Unit.svg";
-import Operating from "../../assets/images/1171278959.svg";
+import Operating from "../../assets/images/operating-icon.svg";
 
 import BenchMarkingExpensePerUnit from "../../components/Charts/BenchMarking/BenchMarkingExpensePerUnit";
 
