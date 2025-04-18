@@ -6,6 +6,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import MoreVertical from "../../assets/images/three-dot-action-icon.svg";
+import MaintenanceInventoryData from "./MaintenanceInventoryData";
 
 export default function MaintenanceInventory() {
     const units = [
@@ -130,7 +131,7 @@ export default function MaintenanceInventory() {
                         <div className="bg-white rounded-lg min-h-[620px] p-3">
                             <div className="w-full p-4 bg-white rounded-lg">
                                 <div className="overflow-x-auto bg-white rounded-lg">
-                                    <table className="w-full table-auto border-collapse font-red-hat-display">
+                                    {/* <table className="w-full table-auto border-collapse font-red-hat-display">
                                         <thead>
                                             <tr className="border-b border-gray-200">
                                                 <th className="py-3 px-6 text-left text-sm font-medium text-gray-500">
@@ -175,7 +176,8 @@ export default function MaintenanceInventory() {
                                                 </tr>
                                             ))}
                                         </tbody>
-                                    </table>
+                                    </table> */}
+                                    <MaintenanceInventoryData /> 
                                 </div>
                             </div>
                         </div>

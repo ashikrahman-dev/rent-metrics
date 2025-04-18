@@ -1,17 +1,15 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // Ensure Link is imported
-import OverviewTab from "../../components/OverviewTab/OverviewTab";
-import Returns from "../../components/Returns/Returns";
-import Valuation from "../../components/Valuation/Valuation";
-import Documents from "../../components/Documents/Documents";
+import { Link } from "react-router-dom"; 
+import ApiIntegration from "../../components/ApiIntegration/ApiIntegration";
+import ExcelImport from "../../components/ExcelImport/ExcelImport";
+import AddData from "../../components/AddData/AddData";
 const Tabs = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     const tabs = [
-        { title: "Overview", content: <OverviewTab /> },
-        { title: "Valuation", content: <Valuation /> },
-        { title: "Returns", content: <Returns /> },
-        { title: "Documents", content: <Documents /> },
+        { title: "API Integration", content: <ApiIntegration /> },
+        { title: "Excel Import", content: <ExcelImport /> },
+        { title: "Manual Input", content: <AddData /> },
     ];
 
     return (
@@ -40,13 +38,13 @@ const Tabs = () => {
     );
 };
 
-export default function SkylineTechHub() {
+export default function ManualInput() {
     return (
         <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
             {/* Heading & Button */}
             <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
                 <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
-                    Skyline Tech Hub
+                    asdfasdf
                 </h2>
                 <div className="flex gap-2.5">
                     <Link

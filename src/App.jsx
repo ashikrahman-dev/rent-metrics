@@ -54,6 +54,8 @@ import UnitRenovationSummary from "./pages/UnitRenovationSummary/UnitRenovationS
 import MMRReport from "./pages/MMRReport/MMRReport";
 import Dealpoint from "./components/Dealpoint/Dealpoint";
 import PropertyManagement from "./components/PropertyManagement/PropertyManagement";
+import ManualInputTab from "./components/ManualInputTab/ManualInputTab";
+import ManualInput from "./pages/ManualInput/ManualInput";
 
 
 // **Protected Route Component**
@@ -206,6 +208,7 @@ const router = createBrowserRouter([
         ),
         children: [
             { path: "skyline-tech-hub", element: <SkylineTechHub /> },
+            { path: "manual-input", element: <ManualInput /> },
             { path: "property-summary", element: <PropertySummary /> },
             { path: "marketing", element: <Marketing /> },
             { path: "valuation", element: <Valuation /> },

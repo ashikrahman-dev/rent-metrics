@@ -250,3 +250,6 @@ button[data-headlessui-state="selected"]:focus-visible {
     font-weight: 700;
     color: #54616B;
 }
+.rs-picker-default .rs-picker-toggle.rs-btn .rs-picker-toggle-indicator .rs-picker-clean {
+    top: 16px;
+}

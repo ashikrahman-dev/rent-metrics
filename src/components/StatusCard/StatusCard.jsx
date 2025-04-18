@@ -36,13 +36,13 @@ export default function StatusCard({
                 />
                 <h6 className="text-sm text-dark-1 font-bold leading-[1.4] flex gap-3 items-center">
                     {title || "Total Revenue"}
-                    <button className="cursor-pointer">
+                    {/* <button className="cursor-pointer">
                         <img
                             src={tooltipIcon}
                             alt="Icon"
                             className="max-w-full"
                         />
-                    </button>
+                    </button> */}
                 </h6>
             </div>
 
@@ -83,7 +83,7 @@ export default function StatusCard({
                     )}
 
                     {/* Number Value */}
-                    <h2 className="text-dark-1 text-4xl leading-[1.4] font-extrabold mt-2.5">
+                    <h2 className="text-dark-1 text-4xl leading-[1.4] font-bold mt-2.5">
                         {number || "$1.2M"}
                     </h2>
                 </div>
