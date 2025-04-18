@@ -115,7 +115,6 @@ export default function UnitInventory() {
                     <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
                         Unit Inventory
                     </h2>
-
                     <div className="flex gap-2.5">
                         {/* Edit Button */}
                         <Link
@@ -159,7 +158,6 @@ export default function UnitInventory() {
                         </Link>
                     </div>
                 </div>
-
                 <div>
                     <div className="flex flex-col gap-6">
                         <div className="bg-white rounded-lg min-h-[620px] p-3">
