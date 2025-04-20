@@ -32,8 +32,7 @@ const Tabs = () => {
             </div>
 
             {/* Tabs Content */}
-            <div>{tabs[activeTab].content}</div>
-            
+            <div>{tabs[activeTab].content}</div> 
         </div>
     );
 };
