@@ -1,222 +1,85 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useFormData } from "../../context/PropertyContext";
 
 export default function PropertyInformation() {
-    return (
-        <div className="">
-            {/* Form - start */}
-            <form>
-                {/* Property Information form */}
-                <div className="bg-white p-6 rounded-lg mb-8">
-                    <h4 className="text-dark-1 text-2xl font-bold leading-[1.3] mb-6">
-                        Property Information
-                    </h4>
-                    <div className="grid grid-cols-12 gap-6 ">
-                        {/* Property Name */}
-                        <div className="col-span-4">
-                            <label
-                                htmlFor="property_name"
-                                className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
-                            >
-                                Property Name
-                            </label>
-                            <div className="mt-3">
-                                <input
-                                    id="property_name"
-                                    name="property_name"
-                                    type="text"
-                                    autoComplete="property_name"
-                                    placeholder="Property Name"
-                                    className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
-                                />
-                            </div>
-                        </div>
+  const { updateFormData } = useFormData();  // Correct hook and function
+  const navigate = useNavigate();
 
-                        {/* Property Address */}
-                        <div className="col-span-4">
-                            <label
-                                htmlFor="property_address"
-                                className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
-                            >
-                                Property Address
-                            </label>
-                            <div className="mt-3">
-                                <input
-                                    id="property_address"
-                                    name="property_address"
-                                    type="text"
-                                    autoComplete="property_address"
-                                    placeholder="Property Address"
-                                    className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
-                                />
-                            </div>
-                        </div>
+  const [formData, setFormData] = useState({
+    property_name: "",
+    property_address: "",
+    city: "",
+    state: "",
+    zip_code: "",
+    website_url: "",
+    number_of_units: "",
+    year_built: "",
+    sf_gba: "",
+  });
 
-                        {/* City */}
-                        <div className="col-span-4">
-                            <label
-                                htmlFor="city"
-                                className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
-                            >
-                                City
-                            </label>
-                            <div className="mt-3">
-                                <input
-                                    id="city"
-                                    name="city"
-                                    type="text"
-                                    autoComplete="city"
-                                    placeholder="City"
-                                    className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
-                                />
-                            </div>
-                        </div>
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
-                        {/* State */}
-                        <div className="col-span-4">
-                            <label
-                                htmlFor="state"
-                                className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
-                            >
-                                State
-                            </label>
-                            <div className="mt-3">
-                                <input
-                                    id="state"
-                                    name="state"
-                                    type="text"
-                                    autoComplete="state"
-                                    placeholder="State"
-                                    className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
-                                />
-                            </div>
-                        </div>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    updateFormData(formData);  // Updated to use the correct function
+    navigate("/dealpoint");
+  };
 
-                        {/* Zip */}
-                        <div className="col-span-4">
-                            <label
-                                htmlFor="zip_code"
-                                className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
-                            >
-                                Zip
-                            </label>
-                            <div className="mt-3">
-                                <input
-                                    id="zip_code"
-                                    name="zip_code"
-                                    type="number"
-                                    autoComplete="zip_code"
-                                    placeholder="Zip"
-                                    className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
-                                />
-                            </div>
-                        </div>
+  return (
+    <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg">
+      <h4 className="text-dark-1 text-2xl font-bold mb-6">
+        Property Information
+      </h4>
+      <div className="grid grid-cols-12 gap-6">
+        {[
+          { label: "Property Name", name: "property_name", type: "text" },
+          { label: "Property Address", name: "property_address", type: "text" },
+          { label: "City", name: "city", type: "text" },
+          { label: "State", name: "state", type: "text" },
+          { label: "Zip", name: "zip_code", type: "number" },
+          { label: "Website", name: "website_url", type: "url" },
+          { label: "Number of Units", name: "number_of_units", type: "number" },
+          { label: "Year Built", name: "year_built", type: "number" },
+          { label: "SF GBA", name: "sf_gba", type: "number" },
+        ].map(({ label, name, type }) => (
+          <div key={name} className="col-span-4">
+            <label htmlFor={name} className="block text-base font-bold text-dark-1">
+              {label}
+            </label>
+            <div className="mt-3">
+              <input
+                id={name}
+                name={name}
+                type={type}
+                value={formData[name]}
+                onChange={handleChange}
+                placeholder={label}
+                className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm bg-dark-7 text-dark-1 placeholder:text-dark-2 border-0 focus:outline-0"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
 
-                        {/* Website */}
-                        <div className="col-span-4">
-                            <label
-                                htmlFor="website_url"
-                                className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
-                            >
-                                Website
-                            </label>
-                            <div className="mt-3">
-                                <input
-                                    id="website_url"
-                                    name="website_url"
-                                    type="url"
-                                    pattern="https://.*"
-                                    autoComplete="website_url"
-                                    placeholder="https://"
-                                    className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Number of units  */}
-                        <div className="col-span-4">
-                            <label
-                                htmlFor="number_of_units"
-                                className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
-                            >
-                                Number of units
-                            </label>
-                            <div className="mt-3">
-                                <input
-                                    id="number_of_units"
-                                    name="number_of_units"
-                                    type="number"
-                                    autoComplete="number_of_units"
-                                    placeholder="Number"
-                                    className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Year Built  */}
-                        <div className="col-span-4">
-                            <label
-                                htmlFor="year_built"
-                                className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
-                            >
-                                Year Built
-                            </label>
-                            <div className="mt-3">
-                                <input
-                                    id="year_built"
-                                    name="year_built"
-                                    type="number"
-                                    autoComplete="year_built"
-                                    placeholder="yyyy"
-                                    min="1900"
-                                    max="2099"
-                                    step="1"
-                                    className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
-                                />
-                            </div>
-                        </div>
-
-                        {/* SF GBA  */}
-                        <div className="col-span-4">
-                            <label
-                                htmlFor="year_built"
-                                className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
-                            >
-                                SF GBA
-                            </label>
-                            <div className="mt-3">
-                                <input
-                                    id="year_built"
-                                    name="year_built"
-                                    type="number"
-                                    autoComplete="year_built"
-                                    placeholder=""
-                                    className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Property Information form */}
-
-                {/* Button group */}
-                <div className="flex justify-end gap-5 mt-8">
-                    <Link
-                        to="/"
-                        className="flex justify-center py-[14px] px-6 rounded-lg bg-danger text-white text-base font-black transition-colors duration-200 hover:bg-danger/15 hover:text-danger"
-                    >
-                        Cancel
-                    </Link>
-                    <Link
-                        to="/dealpoint"
-                        className="flex justify-center py-[14px] px-6 rounded-lg bg-success text-white text-base font-black transition-colors duration-200 hover:bg-success/15 hover:text-success"
-                    >
-                        Add Property
-                    </Link>
-                </div>
-                {/* Button group */}
-                {/* Purchase Information  form */}
-            </form>
-            {/* Form - end */}
-        </div>
-    );
+      <div className="flex justify-end gap-5 mt-8">
+        <button
+          type="button"
+          onClick={() => navigate("/")}
+          className="py-[14px] px-6 rounded-lg bg-danger text-white font-black hover:bg-danger/15 hover:text-danger"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          className="py-[14px] px-6 rounded-lg bg-success text-white font-black hover:bg-success/15 hover:text-success"
+        >
+          Add Property
+        </button>
+      </div>
+    </form>
+  );
 }

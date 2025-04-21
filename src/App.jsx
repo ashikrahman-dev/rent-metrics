@@ -58,14 +58,17 @@ import ManualInputTab from "./components/ManualInputTab/ManualInputTab";
 import ManualInput from "./pages/ManualInput/ManualInput";
 
 
+
 // **Protected Route Component**
 const ProtectedRoute = ({ children }) => {
     return (
         <>
+ 
             <SignedIn>{children}</SignedIn>
             <SignedOut>
                 <Navigate to="/home" replace />
             </SignedOut>
+       
         </>
     );
 };

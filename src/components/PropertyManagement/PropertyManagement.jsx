@@ -70,7 +70,7 @@ export default function PropertyManagement() {
                         Cancel
                     </Link>
                     <Link
-                        to=""
+                        to="/dashboard/property-summary/"
                         className="flex justify-center py-[14px] px-6 rounded-lg bg-success text-white text-base font-black transition-colors duration-200 hover:bg-success/15 hover:text-success"
                     >
                         Apply
