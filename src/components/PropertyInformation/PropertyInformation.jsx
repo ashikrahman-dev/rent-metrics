@@ -59,6 +59,7 @@ export default function PropertyInformation() {
                 onChange={handleChange}
                 placeholder={label}
                 className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm bg-dark-7 text-dark-1 placeholder:text-dark-2 border-0 focus:outline-0"
+                required
               />
             </div>
           </div>
@@ -68,7 +69,7 @@ export default function PropertyInformation() {
       <div className="flex justify-end gap-5 mt-8">
         <button
           type="button"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/dashboard/property-summary/")}
           className="py-[14px] px-6 rounded-lg bg-danger text-white font-black hover:bg-danger/15 hover:text-danger"
         >
           Cancel

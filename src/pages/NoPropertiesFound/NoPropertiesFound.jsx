@@ -1,7 +1,24 @@
+import { useState } from "react";
 import PropertiesNotFoundCard from "../../components/PropertiesNotFoundCard/PropertiesNotFoundCard";
 import PropertySearchFilter from "../../components/PropertySearchFilter/PropertySearchFilter";
+import { propertyList } from "../../utils/data/data"; // Import propertyList
 
 export default function NoPropertiesFound() {
+    const [searchResults, setSearchResults] = useState([]);
+    const [searched, setSearched] = useState(false);
+    
+    const handleSearch = (query) => {
+        // Filter properties based on name or address
+        const results = propertyList.filter(
+            property => 
+                property.name.toLowerCase().includes(query.toLowerCase()) ||
+                property.address.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        setSearchResults(results);
+        setSearched(true);
+    };
+    
     return (
         <section className="bg-dark-8 pt-10 px-[30px] min-h-svh">
             <div className="container mx-auto pb-12">
@@ -13,8 +30,11 @@ export default function NoPropertiesFound() {
                     system
                 </p>
 
-                <PropertySearchFilter />
-                <PropertiesNotFoundCard />
+                <PropertySearchFilter onSearch={handleSearch} />
+                <PropertiesNotFoundCard 
+                    searchResults={searchResults} 
+                    searched={searched} 
+                />
             </div>
         </section>
     );

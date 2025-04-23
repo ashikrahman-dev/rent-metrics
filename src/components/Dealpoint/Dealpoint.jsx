@@ -4,57 +4,60 @@ import { useFormData } from "../../context/PropertyContext";
 
 export default function Dealpoint() {
 
-    const { formData, updateFormData, handleFileUpload } = useFormData();
+  const { updateFormData, handleFileUpload } = useFormData();
+  const navigate = useNavigate();
 
   const [formState, setFormState] = useState({
-    purchasePrice: "",
-    purchaseDate: "",
-    trailingNOI: "",
-    debtAmount: "",
-    equityAmount: "",
-    loanAmount: "",
-    interestRate: "",
-    term: "",
-    interestOnlyPeriod: "",
-    mortgageCompany: "",
-    uploadedFile: null, // Local state for file upload
+      purchasePrice: "",
+      purchaseDate: "",
+      trailingNOI: "",
+      debtAmount: "",
+      equityAmount: "",
+      loanAmount: "",
+      interestRate: "",
+      term: "",
+      interestOnlyPeriod: "",
+      mortgageCompany: "",
+      uploadedFile: null,
   });
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormState((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+      const { name, value } = e.target;
+      setFormState((prevState) => ({
+          ...prevState,
+          [name]: value,
+      }));
   };
 
   const handleFileUploadLocal = (e) => {
-    const file = e.target.files[0];
-    setFormState((prevState) => ({
-      ...prevState,
-      uploadedFile: file,
-    }));
-    handleFileUpload(file); // ✅ Use context's handleFileUpload to set blob URL
+      const file = e.target.files[0];
+      setFormState((prevState) => ({
+          ...prevState,
+          uploadedFile: file,
+      }));
+      handleFileUpload(file);
   };
-  
+
   const handleDrop = (e) => {
-    e.preventDefault();
-    const file = e.dataTransfer.files[0];
-    setFormState((prevState) => ({
-      ...prevState,
-      uploadedFile: file,
-    }));
-    handleFileUpload(file); // ✅ Use context's handleFileUpload to set blob URL
+      e.preventDefault();
+      const file = e.dataTransfer.files[0];
+      setFormState((prevState) => ({
+          ...prevState,
+          uploadedFile: file,
+      }));
+      handleFileUpload(file);
   };
 
   const handleDragOver = (e) => {
-    e.preventDefault();
+      e.preventDefault();
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form data submitted:", formState);
-    // Data submission logic here
+      e.preventDefault();
+      // Save the form data to context
+      updateFormData(formState);
+      // Navigate to next step
+      navigate("/PropertyManagement");
   };
 
   return (
@@ -94,16 +97,23 @@ export default function Dealpoint() {
             <div
               className="border-2 border-dashed border-blue-300 rounded-lg p-10 mb-10 flex flex-col items-center justify-center text-center mt-6 bg-[rgba(41,112,204,.05)]"
               onDrop={handleDrop}
-              onDragOver={handleDragOver}
-            >
-              <svg className="mb-4" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Icon Path */}
-              </svg>
-              <p className="text-dark-2 mb-4 text-2xl font-bold leading-[1.3]">Choose a file or drag & drop it here.</p>
+              onDragOver={handleDragOver} >
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clipPath="url(#clip0_26333_33515)">
+<path d="M39.9927 17.6441C37.7742 8.80647 28.8117 3.44062 19.9741 5.65907C13.0677 7.39279 8.05291 13.3618 7.53622 20.4637C2.63241 21.2724 -0.687381 25.9032 0.121312 30.807C0.840202 35.1666 4.61773 38.3592 9.03605 38.3417H16.5352V35.342H9.03605C5.72273 35.342 3.03671 32.656 3.03671 29.3427C3.03671 26.0294 5.72273 23.3434 9.03605 23.3434C9.86443 23.3434 10.5359 22.6719 10.5359 21.8435C10.5284 14.3885 16.5659 8.3389 24.0209 8.33149C30.4743 8.32503 36.0296 12.8873 37.278 19.2188C37.4012 19.851 37.9143 20.3339 38.5528 20.4187C42.6532 21.0026 45.5037 24.7999 44.9199 28.9002C44.3956 32.5821 41.252 35.3235 37.5329 35.342H31.5336V38.3417H37.5329C43.3313 38.3242 48.0175 33.6094 47.9999 27.8111C47.9853 22.9844 44.6815 18.7895 39.9927 17.6441Z" fill="black"/>
+<path d="M22.97 23.7785L16.9707 29.7778L19.0855 31.8926L22.5351 28.4579V42.8414H25.5348V28.4579L28.9694 31.8926L31.0842 29.7778L25.0848 23.7785C24.4998 23.1969 23.5551 23.1969 22.97 23.7785Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_26333_33515">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+              <p className="text-dark-2 my-4 text-2xl font-bold leading-[1.3]">Choose a file or drag & drop it here.</p>
               <p className="text-dark-2 text-sm font-semibold mb-4">OR</p>
               <label className="cursor-pointer text-main underline hover:text-main-2 text-sm font-semibold">
                 Choose File
-                <input type="file" className="hidden" onChange={handleFileUploadLocal} />
+                <input type="file" className="hidden" onChange={handleFileUploadLocal} required />
               </label>
               {formState.uploadedFile && (
                 <p className="mt-4 text-green-600">File selected: {formState.uploadedFile.name}</p>
@@ -112,18 +122,19 @@ export default function Dealpoint() {
           </div>
 
           <div className="flex justify-end gap-5 mt-8 pb-8">
-            <Link
-              to="/"
-              className="flex justify-center py-[14px] px-6 rounded-lg bg-danger text-white text-base font-black hover:bg-danger/15 hover:text-danger"
+          <Link
+                to="/add-new-properties"
+                className="flex justify-center py-[14px] px-6 rounded-lg bg-danger text-white text-base font-black hover:bg-danger/15 hover:text-danger"
             >
-              Cancel
+                Cancel
             </Link>
-            <Link
-              to="/PropertyManagement"
-              className="flex justify-center py-[14px] px-6 rounded-lg bg-success text-white text-base font-black transition-colors duration-200 hover:bg-success/15 hover:text-success"
+            <button
+                onClick={handleSubmit}
+                type="button"
+                className="flex justify-center py-[14px] px-6 rounded-lg bg-success text-white text-base font-black transition-colors duration-200 hover:bg-success/15 hover:text-success"
             >
-              Connect Data
-            </Link>
+                Connect Data
+            </button>
           </div>
         </form>
       </div>

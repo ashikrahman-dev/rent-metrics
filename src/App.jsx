@@ -3,6 +3,7 @@ import { SignedIn, SignedOut } from "@clerk/clerk-react";
 import {
     createBrowserRouter,
     Navigate,
+    Route,
     RouterProvider,
 } from "react-router-dom";
 import NotFound from "./components/NotFound/NotFound";
@@ -54,9 +55,7 @@ import UnitRenovationSummary from "./pages/UnitRenovationSummary/UnitRenovationS
 import MMRReport from "./pages/MMRReport/MMRReport";
 import Dealpoint from "./components/Dealpoint/Dealpoint";
 import PropertyManagement from "./components/PropertyManagement/PropertyManagement";
-import ManualInputTab from "./components/ManualInputTab/ManualInputTab";
 import ManualInput from "./pages/ManualInput/ManualInput";
-
 
 
 // **Protected Route Component**
@@ -68,11 +67,11 @@ const ProtectedRoute = ({ children }) => {
             <SignedOut>
                 <Navigate to="/home" replace />
             </SignedOut>
+          
        
         </>
     );
 };
-
 // OAuth Callback Component
 // const OAuthCallback = () => {
 //     // This component can be empty - Clerk will handle the redirect

@@ -75,9 +75,9 @@ export default function MaintenanceInventory() {
 
     return (
         <>
-            <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
+            <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto pt-24 relative z-0">
                 {/* Heading & Button */}
-                <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
+                <div className="flex gap-6 justify-between items-center mb-[34px] ">
                     <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
                     Maintenance Inventory 
                     </h2>
@@ -128,7 +128,7 @@ export default function MaintenanceInventory() {
 
                 <div>
                     <div className="flex flex-col gap-6">
-                        <div className="bg-white rounded-lg min-h-[620px] p-3">
+                        <div className="bg-white rounded-lg min-h-[620px]">
                             <div className="w-full p-4 bg-white rounded-lg">
                                 <div className="overflow-x-auto bg-white rounded-lg">
                                     {/* <table className="w-full table-auto border-collapse font-red-hat-display">

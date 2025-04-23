@@ -67,7 +67,7 @@ export default function MMRReportTable() {
         <div>
             <div className="grid grid-cols-2 gap-6">
                 <div className="w-full overflow-x-auto border rounded-2xl border-dark-5 font-red-hat-display">
-                    <table className="min-w-full border-collapse bg-white">
+                    <table className="min-w-full h-full border-collapse bg-white">
                         <thead>
                             <tr className="bg-main-shade-2 text-sm font-bold text-dark-2">
                                 {Row1.map((header, idx) => (
@@ -125,7 +125,7 @@ export default function MMRReportTable() {
                     </table>
                 </div>
                 <div className="w-full overflow-x-auto border rounded-2xl border-dark-5 font-red-hat-display">
-                    <table className="min-w-full border-collapse bg-white">
+                    <table className="min-w-full h-full border-collapse bg-white">
                         <thead>
                             <tr className="bg-main-shade-2 text-sm font-bold text-dark-2">
                                 {Row2.map((header2, idx) => (
@@ -186,7 +186,7 @@ export default function MMRReportTable() {
                     </table>
                 </div>
                 <div className="w-full overflow-x-auto border rounded-2xl border-dark-5 font-red-hat-display">
-                    <table className="min-w-full border-collapse bg-white">
+                    <table className="min-w-full h-full border-collapse bg-white">
                         <thead>
                             <tr className="bg-main-shade-2 text-sm font-bold text-dark-2">
                                 {Row3.map((header3, idx) => (
@@ -248,7 +248,7 @@ export default function MMRReportTable() {
                 </div>
 
                 <div className="w-full overflow-x-auto border rounded-2xl border-dark-5 font-red-hat-display">
-                    <table className="min-w-full border-collapse bg-white">
+                    <table className="min-w-full h-full border-collapse bg-white">
                         <thead>
                             <tr className="bg-main-shade-2 text-sm font-bold text-dark-2">
                                 {Row1.map((header, idx) => (
@@ -306,7 +306,7 @@ export default function MMRReportTable() {
                     </table>
                 </div>
                 <div className="w-full overflow-x-auto border rounded-2xl border-dark-5 font-red-hat-display">
-                    <table className="min-w-full border-collapse bg-white">
+                    <table className="min-w-full h-full border-collapse bg-white">
                         <thead>
                             <tr className="bg-main-shade-2 text-sm font-bold text-dark-2">
                                 {Row2.map((header2, idx) => (
@@ -367,7 +367,7 @@ export default function MMRReportTable() {
                     </table>
                 </div>
                 <div className="w-full overflow-x-auto border rounded-2xl border-dark-5 font-red-hat-display">
-                    <table className="min-w-full border-collapse bg-white">
+                    <table className="min-w-full h-full border-collapse bg-white">
                         <thead>
                             <tr className="bg-main-shade-2 text-sm font-bold text-dark-2">
                                 {Row2.map((header2, idx) => (

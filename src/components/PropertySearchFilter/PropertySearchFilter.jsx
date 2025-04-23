@@ -1,15 +1,22 @@
-export default function PropertySearchFilter() {
-    // Property Search Function
+import { useState } from "react";
+
+export default function PropertySearchFilter({ onSearch }) {
+    const [query, setQuery] = useState("");
+
     function propertySearch(e) {
         e.preventDefault();
-        console.log("Property Search");
+        onSearch(query); // Just pass the query string, not results
     }
 
-    // Property Search Filter
-    function propertyFilter(e) {
-        e.preventDefault();
-        console.log("Property Filter");
-    }
+    const handleInputChange = (e) => {
+        const value = e.target.value;
+        setQuery(value);
+        
+        // Optional: Search as you type (remove if you prefer button-only search)
+        if (value.trim() !== "") {
+            onSearch(value);
+        }
+    };
 
     return (
         <div className="bg-white p-10 rounded-lg">
@@ -21,8 +28,9 @@ export default function PropertySearchFilter() {
                     type="text"
                     placeholder="Search property name or address"
                     className="w-full p-4 h-13 font-medium focus:outline-none bg-dark-7 rounded-lg"
+                    value={query}
+                    onChange={handleInputChange}
                 />
-
                 {/* Search Button */}
                 <button
                     onClick={propertySearch}
@@ -47,20 +55,13 @@ export default function PropertySearchFilter() {
 
                 {/* Filter Button */}
                 <button
-                    onClick={propertyFilter}
-                    className="text-base px-6 py-[14px] bg-main-shade rounded-lg text-main font-black transition-colors duration-200 hover:bg-main hover:text-white cursor-pointer inline-flex items-center gap-[10px] group col-auto"
+                   onClick={() => console.log("Filter")} 
+                   className="text-base px-6 py-[14px] bg-main-shade rounded-lg text-main font-black transition-colors duration-200 hover:bg-main hover:text-white cursor-pointer inline-flex items-center gap-[10px] group col-auto"
                 >
-                    <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M8.56546 14.5834V13.3334H11.4261V14.5834H8.56546ZM5.3365 10.6251V9.37508H14.6553V10.6251H5.3365ZM2.9165 6.66675V5.41675H17.0832V6.66675H2.9165Z"
-                            fill="#2970CC"
-                            className="transition-all duration-200 group-hover:fill-white"
+                            fill="#2970CC" className="transition-all duration-200 group-hover:fill-white"
                         />
                     </svg>
                     Advance Filter

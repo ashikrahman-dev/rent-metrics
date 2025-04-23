@@ -1,16 +1,18 @@
 import { SignedIn, SignedOut, UserButton, useUser } from "@clerk/clerk-react";
 import userImg from "../../assets/images/user-image.png";
 
-export default function DashboardHeader() {
+export default function DashboardHeader({ onSearch }) {
     const { user } = useUser();
+    console.log("DashboardHeader rendered with onSearch:", onSearch);
 
     return (
         <section className="px-8 grid grid-cols-12 gap-6 py-4 bg-white mb-[-70px] relative z-10">
             {/* Search Box */}
             <div className="col-span-6">
                 <input
-                    type="text"
-                    placeholder="Search..."
+                      type="text"
+                      placeholder="Search..."
+                      onChange={(e) => onSearch(e.target.value)}
                     className="search-field w-full max-w-[86%] px-4 py-2 pl-[52px] placeholder:text-dark-4 border border-dark-5 text-sm text-dark-2 rounded-sm focus:outline-none"
                 />
             </div>

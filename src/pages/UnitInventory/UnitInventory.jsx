@@ -4,8 +4,34 @@ import Check from "../../assets/images/check.svg";
 import X from "../../assets/images/Close.svg";
 import MoreVertical from "../../assets/images/three-dot-action-icon.svg";
 import Upload from "../../assets/images/Upload.svg";
+import React, { useState } from 'react';
 
 export default function UnitInventory() {
+    const [openRowId, setOpenRowId] = useState(null);
+
+    const handleThreeDotClick = (id) => {
+        setOpenRowId(openRowId === id ? null : id);
+      };
+    
+      const handleEdit = (unit) => {
+        console.log("Edit clicked:", unit);
+        setOpenRowId(null);
+      };
+    
+      const handleDelete = (unit) => {
+        console.log("Delete clicked:", unit);
+        setOpenRowId(null);
+      };
+    
+      const StatusIcon = ({ status }) => {
+        return status ? (
+          <img src={Check} className="max-w-full" />
+        ) : (
+          <img src={X} className="max-w-full" />
+        );
+      };
+
+
     const units = [
         {
             id: 1,
@@ -99,23 +125,14 @@ export default function UnitInventory() {
         },
     ];
 
-    const StatusIcon = ({ status }) => {
-        return status ? (
-            <img src={Check} className="max-w-full" />
-        ) : (
-            <img src={X} className="max-w-full" />
-        );
-    };
+
 
     return (
         <>
-            <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
-                {/* Heading & Button */}
-                <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
-                    <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
-                        Unit Inventory
-                    </h2>
-                    <div className="flex gap-2.5">
+    <section className="px-8 pt-23 bg-dark-10 min-h-[calc(100%-50px)]">
+ <div className="flex gap-6 justify-between items-center mb-[12px]">
+ <h2 className="text-[28px] font-bold text-dark-1 mb-6">Unit Inventory</h2>
+      <div className="flex gap-2.5">
                         {/* Edit Button */}
                         <Link
                             to=""
@@ -157,96 +174,59 @@ export default function UnitInventory() {
                             Share
                         </Link>
                     </div>
-                </div>
-                <div>
-                    <div className="flex flex-col gap-6">
-                        <div className="bg-white rounded-lg min-h-[620px] p-3">
-                            <div className="w-full p-4 bg-white rounded-lg">
-                                <div className="overflow-x-auto bg-white rounded-lg">
-                                    <table className="w-full table-auto border-collapse font-red-hat-display">
-                                        <thead>
-                                            <tr className="border-b border-gray-200">
-                                                <th className="py-3 px-6 text-left text-sm font-medium text-gray-500">
-                                                    UNIT NUMBER
-                                                </th>
-                                                <th className="py-3 px-6 text-left text-sm font-medium text-gray-500">
-                                                    REFRIGERATOR
-                                                </th>
-                                                <th className="py-3 px-6 text-left text-sm font-medium text-gray-500">
-                                                    STOVE
-                                                </th>
-                                                <th className="py-3 px-6 text-left text-sm font-medium text-gray-500">
-                                                    MICROWAVE
-                                                </th>
-                                                <th className="py-3 px-6 text-center text-sm font-medium text-gray-500">
-                                                    DISHWASHER
-                                                </th>
-                                                <th className="py-3 px-6 text-right text-sm font-medium text-gray-500">
-                                                    ACTION
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {units.map((unit) => (
-                                                <tr
-                                                    key={unit.id}
-                                                    className="border-b border-gray-200"
-                                                >
-                                                    <td className="py-4 px-6 text-sm text-gray-900">
-                                                        101
-                                                    </td>
-                                                    <td className="py-4 px-6">
-                                                        <div className="flex">
-                                                            <img
-                                                                src={Upload}
-                                                                className="max-w-full"
-                                                            />
-                                                        </div>
-                                                    </td>
-                                                    <td className="py-4 px-6">
-                                                        <StatusIcon
-                                                            status={
-                                                                unit.appliances
-                                                                    .stove
-                                                            }
-                                                        />
-                                                    </td>
-                                                    <td className="py-4 px-6 ">
-                                                        <StatusIcon
-                                                            status={
-                                                                unit.appliances
-                                                                    .microwave
-                                                            }
-                                                        />
-                                                    </td>
-                                                    <td className="py-4 px-6 flex justify-center">
-                                                        <StatusIcon
-                                                            status={
-                                                                unit.appliances
-                                                                    .dishwasher
-                                                            }
-                                                        />
-                                                    </td>
-                                                    <td className="py-4 px-6">
-                                                        <div className="flex justify-end">
-                                                            <img
-                                                                src={
-                                                                    MoreVertical
-                                                                }
-                                                                className="text-gray-500 "
-                                                            />
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+ </div>
+      <div className="w-full bg-white rounded-lg p-3">
+      <div className=" bg-white rounded-lg">
+      <table className="w-full table-auto bg-white rounded-lg overflow-hidden">
+        <thead>
+          <tr className="text-left text-sm text-dark-2 uppercase bg-white">
+            <th className="px-4 py-3 text-left cursor-pointer border-b border-b-dark-3">ID</th>
+            <th className="px-4 py-3 text-left cursor-pointer border-b border-b-dark-3">Refrigerator</th>
+            <th className="px-4 py-3 text-left cursor-pointer border-b border-b-dark-3">Stove</th>
+            <th className="px-4 py-3 text-left cursor-pointer border-b border-b-dark-3">Microwave</th>
+            <th className="px-4 py-3 text-left cursor-pointer border-b border-b-dark-3">Dishwasher</th>
+            <th className="px-4 py-2 text-right cursor-pointer border-b border-b-dark-3">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {units.map((unit) => (
+            <tr key={unit.id} className="border-b border-gray-200 hover:bg-gray-50">
+              <td className=" px-4 py-4.5 font-medium text-dark-2 text-sm">{unit.id}</td>
+              <td className=" px-4 py-4.5 font-medium text-dark-2 text-sm"><StatusIcon status={unit.appliances.refrigerator} /></td>
+              <td className=" px-4 py-4.5 font-medium text-dark-2 text-sm"><StatusIcon status={unit.appliances.stove} /></td>
+              <td className=" px-4 py-4.5 font-medium text-dark-2 text-sm"><StatusIcon status={unit.appliances.microwave} /></td>
+              <td className=" px-4 py-4.5 font-medium text-dark-2 text-sm"><StatusIcon status={unit.appliances.dishwasher} /></td>
+              <td className=" px-4 py-4.5 font-medium text-dark-2 text-sm text-right relative">
+                <button onClick={() => handleThreeDotClick(unit.id)} className="mr-4">
+                  <img src={MoreVertical} alt="Options" className="cursor-pointer w-5 h-5" />
+                </button>
+                {openRowId === unit.id && (
+                  <div className="absolute right-0 mt-2 w-24 bg-white border border-gray-200 rounded-md shadow-md z-10">
+                    <button
+                      onClick={() => handleEdit(unit)}
+                      className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 w-full text-left"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => handleDelete(unit)}
+                      className="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 w-full text-left"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+        </div>
+        </div>
+
+   
+    </section>
         </>
     );
 }
