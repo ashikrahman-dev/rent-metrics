@@ -129,10 +129,20 @@ export default function UnitInventory() {
 
     return (
         <>
+<<<<<<< HEAD
     <section className="px-8 pt-23 bg-dark-10 min-h-[calc(100%-50px)]">
  <div className="flex gap-6 justify-between items-center mb-[12px]">
  <h2 className="text-[28px] font-bold text-dark-1 mb-6">Unit Inventory</h2>
       <div className="flex gap-2.5">
+=======
+            <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
+                {/* Heading & Button */}
+                <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
+                    <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
+                        Unit Inventory
+                    </h2> 
+                    <div className="flex gap-2.5">
+>>>>>>> af6218a5d41541d1c32e8cbc2a94e4dc606cc2d9
                         {/* Edit Button */}
                         <Link
                             to=""
