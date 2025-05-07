@@ -43,21 +43,13 @@ export default function HomeContent() {
                     <div className="grid sm:grid-cols-12 gap-6 items-center">
                         <div className="lg:col-span-7 sm:col-span-6 col-span-full xl:pr-22 lg:pr-12 pr-0 sm:order-1 order-2">
                             <h3 className="xl:text-[32px] lg:text-3xl md:text-2xl text-xl font-bold mb-4">
-                                Boost NOI with Portfolio-Wide Intelligence
+                            Take Control with AI-Driven Property Management
                             </h3>
                             <p className="xl:text-lg md:text-base text-sm text-dark-2 mb-4">
-                                RentMetrics gives you complete visibility into
-                                your entire portfolio—even when data is spread
-                                across multiple systems or managed by different
-                                teams.
+                            RentMetrics provides real-time, actionable insights across all your properties—all in one centralized platform. Instantly identify the moves that maximize NOI, mitigate risks, and seize new opportunities with early alerts on revenue trends.
                             </p>
                             <p className="xl:text-lg md:text-base text-sm text-dark-2">
-                                With a centralized, AI-powered view, you can
-                                effortlessly track trends, assess portfolio
-                                performance, and understand how day-to-day
-                                decisions impact returns. Proactively manage
-                                your assets with data-driven confidence and
-                                maximize NOI
+                            With purpose-built dashboards and a shared portfolio view, your team can stay aligned, track progress toward goals, and have more effective, data-driven conversations with stakeholders. Easily prioritize actions, optimize performance, and transparently share in-depth insights with clients.
                             </p>
                         </div>
 

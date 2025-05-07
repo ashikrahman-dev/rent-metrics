@@ -13,7 +13,7 @@ export default function DashboardHeader({ onSearch }) {
                       type="text"
                       placeholder="Search..."
                       onChange={(e) => onSearch(e.target.value)}
-                    className="search-field w-full max-w-[86%] px-4 py-2 pl-[52px] placeholder:text-dark-4 border border-dark-5 text-sm text-dark-2 rounded-sm focus:outline-none"
+                      className="search-field w-full max-w-[86%] px-4 py-2 pl-[52px] placeholder:text-dark-4 border border-dark-5 text-sm text-dark-2 rounded-sm focus:outline-none"
                 />
             </div>
 

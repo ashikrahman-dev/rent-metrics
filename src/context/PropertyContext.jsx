@@ -54,7 +54,7 @@ export function FormDataProvider({ children }) {
       value={{
         formData,
         setFormData,
-        updateFormData,  // ✅ এটা যোগ করো
+        updateFormData,  
         searchQuery,
         setSearchQuery,
         filteredProperties,
