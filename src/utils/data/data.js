@@ -222,26 +222,11 @@ export const propertyDocumentsData = [
 export const menuItems = [
     {
         id: 1,
-        title: "Solution",
-        url: "/solution",
-    },
-    {
-        id: 2,
-        title: "Products",
-        url: "/products",
-    },
-    {
-        id: 3,
-        title: "Resources",
-        url: "/resources",
-    },
-    {
-        id: 4,
         title: "Why Rent Metrics",
         url: "/home/why-rent-metrics",
     },
     {
-        id: 5,
+        id: 2,
         title: "Business Intelligence",
         url: "/home/business-intelligence",
     },
