@@ -212,6 +212,7 @@ const router = createBrowserRouter([
             { path: "skyline-tech-hub", element: <SkylineTechHub /> },
             { path: "manual-input", element: <ManualInput /> },
             { path: "property-summary", element: <PropertySummary /> },
+            { path: ":propertyId", element: <SkylineTechHub /> },
             { path: "marketing", element: <Marketing /> },
             { path: "valuation", element: <Valuation /> },
             { path: "asset-intelligence", element: <AssetIntelligence /> },

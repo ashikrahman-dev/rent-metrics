@@ -9,18 +9,18 @@ import {
 } from "recharts";
 
 const data = [
-    { name: "Jan-24", sales: 5, revenue: 0, profit: 90 },
-    { name: "Feb-24", sales: 84, revenue: 175, profit: 100 },
-    { name: "Mar-24", sales: 160, revenue: 160, profit: 200 },
-    { name: "Apr-24", sales: 127, revenue: 165, profit: 150 },
-    { name: "May-24", sales: 72, revenue: 230, profit: 110 },
-    { name: "Jun-24", sales: 124, revenue: 190, profit: 180 },
-    { name: "July-24", sales: 152, revenue: 200, profit: 90 },
-    { name: "Aug-24", sales: 150, revenue: 190, profit: 148 },
-    { name: "Sep-24", sales: 151, revenue: 148, profit: 120 },
-    { name: "Oct-24", sales: 110, revenue: 173, profit: 140 },
-    { name: "Nov-24", sales: 140, revenue: 190, profit: 190 },
-    { name: "Dec-24", sales: 148, revenue: 165, profit: 50 },
+    { name: "Jan-24", NOI: 5, revenue: 0, Expense : 90 },
+    { name: "Feb-24", NOI: 84, revenue: 175, Expense : 100 },
+    { name: "Mar-24", NOI: 160, revenue: 160, Expense : 200 },
+    { name: "Apr-24", NOI: 127, revenue: 165, Expense : 150 },
+    { name: "May-24", NOI: 72, revenue: 230, Expense : 110 },
+    { name: "Jun-24", NOI: 124, revenue: 190, Expense : 180 },
+    { name: "July-24", NOI: 152, revenue: 200, Expense : 90 },
+    { name: "Aug-24", NOI: 150, revenue: 190, Expense : 148 },
+    { name: "Sep-24", NOI: 151, revenue: 148, Expense : 120 },
+    { name: "Oct-24", NOI: 110, revenue: 173, Expense : 140 },
+    { name: "Nov-24", NOI: 140, revenue: 190, Expense : 190 },
+    { name: "Dec-24", NOI: 148, revenue: 165, Expense : 50 },
 ];
 
 export default function MonthlyPropertyChart() {
@@ -81,7 +81,7 @@ export default function MonthlyPropertyChart() {
                     />
                     <Line
                         type="linear"
-                        dataKey="profit"
+                        dataKey="Expense"
                         stroke="#68C8F8"
                         strokeWidth={1}
                         dot={false}
@@ -93,7 +93,7 @@ export default function MonthlyPropertyChart() {
                     />
                     <Line
                         type="linear"
-                        dataKey="sales"
+                        dataKey="NOI"
                         stroke="#30D287"
                         strokeWidth={1}
                         dot={false}

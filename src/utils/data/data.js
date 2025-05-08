@@ -19,7 +19,7 @@ export const propertyList = [
         address: "456 Business Ave, San Francisco, CA",
         image: propertyImage1,
         occupancy: "95",
-        revenue: "NOI",
+        revenue: "$000",
         status: "8.3%",
     },
     {
@@ -28,7 +28,7 @@ export const propertyList = [
         address: "1122 Cyber Road, Techville",
         image: propertyImage2,
         occupancy: "95",
-        revenue: "NOI",
+        revenue: "$000",
         status: "8.3%",
     },
     {
@@ -37,7 +37,7 @@ export const propertyList = [
         address: "5678 Cloud Avenue, Silicon Valley",
         image: propertyImage3,
         occupancy: "95",
-        revenue: "NOI",
+        revenue: "$000",
         status: "8.3%",
     },
     {
@@ -46,7 +46,7 @@ export const propertyList = [
         address: "7890 Digital Drive, Innovation City",
         image: propertyImage4,
         occupancy: "95",
-        revenue: "NOI",
+        revenue: "$000",
         status: "8.3%",
     },
     {
@@ -55,7 +55,7 @@ export const propertyList = [
         address: "9101 Startup Lane, Codeville",
         image: propertyImage5,
         occupancy: "95",
-        revenue: "NOI",
+        revenue: "$000",
         status: "8.3%",
     },
     {
@@ -64,7 +64,7 @@ export const propertyList = [
         address: "3456 AI Boulevard, Future Town",
         image: propertyImage6,
         occupancy: "95",
-        revenue: "NOI",
+        revenue: "$000",
         status: "8.3%",
     },
     {
@@ -73,7 +73,7 @@ export const propertyList = [
         address: "3344 VR Avenue, Meta City",
         image: propertyImage7,
         occupancy: "95",
-        revenue: "NOI",
+        revenue: "$000",
         status: "8.3%",
     },
     {
@@ -82,7 +82,7 @@ export const propertyList = [
         address: "5566 Blockchain Street, Neural Bay",
         image: propertyImage8,
         occupancy: "95",
-        revenue: "NOI",
+        revenue: "$000",
         status: "8.3%",
     },
 ];

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from 'react';
+
 import { useOutletContext } from 'react-router-dom';
 import { propertyList as defaultPropertyList } from "../../utils/data/data";
 import { useFormData } from "../../context/PropertyContext";
@@ -7,7 +7,9 @@ import { useFormData } from "../../context/PropertyContext";
 export default function PropertySummary() {
 
   const { searchTerm } = useOutletContext();
-  const { properties, searchQuery, filteredProperties: contextFilteredProperties } = useFormData();
+  // const { properties, searchQuery, filteredProperties: contextFilteredProperties } = useFormData();
+  const { properties, searchQuery, filteredProperties: contextFilteredProperties, selectProperty } = useFormData();
+
 
   // Changed the order here - put user properties first, then default properties
   const allProperties = [...properties, ...defaultPropertyList];
@@ -20,7 +22,9 @@ export default function PropertySummary() {
   ? contextFilteredProperties
   : allProperties;
 
-
+  const handlePropertySelect = (property) => {
+    selectProperty(property);
+  };
 
   return (
     <div className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
@@ -58,6 +62,7 @@ export default function PropertySummary() {
                     <div
                         key={property.id || `new-property-${index}`}
                         className="col-span-3 p-2 rounded-lg bg-white property-card relative"
+                        onClick={() => handlePropertySelect(property)}
                     >
                         {(property.image || property.imageURL) ? (
                             <img
@@ -96,8 +101,9 @@ export default function PropertySummary() {
                                 </div>
                             </div>
                             <Link
-                                to="/dashboard/skyline-tech-hub"
+                                to={`/dashboard/${property.id || `property-${index}`}`}
                                 className="py-[9px] px-6 border border-main rounded-lg font-black flex justify-center text-main w-full leading-[1.5] transition-colors duration-300 hover:bg-main hover:text-white"
+                                onClick={() => handlePropertySelect(property)}
                             >
                                 View Details
                             </Link>

@@ -4,6 +4,44 @@ import OverviewTab from "../../components/OverviewTab/OverviewTab";
 import Returns from "../../components/Returns/Returns";
 import Valuation from "../../components/Valuation/Valuation";
 import Documents from "../../components/Documents/Documents";
+import { useFormData } from "../../context/PropertyContext";
+
+export default function SkylineTechHub() {
+    const { selectedProperty } = useFormData();
+    
+    if (!selectedProperty) {
+        return <div>No property selected</div>;
+    }
+
+    return (
+        <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
+            {/* Heading & Button */}
+            <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
+                <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
+                    {selectedProperty.name || selectedProperty.property_name}
+                </h2>
+                <div className="flex gap-2.5">
+                    <Link
+                        to="/add-new-properties"
+                        className="text-base px-[18px] py-[9px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main cursor-pointer inline-flex items-center gap-2 group col-auto"
+                    >
+                        Export
+                    </Link>
+                    <Link
+                        to="/add-new-properties"
+                        className="text-base px-[17px] py-2 border border-dark-2 bg-transparent rounded-lg text-dark-2 font-black transition-colors duration-200 hover:bg-dark-2 hover:text-white cursor-pointer inline-flex items-center gap-2 group col-auto"
+                    >
+                        Share
+                    </Link>
+                </div>
+            </div>
+
+            {/* Tabs Component */}
+            <Tabs />
+        </section>
+    );
+}
+
 const Tabs = () => {
     const [activeTab, setActiveTab] = useState(0);
 
@@ -39,33 +77,3 @@ const Tabs = () => {
         </div>
     );
 };
-
-export default function SkylineTechHub() {
-    return (
-        <section className="flex-1 p-8 bg-dark-10 min-h-[calc(100%-70px)] h-full overflow-y-auto py-20 relative z-0">
-            {/* Heading & Button */}
-            <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
-                <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
-                    Skyline Tech Hub
-                </h2>
-                <div className="flex gap-2.5">
-                    <Link
-                        to="/add-new-properties"
-                        className="text-base px-[18px] py-[9px] bg-main rounded-lg text-white font-black transition-colors duration-200 hover:bg-main-shade hover:text-main cursor-pointer inline-flex items-center gap-2 group col-auto"
-                    >
-                        Export
-                    </Link>
-                    <Link
-                        to="/add-new-properties"
-                        className="text-base px-[17px] py-2 border border-dark-2 bg-transparent rounded-lg text-dark-2 font-black transition-colors duration-200 hover:bg-dark-2 hover:text-white cursor-pointer inline-flex items-center gap-2 group col-auto"
-                    >
-                        Share
-                    </Link>
-                </div>
-            </div>
-
-            {/* Tabs Component */}
-            <Tabs />
-        </section>
-    );
-}

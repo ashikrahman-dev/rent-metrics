@@ -13,11 +13,7 @@ export function FormDataProvider({ children }) {
     imageURL: "",
   });
 
-
-
-
-  
-
+  const [selectedProperty, setSelectedProperty] = useState(null);
   const [properties, setProperties] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -44,6 +40,10 @@ export function FormDataProvider({ children }) {
     });
   };
 
+  const selectProperty = (property) => {
+    setSelectedProperty(property);
+  };
+
   const filteredProperties = properties.filter((property) =>
     property?.property_name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
     property?.property_address?.toLowerCase().includes(searchQuery.toLowerCase())
@@ -61,6 +61,8 @@ export function FormDataProvider({ children }) {
         properties,
         submitProperty,
         handleFileUpload,
+        selectedProperty,
+        selectProperty
       }}
     >
       {children}
