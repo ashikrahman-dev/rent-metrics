@@ -76,7 +76,7 @@ export default function Dealpoint() {
           <div className="bg-white p-6 rounded-lg mb-8">
             <h4 className="text-dark-1 text-2xl font-bold leading-[1.3] mb-6">Deal Points</h4>
             <div className="grid grid-cols-12 gap-6">
-              {renderInput("purchasePrice", "Purchase Price", "text", "$ 0000.00.00")}
+              {renderInput("purchasePrice", "Purchase Price", "text", "$ 0000.00")}
               {renderInput("purchaseDate", "Date of Purchase", "date")}
               {renderInput("trailingNOI", "Trailing 12 Month NOI", "text", "$ 0000.00.00", 4)}
               {renderInput("debtAmount", "Debt Amount at Purchase", "text", "$ 0000.00.00", 4)}

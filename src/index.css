@@ -253,3 +253,7 @@ button[data-headlessui-state="selected"]:focus-visible {
 .rs-picker-default .rs-picker-toggle.rs-btn .rs-picker-toggle-indicator .rs-picker-clean {
     top: 16px;
 }
+
+.recharts-wrapper-container .recharts-wrapper{
+    padding: 0px !important;
+}

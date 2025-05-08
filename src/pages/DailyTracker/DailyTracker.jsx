@@ -102,7 +102,7 @@ export default function DailyTracker() {
           {/* Heading & Button */}
           <div className="flex gap-5 justify-between items-center">
             <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
-              Revenue
+            Expenses
             </h2>
             <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
               Budget
@@ -136,7 +136,54 @@ export default function DailyTracker() {
                   <div className="progressBarItemInnerText  shrink-0 text-right">$18,999</div>
               </div>
               <div className="progressBarItem flex gap-4 mb-8">
-                  <div className="progressBarItemInnerText shrink-0">Cash Flow</div>
+                  <div className="progressBarItemInnerText shrink-0">Management Fees</div>
+               <CustomProgressBar raised= { 18999} goal={42279} bgColor={"#E9EDF0"} baseBgColor={"#D8DFE5"} />
+                  <div className="progressBarItemInnerText  shrink-0 text-right">$18,999</div>
+              </div>
+              <div className="progressBarItem flex gap-4 mb-8">
+                  <div className="progressBarItemInnerText shrink-0">Taxes</div>
+                  <CustomProgressBar raised= { 18999} goal={42279} bgColor={"#E9EDF0"} baseBgColor={"#D8DFE5"} />
+                  <div className="progressBarItemInnerText  shrink-0 text-right">$18,999</div>
+              </div>
+              <div className="progressBarItem flex gap-4 mb-8">
+                  <div className="progressBarItemInnerText shrink-0">Insurance</div>
+               <CustomProgressBar raised= {17000} goal={18999} bgColor={"#E9EDF0"} baseBgColor={"#D8DFE5"} />
+                  <div className="progressBarItemInnerText  shrink-0 text-right">$18,999</div>
+              </div>
+              <div className="progressBarItem flex gap-4 mb-8">
+                  <div className="progressBarItemInnerText shrink-0">Total Expense</div>
+               <CustomProgressBar raised= {16000} goal={18999} bgColor={"#2970CC"} baseBgColor={"#E5EEF9"} />
+                  <div className="progressBarItemInnerText  shrink-0 text-right">$18,999</div>
+              </div>
+              <hr className="bg-[#D8DFE5] text-[#D8DFE5] mb-[24px]"/>
+              <div className="progressBarItem flex gap-4 mb-8">
+                  <div className="progressBarItemInnerText shrink-0">Net Operating Income</div>
+               <CustomProgressBar raised= {19000} goal={28999} bgColor={"#E9EDF0"} baseBgColor={"#D8DFE5"} />
+                  <div className="progressBarItemInnerText  shrink-0 text-right">$28,999</div>
+              </div>
+              <div className="progressBarItem flex gap-4 mb-8">
+                  <div className="progressBarItemInnerText shrink-0">Debt Service</div>
+               <CustomProgressBar raised= {12000} goal={20999} bgColor={"#E9EDF0"} baseBgColor={"#D8DFE5"} />
+                  <div className="progressBarItemInnerText  shrink-0 text-right">$20,999</div>
+              </div>
+              <div className="progressBarItem flex gap-4 mb-8">
+                  <div className="progressBarItemInnerText shrink-0">Non-Operating Expense</div>
+               <CustomProgressBar raised= {12000} goal={20999} bgColor={"#E9EDF0"} baseBgColor={"#D8DFE5"} />
+                  <div className="progressBarItemInnerText  shrink-0 text-right">$20,999</div>
+              </div>
+              <div className="progressBarItem flex gap-4 mb-8">
+                  <div className="progressBarItemInnerText shrink-0">Capital</div>
+               <CustomProgressBar raised= {20000} goal={22999} bgColor={"#E9EDF0"} baseBgColor={"#D8DFE5"} />
+                  <div className="progressBarItemInnerText  shrink-0 text-right">$22,999</div>
+              </div>
+              <hr className="bg-[#D8DFE5] text-[#D8DFE5] mb-[24px]"/>
+              <div className="progressBarItem flex gap-4 mb-8">
+                  <div className="progressBarItemInnerText shrink-0">NOI</div>
+               <CustomProgressBar raised= {300000} goal={473425} bgColor={"#FFC362"} baseBgColor={"#FFF8EC"} />
+                  <div className="progressBarItemInnerText  shrink-0 text-right">$473,425</div>
+              </div>
+              <div className="progressBarItem flex gap-4 mb-8">
+                  <div className="progressBarItemInnerText shrink-0">Total Expenses</div>
                <CustomProgressBar raised= {450000} goal={473425} bgColor={"#2970CC"} baseBgColor={"#E5EEF9"} />
                   <div className="progressBarItemInnerText  shrink-0 text-right">$473,425</div>
               </div>

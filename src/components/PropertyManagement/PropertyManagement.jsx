@@ -36,7 +36,7 @@ export default function PropertyManagement() {
                 <div className="flex gap-6 items-center">
                     <div className="w-full">
                         <h2 className="text-[32px] text-dark-1 font-bold leading-[1.4] mb-2">
-                        Property Management Setup
+                        Data Integration
                         </h2>
                     </div>
                 </div>
@@ -62,11 +62,30 @@ export default function PropertyManagement() {
                                             type="text"
                                             value={managementData.management_company}
                                             onChange={handleChange}
-                                            placeholder="RPM Management"
+                                            placeholder="Property Management Company"
                                             className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
                                         />
                                     </div>
                                 </div>
+                                <div className="col-span-12">
+  <label
+    htmlFor="management_description"
+    className="block text-base leading-[1.40] font-bold text-dark-1 text-left"
+  >
+    Input Data Manually
+  </label>
+  <div className="mt-3">
+    <textarea
+      id="management_description"
+      name="management_description"
+      value={managementData.management_description}
+      onChange={handleChange}
+      placeholder="Type here"
+      className="block w-full h-32 py-4 px-4 rounded-lg text-sm font-medium leading-[1.3] placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0 resize-none"
+    />
+  </div>
+</div>
+
                             </div>
                         </div>
 

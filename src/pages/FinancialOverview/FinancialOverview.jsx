@@ -67,7 +67,7 @@ export default function FinancialOverview() {
                         <StatusCard
                             title="Revenue Overview"
                             icon={revenueOverview}
-                            number="$85,420"
+                            number="$820"
                             status="Last month"
                             statusCode="12.5%"
                             statusColor="#73EAB2"
@@ -75,7 +75,7 @@ export default function FinancialOverview() {
                         <StatusCard
                             title="Expense Tracking"
                             icon={expenseTracking}
-                            number="$42,150"
+                            number="$420"
                             status="Last month"
                             statusCode="3.2%"
                             statusColor="#68C8F8"
@@ -83,18 +83,18 @@ export default function FinancialOverview() {
                         <StatusCard
                             title="NOI Tracker"
                             icon={NoiTracker}
-                            number="500"
+                            number="$432"
                             status="Convert"
-                            statusCode="12%"
+                            statusCode="8.7%"
                             statusColor="#FFC362"
                         />
                         <StatusCardKPI />
                         <StatusCardKPI />
                     </div>
                 </div>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6 recharts-wrapper-container">
                     <CurrentMonthActualChart />
-                    <BudgetProjectionsChart />
+                    {/* <BudgetProjectionsChart /> */}
                 </div>
                 <div className="grid grid-cols-1 gap-6">
                     <DailyFinancialTrackerChart />

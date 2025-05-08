@@ -7,7 +7,7 @@ export default function UnitRenovationSummary() {
             {/* Heading & Button */}
             <div className="flex gap-6 justify-between items-center mb-[34px] pt-8">
                 <h2 className="text-[28px] font-bold text-dark-1 leading-[1.35]">
-                Conconrd Park at Russett Unit Renovation (Total Combined)
+                Unit Renovation Combined Summary
                 </h2>
 
                 <div className="flex gap-2.5">
