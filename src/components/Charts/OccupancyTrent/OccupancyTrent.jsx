@@ -55,6 +55,7 @@ export default function OccupancyTrend() {
                                 fontWeight: 600,
                                 fill: "#8E99A1",
                             }}
+                            axisLine={{ stroke: "#E6E6EC" }}
                         />
                         <YAxis
                             yAxisId="left"
@@ -66,6 +67,7 @@ export default function OccupancyTrend() {
                                 fontWeight: 600,
                                 fill: "#54616B",
                             }}
+                            axisLine={{ stroke: "#E6E6EC" }}
                         />
                         <YAxis
                             yAxisId="right"
@@ -78,6 +80,7 @@ export default function OccupancyTrend() {
                                 fontWeight: 600,
                                 fill: "#54616B",
                             }}
+                            axisLine={{ stroke: "#E6E6EC" }}
                         />
                         <Bar
                             dataKey="value"
@@ -89,7 +92,7 @@ export default function OccupancyTrend() {
                             yAxisId="right"
                             type="linear"
                             dataKey="revenue"
-                            stroke="#001924"
+                            stroke="#2970CC"
                             strokeWidth={1.5}
                             dot={false}
                             tick={{
