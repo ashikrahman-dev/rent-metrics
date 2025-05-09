@@ -2,30 +2,66 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormData } from "../../context/PropertyContext";
 
+const formatCurrency = (value) => {
+    if (!value) return "";
+    // Remove all non-numeric characters
+    const numericValue = value.replace(/[^0-9.]/g, "");
+    // Convert to number and format
+    const number = parseFloat(numericValue);
+    if (isNaN(number)) return "";
+    return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+    }).format(number);
+};
+
+const formatPercentage = (value) => {
+    if (!value) return "";
+    // Remove all non-numeric characters
+    const numericValue = value.replace(/[^0-9.]/g, "");
+    // Convert to number
+    const number = parseFloat(numericValue);
+    if (isNaN(number)) return "";
+    return number + "%";
+};
+
 export default function Dealpoint() {
 
   const { updateFormData, handleFileUpload } = useFormData();
   const navigate = useNavigate();
 
   const [formState, setFormState] = useState({
-      purchasePrice: "",
+      purchasePrice: "$1,000,000",
       purchaseDate: "",
-      trailingNOI: "",
-      debtAmount: "",
-      equityAmount: "",
-      loanAmount: "",
-      interestRate: "",
-      term: "",
-      interestOnlyPeriod: "",
+      trailingNOI: "$100,000",
+      debtAmount: "$750,000",
+      equityAmount: "$250,000",
+      loanAmount: "$750,000",
+      interestRate: "4.5%",
+      term: "5",
+      interestOnlyPeriod: "12",
       mortgageCompany: "",
       uploadedFile: null,
   });
 
   const handleInputChange = (e) => {
       const { name, value } = e.target;
+      let formattedValue = value;
+
+      // Format currency fields
+      if (["purchasePrice", "trailingNOI", "debtAmount", "equityAmount", "loanAmount"].includes(name)) {
+          formattedValue = formatCurrency(value);
+      }
+      // Format percentage fields
+      else if (name === "interestRate") {
+          formattedValue = formatPercentage(value);
+      }
+
       setFormState((prevState) => ({
           ...prevState,
-          [name]: value,
+          [name]: formattedValue,
       }));
   };
 
@@ -76,7 +112,7 @@ export default function Dealpoint() {
           <div className="bg-white p-6 rounded-lg mb-8">
             <h4 className="text-dark-1 text-2xl font-bold leading-[1.3] mb-6">Deal Points</h4>
             <div className="grid grid-cols-12 gap-6">
-              {renderInput("purchasePrice", "Purchase Price", "text", "$ 0000.00")}
+              {renderInput("purchasePrice", "Purchase Price", "text", "$ 0000.00.00")}
               {renderInput("purchaseDate", "Date of Purchase", "date")}
               {renderInput("trailingNOI", "Trailing 12 Month NOI", "text", "$ 0000.00.00", 4)}
               {renderInput("debtAmount", "Debt Amount at Purchase", "text", "$ 0000.00.00", 4)}
@@ -142,6 +178,18 @@ export default function Dealpoint() {
   );
 
   function renderInput(name, label, type = "text", placeholder = "", colSpan = 6) {
+    // Determine if this is a currency input
+    const isCurrency = ["purchasePrice", "trailingNOI", "debtAmount", "equityAmount", "loanAmount"].includes(name);
+    const isPercentage = name === "interestRate";
+    
+    // Adjust placeholder based on input type
+    let adjustedPlaceholder = placeholder;
+    if (isCurrency) {
+        adjustedPlaceholder = "$0";
+    } else if (isPercentage) {
+        adjustedPlaceholder = "0%";
+    }
+
     return (
       <div className={`col-span-${colSpan}`} key={name}>
         <label htmlFor={name} className="block text-base font-bold text-dark-1">
@@ -153,8 +201,8 @@ export default function Dealpoint() {
             name={name}
             value={formState[name]}
             onChange={handleInputChange}
-            type={type}
-            placeholder={placeholder}
+            type={type === "number" ? "text" : type}
+            placeholder={adjustedPlaceholder}
             className="block w-full h-13 py-[17px] px-4 rounded-lg text-sm font-medium placeholder:text-dark-2 bg-dark-7 border-0 text-dark-1 focus:outline-0"
           />
         </div>
